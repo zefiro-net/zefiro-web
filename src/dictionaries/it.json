@@ -1,0 +1,112 @@
+{
+  "lang": "it",
+  "metadata": {
+    "title": "Zefiro s.r.l.",
+    "description": "Sito di Zefiro Net. Infrastrutture di telecomunicazione sicure e all'avanguardia."
+  },
+  "nav": {
+    "chiSiamo": "Chi Siamo",
+    "sedi": "Sedi",
+    "manifesto": "Manifesto",
+    "lavoraConNoi": "Lavora con noi",
+    "areaPubblica": "Area Pubblica",
+    "apriMenu": "Apri menu"
+  },
+  "common": {
+    "scopriDiPiu": "Scopri di più",
+    "contatti": "Contatti"
+  },
+  "footer": {
+    "tagline": "Connettere in un soffio.",
+    "azienda": "L'Azienda",
+    "chiSiamo": "Chi Siamo",
+    "manifesto": "Manifesto",
+    "sedi": "Sedi",
+    "risorse": "Risorse e Governance",
+    "documentiPubblici": "Documenti pubblici",
+    "modello231": "Modello 231",
+    "certificazioni": "Certificazioni e Sostenibilità",
+    "whistleblowing": "Whistleblowing",
+    "contatti": "Contatti",
+    "indirizzo": "Milano, Via Gattamelata, 34 (Il Pharo)",
+    "copyright": "Tutti i diritti riservati.",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy"
+  },
+  "hero": {
+    "titolo": "Connettere <br/> <span class='text-zefiro-cyan'>in un soffio.</span>",
+    "sottotitolo": "Acceleriamo lo sviluppo delle reti 5G in Italia. Forniamo infrastrutture wholesale d'eccellenza per connettere le aree rurali e colmare il digital divide.",
+    "ctaPrimaria": "Il progetto Zefiro",
+    "ctaSecondaria": "Il nostro Manifesto"
+  },
+  "missione": {
+    "titolo": "Una missione condivisa",
+    "sottotitolo": "Eccellenza tecnologica al servizio degli operatori"
+  },
+  "manifesto": {
+    "titolo": "Il nostro ",
+    "titoloAccento": "manifesto",
+    "sottotitolo": "Crediamo in un'Italia connessa, senza distinzioni geografiche. Lavoriamo dietro le quinte affinché la digitalizzazione diventi una realtà concreta per tutti."
+  },
+  "sedi": {
+    "titolo": "Le ",
+    "titoloAccento": "sedi",
+    "sottotitolo": "Siamo presenti sul territorio nazionale con centri operativi e direzionali per garantire la massima efficienza della rete."
+  },
+  "documenti": {
+    "titolo": "Documenti ",
+    "titoloAccento": "pubblici",
+    "titoloSezione": "Documenti Pubblici",
+    "sottotitolo": "In linea con i nostri valori di trasparenza, mettiamo a disposizione tutti i documenti societari, finanziari e di governance.",
+    "colonnaTitolo": "Titolo Documento",
+    "colonnaCategoria": "Categoria",
+    "colonnaData": "Data",
+    "colonnaDownload": "Download",
+    "nessunDocumento": "Nessun documento trovato in questa categoria.",
+    "tornaTutti": "Torna a tutti i documenti",
+    "filtroTutti": "Tutti",
+    "filtroFinanza": "Finanza",
+    "filtroGovernance": "Governance",
+    "filtroSicurezza": "Sicurezza"
+  },
+  "lavoraConNoi": {
+    "titolo": "Lavora ",
+    "titoloAccento": "con noi",
+    "sottotitolo": "Entra a far parte della joint venture che sta accelerando il futuro digitale dell'Italia. Cerchiamo talenti pronti a fare la differenza.",
+    "valoriTitolo": "I Nostri Valori",
+    "valore1Titolo": "Innovazione Continua",
+    "valore1Desc": "Sperimentiamo le tecnologie 5G più avanzate per connettere anche le aree più remote d'Italia.",
+    "valore2Titolo": "Sostenibilità",
+    "valore2Desc": "Costruiamo infrastrutture nel rispetto dell'ambiente e del territorio, promuovendo uno sviluppo equo.",
+    "valore3Titolo": "Eccellenza Tecnica",
+    "valore3Desc": "Il nostro team è composto dai migliori esperti nel settore delle telecomunicazioni wholesale.",
+    "candidaturaTitolo": "Candidatura Spontanea",
+    "candidaturaDesc": "Inviaci il tuo CV e raccontaci come puoi contribuire al progetto Zefiro Net.",
+    "candidaturaNote": "Il nostro team HR valuterà con attenzione ogni profilo."
+  },
+  "chiSiamo": {
+    "etichetta": "La Joint Venture",
+    "titolo": "Chi ",
+    "titoloAccento": "siamo",
+    "titoloDefault": "Chi Siamo",
+    "missioneTitolo": "La nostra missione",
+    "wholesaleTitolo": "Modello Wholesale Only"
+  },
+  "homepage": {
+    "badgeCopertura": "Infrastruttura & Territorio",
+    "chiSiamoTitolo": "Connettiamo il 70% del territorio italiano",
+    "chiSiamoSottotitolo": "Superiamo il digital divide portando la tecnologia 5G e le reti ultra-broadband nel 70% del territorio nazionale, principalmente nelle aree rurali e meno densamente popolate del Paese. Con circa 7.000 siti e torri radiomobili attive, abilitiamo un'infrastruttura wholesale d'eccellenza aperta e condivisa.",
+    "chiSiamoBottone": "Scopri il progetto Zefiro",
+    "stat1Valore": "70%",
+    "stat1Label": "Territorio nazionale coperto (zone rurali)",
+    "stat2Valore": "~7.000",
+    "stat2Label": "Siti e torri radiomobili attive",
+    "stat3Valore": "100%",
+    "stat3Label": "Wholesale-Only condiviso",
+    "mapChipRete": "Rete Radiomobile Nazionale",
+    "mapChipCopertura": "70% Territorio Coperto",
+    "mapLegendaRurale": "Territorio coperto (70%)",
+    "mapLegendaUrbana": "Aree non coperte",
+    "mapTagline": "Digital Divide & 5G Wholesale"
+  }
+}

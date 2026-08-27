@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Bilancio d'Esercizio 2024",
+    "date": "2025-04-15",
+    "category": "Finanza",
+    "size": "2.4 MB",
+    "fileUrl": "#"
+  },
+  {
+    "id": 2,
+    "title": "Bilancio d'Esercizio 2023",
+    "date": "2024-04-12",
+    "category": "Finanza",
+    "size": "2.1 MB",
+    "fileUrl": "#"
+  },
+  {
+    "id": 3,
+    "title": "Relazione sulla Corporate Governance",
+    "date": "2025-01-10",
+    "category": "Governance",
+    "size": "1.8 MB",
+    "fileUrl": "#"
+  },
+  {
+    "id": 4,
+    "title": "Codice Etico",
+    "date": "2023-09-05",
+    "category": "Governance",
+    "size": "850 KB",
+    "fileUrl": "#"
+  },
+  {
+    "id": 5,
+    "title": "Politica per la Sicurezza delle Informazioni",
+    "date": "2024-11-20",
+    "category": "Sicurezza",
+    "size": "1.2 MB",
+    "fileUrl": "#"
+  }
+]

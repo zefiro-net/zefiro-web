@@ -1,0 +1,112 @@
+{
+  "lang": "en",
+  "metadata": {
+    "title": "Zefiro SRL",
+    "description": "Official website of Zefiro Net. Secure, state-of-the-art telecommunications infrastructure."
+  },
+  "nav": {
+    "chiSiamo": "About Us",
+    "sedi": "Offices",
+    "manifesto": "Manifesto",
+    "lavoraConNoi": "Work with us",
+    "areaPubblica": "Public Area",
+    "apriMenu": "Open menu"
+  },
+  "common": {
+    "scopriDiPiu": "Learn more",
+    "contatti": "Contact"
+  },
+  "footer": {
+    "tagline": "Connecting in a breath.",
+    "azienda": "The Company",
+    "chiSiamo": "About Us",
+    "manifesto": "Manifesto",
+    "sedi": "Offices",
+    "risorse": "Resources & Governance",
+    "documentiPubblici": "Public Documents",
+    "modello231": "Model 231",
+    "certificazioni": "Certifications & Sustainability",
+    "whistleblowing": "Whistleblowing",
+    "contatti": "Contact",
+    "indirizzo": "Milan, Via Gattamelata, 34 (Il Pharo)",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy"
+  },
+  "hero": {
+    "titolo": "Connecting <br/> <span class='text-zefiro-cyan'>in a breath.</span>",
+    "sottotitolo": "We accelerate the deployment of 5G networks across Italy. Providing world-class wholesale infrastructure to connect rural areas and bridge the digital divide.",
+    "ctaPrimaria": "The Zefiro Project",
+    "ctaSecondaria": "Our Manifesto"
+  },
+  "missione": {
+    "titolo": "A shared mission",
+    "sottotitolo": "Technological excellence serving telecom operators"
+  },
+  "manifesto": {
+    "titolo": "Our ",
+    "titoloAccento": "manifesto",
+    "sottotitolo": "We believe in a seamlessly connected Italy without geographical disparities. We work behind the scenes to make digitization a tangible reality for everyone."
+  },
+  "sedi": {
+    "titolo": "Our ",
+    "titoloAccento": "offices",
+    "sottotitolo": "We operate across Italy with strategic direction and operational centres to guarantee the highest network efficiency."
+  },
+  "documenti": {
+    "titolo": "Public ",
+    "titoloAccento": "documents",
+    "titoloSezione": "Public Documents",
+    "sottotitolo": "In line with our commitment to transparency, we make all corporate, financial, and governance records available.",
+    "colonnaTitolo": "Document Title",
+    "colonnaCategoria": "Category",
+    "colonnaData": "Date",
+    "colonnaDownload": "Download",
+    "nessunDocumento": "No documents found in this category.",
+    "tornaTutti": "Back to all documents",
+    "filtroTutti": "All",
+    "filtroFinanza": "Finance",
+    "filtroGovernance": "Governance",
+    "filtroSicurezza": "Security"
+  },
+  "lavoraConNoi": {
+    "titolo": "Work ",
+    "titoloAccento": "with us",
+    "sottotitolo": "Join the joint venture accelerating Italy's digital future. We are looking for talents ready to make an impact.",
+    "valoriTitolo": "Our Core Values",
+    "valore1Titolo": "Continuous Innovation",
+    "valore1Desc": "We experiment with cutting-edge 5G technologies to connect even the most remote regions of Italy.",
+    "valore2Titolo": "Sustainability",
+    "valore2Desc": "We build infrastructure respecting the environment and local landscapes, fostering equitable growth.",
+    "valore3Titolo": "Technical Excellence",
+    "valore3Desc": "Our team brings together the foremost experts in wholesale telecommunications.",
+    "candidaturaTitolo": "Open Application",
+    "candidaturaDesc": "Send us your resume and tell us how you can contribute to the Zefiro Net vision.",
+    "candidaturaNote": "Our HR team will carefully review every application."
+  },
+  "chiSiamo": {
+    "etichetta": "The Joint Venture",
+    "titolo": "About ",
+    "titoloAccento": "us",
+    "titoloDefault": "About Us",
+    "missioneTitolo": "Our Mission",
+    "wholesaleTitolo": "Wholesale-Only Model"
+  },
+  "homepage": {
+    "badgeCopertura": "Infrastructure & Territory",
+    "chiSiamoTitolo": "Connecting 70% of Italian Territory",
+    "chiSiamoSottotitolo": "Bridging the digital divide by delivering 5G and ultra-broadband networks across 70% of the national territory, mainly in rural and sparsely populated areas. With around 7,000 active mobile sites and towers, we enable an open, shared wholesale infrastructure of excellence.",
+    "chiSiamoBottone": "Discover the Zefiro project",
+    "stat1Valore": "70%",
+    "stat1Label": "National territory covered (rural areas)",
+    "stat2Valore": "~7,000",
+    "stat2Label": "Active mobile towers & sites",
+    "stat3Valore": "100%",
+    "stat3Label": "Shared Wholesale-Only",
+    "mapChipRete": "National Mobile Network",
+    "mapChipCopertura": "70% Territory Covered",
+    "mapLegendaRurale": "Covered territory (70%)",
+    "mapLegendaUrbana": "Non-covered areas",
+    "mapTagline": "Digital Divide & 5G Wholesale"
+  }
+}
