@@ -23,20 +23,22 @@ export function ScrollDownButton({ label = 'Scroll down', targetId = 'copertura'
   return (
     <button
       onClick={handleScroll}
-      className="group relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zefiro-cyan transition-all duration-300 active:scale-90"
+      className="group flex items-center justify-center p-2 cursor-pointer focus-visible:outline-none transition-transform duration-300 hover:scale-110 active:scale-95"
       aria-label={label}
     >
-      {/* Subtle Circular Glass Backdrop */}
-      <div className="absolute inset-0 rounded-full bg-white/5 dark:bg-white/[0.03] backdrop-blur-sm border border-white/15 dark:border-white/10 group-hover:border-zefiro-cyan/50 group-hover:bg-zefiro-cyan/10 transition-all duration-300 shadow-sm"></div>
-
-      {/* Pure Sleek Minimalist Arrow */}
+      {/* Pure Angular Modern Chevron Arrow — No Border, No Circle */}
       <svg
-        className="w-5 h-5 text-gray-300 dark:text-gray-300 group-hover:text-zefiro-cyan animate-bounce transition-colors relative z-10"
+        className="w-7 h-7 sm:w-8 sm:h-8 text-white/70 dark:text-white/60 group-hover:text-zefiro-cyan animate-bounce transition-colors duration-300 filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(0,206,219,0.8)]"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
       >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M19 9l-7 7-7-7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M19 9l-7 7-7-7"
+        />
       </svg>
     </button>
   );
