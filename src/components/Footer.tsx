@@ -59,9 +59,15 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           </ul>
         </div>
       </div>
-      <div className="container mx-auto px-4 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 text-center text-xs sm:text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
-        <p>&copy; {new Date().getFullYear()} Zefiro Net SRL {f.copyright}</p>
-        <div className="flex gap-4">
+      <div className="container mx-auto px-4 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 text-xs sm:text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Zefiro Net S.r.l. {f.copyright}</p>
+          <span className="hidden md:inline text-white/20">•</span>
+          <p className="text-[11px] sm:text-xs text-gray-400">
+            P.IVA e C.F. [00000000000] • Cap. Soc. [€ 000.000,00 i.v.] • REA [MI-0000000] • PEC: [zefironet@pec.it]
+          </p>
+        </div>
+        <div className="flex gap-4 text-xs sm:text-sm shrink-0">
           <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors py-1">{f.privacy}</Link>
           <Link href={`/${lang}/cookie-policy`} className="hover:text-white transition-colors py-1">{f.cookie}</Link>
         </div>
