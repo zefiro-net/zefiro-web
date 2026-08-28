@@ -20,6 +20,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: dict.metadata.title,
     description: dict.metadata.description,
+    robots: {
+      index: false,
+      follow: false,
+      nocache: true,
+      googleBot: {
+        index: false,
+        follow: false,
+        noimageindex: true,
+      },
+    },
   };
 }
 
