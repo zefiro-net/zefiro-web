@@ -58,22 +58,13 @@ export default async function ChiSiamoPage({ params }: { params: Promise<{ lang:
       <section className="relative flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-32 sm:pt-36 md:pt-40 tall:pt-44 xl:tall:pt-48 pb-6 sm:pb-8 tall:pb-10 z-10">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <FadeIn delay={0.1}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/40 dark:bg-slate-800/40 backdrop-blur-md border border-gray-200/50 dark:border-white/10 mb-3 sm:mb-4 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-zefiro-cyan animate-pulse"></span>
-              <span className="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-primary dark:text-gray-300">
-                {dict.chiSiamo.etichetta}
-              </span>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.2}>
             <h1 className="text-3xl sm:text-5xl md:text-6xl tall:text-5xl lg:tall:text-6xl font-black tracking-tight text-primary dark:text-white mb-3 sm:mb-4 leading-[1.1]">
               {dict.chiSiamo.titolo}
               <span className="text-zefiro-cyan">{dict.chiSiamo.titoloAccento}</span>
             </h1>
           </FadeIn>
 
-          <FadeIn delay={0.3} className="flex flex-col items-center">
+          <FadeIn delay={0.2} className="flex flex-col items-center">
             <div className="w-12 tall:w-16 h-1.5 bg-zefiro-cyan rounded-full mb-4 sm:mb-5 tall:mb-7 mx-auto"></div>
             <div className="text-base sm:text-lg tall:text-xl md:tall:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium max-w-3xl mx-auto" dangerouslySetInnerHTML={{ __html: sottotitolo }} />
           </FadeIn>

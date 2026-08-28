@@ -42,21 +42,18 @@ export default async function ManifestoPage({ params }: { params: Promise<{ lang
       <div className="absolute bottom-1/3 left-0 -z-10 w-[500px] h-[500px] bg-zefiro-teal/15 blur-[120px] rounded-full -ml-40 pointer-events-none"></div>
 
       {/* Hero Section */}
-      <section className="relative flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-32 sm:pt-36 md:pt-40 pb-12 sm:pb-16 z-10">
+      <section className="relative flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-32 sm:pt-36 md:pt-40 tall:pt-44 xl:tall:pt-48 pb-6 sm:pb-8 tall:pb-10 z-10">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <FadeIn delay={0.1}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zefiro-cyan/10 border border-zefiro-cyan/25 text-zefiro-cyan text-xs font-bold uppercase tracking-widest mb-4">
-              <span className="w-2 h-2 rounded-full bg-zefiro-cyan animate-pulse"></span>
-              {isIt ? 'I Nostri Principi Guida' : 'Our Guiding Principles'}
-            </div>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-primary dark:text-white mb-4 leading-[1.1]">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl tall:text-5xl lg:tall:text-6xl font-black tracking-tight text-primary dark:text-white mb-3 sm:mb-4 leading-[1.1]">
               {dict.manifesto.titolo}
               <span className="text-zefiro-cyan">{dict.manifesto.titoloAccento}</span>
             </h1>
           </FadeIn>
           
           <FadeIn delay={0.2} className="flex flex-col items-center">
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto">
+            <div className="w-12 tall:w-16 h-1.5 bg-zefiro-cyan rounded-full mb-4 sm:mb-5 tall:mb-7 mx-auto"></div>
+            <p className="text-base sm:text-lg tall:text-xl md:tall:text-2xl text-gray-600 dark:text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto">
               {sottotitolo}
             </p>
           </FadeIn>
