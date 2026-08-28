@@ -62,8 +62,8 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
       <div className="container mx-auto px-4 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 text-center text-xs sm:text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
         <p>&copy; {new Date().getFullYear()} Zefiro Net SRL {f.copyright}</p>
         <div className="flex gap-4">
-          <Link href="#" className="hover:text-white transition-colors py-1">{f.privacy}</Link>
-          <Link href="#" className="hover:text-white transition-colors py-1">{f.cookie}</Link>
+          <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors py-1">{f.privacy}</Link>
+          <Link href={`/${lang}/cookie-policy`} className="hover:text-white transition-colors py-1">{f.cookie}</Link>
         </div>
       </div>
     </footer>
