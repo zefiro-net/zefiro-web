@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import { getDictionary, locales, defaultLocale } from "@/i18n";
 import type { Locale } from "@/i18n";
 
@@ -51,6 +52,7 @@ export default async function LocaleLayout({
         {children}
       </div>
       <Footer dict={dict} lang={locale} />
+      <CookieBanner lang={locale} />
     </>
   );
 }
