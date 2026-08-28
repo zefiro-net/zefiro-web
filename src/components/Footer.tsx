@@ -59,18 +59,23 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           </ul>
         </div>
       </div>
-      <div className="container mx-auto px-4 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 text-xs sm:text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 text-center md:text-left text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Zefiro Net S.r.l. {f.copyright}</p>
-          <span className="hidden md:inline text-white/20">•</span>
-          <p className="text-[11px] sm:text-xs text-gray-400">
-            P.IVA e C.F. [00000000000] • Cap. Soc. [€ 000.000,00 i.v.] • REA [MI-0000000] • PEC: [zefironet@pec.it]
+      {/* Bottom Legal & Corporate Strip */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-3 text-xs sm:text-sm text-gray-300">
+          <p className="font-medium text-center sm:text-left">
+            &copy; {new Date().getFullYear()} Zefiro Net S.r.l. — {f.copyright}
           </p>
+          <div className="flex items-center gap-4 text-xs sm:text-sm shrink-0">
+            <Link href={`/${lang}/privacy-policy`} className="hover:text-zefiro-cyan text-gray-300 hover:underline transition-colors py-0.5">{f.privacy}</Link>
+            <span className="text-white/20">•</span>
+            <Link href={`/${lang}/cookie-policy`} className="hover:text-zefiro-cyan text-gray-300 hover:underline transition-colors py-0.5">{f.cookie}</Link>
+          </div>
         </div>
-        <div className="flex gap-4 text-xs sm:text-sm shrink-0">
-          <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors py-1">{f.privacy}</Link>
-          <Link href={`/${lang}/cookie-policy`} className="hover:text-white transition-colors py-1">{f.cookie}</Link>
-        </div>
+
+        {/* Corporate Details Line */}
+        <p className="text-[11px] sm:text-xs text-gray-400/90 leading-relaxed text-center sm:text-left">
+          Sede Legale: {f.indirizzo} • P.IVA e C.F. [00000000000] • Cap. Soc. [€ 000.000,00 i.v.] • REA [MI-0000000] • PEC: <a href="mailto:zefironet@pec.it" className="text-gray-300 hover:text-zefiro-cyan transition-colors">[zefironet@pec.it]</a>
+        </p>
       </div>
     </footer>
   );
