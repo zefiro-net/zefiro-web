@@ -1,7 +1,11 @@
 # 📄 Modulo Raccolta e Revisione Contenuti — Zefiro Net Website
-> **Destinatario:** Team HR & Comunicazione / Direzione Zefiro Net  
-> **Oggetto:** Inserimento e approvazione testi per il nuovo sito web istituzionale (Italiano 🇮🇹 / Inglese 🇬🇧).  
-> **Istruzioni:** Ciascuna sezione presenta lo **screenshot visivo della schermata aggiornata** e i campi da compilare `[ NUOVO TESTO IT ]` e `[ NUOVO TESTO EN ]`. Se un testo attuale è già approvato, è sufficiente scrivere **"CONFERMATO"**.
+> **Destinatario:** Team HR, Comunicazione & Direzione Zefiro Net S.r.l.  
+> **Oggetto:** Inserimento, approvazione testi (Italiano 🇮🇹 / Inglese 🇬🇧), note di sezione e dati societari per il nuovo sito web istituzionale.  
+> **Istruzioni:**  
+> 1. Ciascuna sezione presenta il riferimento visivo e i campi da compilare `[ NUOVO TESTO IT ]` e `[ NUOVO TESTO EN ]`.  
+> 2. Se un testo attuale è già approvato, è sufficiente scrivere **"CONFERMATO"**.  
+> 3. Per ciascuna sezione è disponibile un campo **"📝 Note & Indicazioni Generali"** dove inserire commenti liberi, feedback di grafica o istruzioni speciali.  
+> 4. Nella Sezione 9 sono indicati i dati societari da completare.
 
 ---
 
@@ -10,17 +14,18 @@
 2. [Homepage (Hero Banner, Mappa di Copertura, Metriche, Highlights)](#2-homepage)
 3. [Pagina: Chi Siamo (La Joint Venture, Missione, Wholesale, Soci, Certificazioni)](#3-pagina-chi-siamo)
 4. [Pagina: Sedi (Milano & Roma)](#4-pagina-sedi)
-5. [Pagina: Manifesto (I 5 Valori Cardine)](#5-pagina-manifesto)
+5. [Pagina: Manifesto (I 5 Pilastri Guida)](#5-pagina-manifesto)
 6. [Pagina: Lavora con Noi (Valori People, Candidatura Spontanea)](#6-pagina-lavora-con-noi)
 7. [Pagina: Documenti Pubblici (Bilanci, Governance, Sicurezza)](#7-pagina-documenti-pubblici)
-8. [Footer & Informazioni Societarie](#8-footer--informazioni-societarie)
+8. [Footer del Sito Web](#8-footer-del-sito-web)
+9. [Dati Societari Obbligatori (Conformità Legale)](#9-dati-societari-obbligatori)
 
 ---
 
 ## 1. Header & Menu di Navigazione
 *La barra di navigazione visibile in cima a tutte le pagine del sito.*
 
-![Screenshot Header](screenshots_hr/0_header_nav.png)
+![Screenshot Header](screenshot_sezioni/0_header_nav.png)
 
 | Voce Menu | Testo Attuale (IT) | NUOVO TESTO IT (da compilare) | Testo Attuale (EN) | NUOVO TESTO EN (da compilare) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -28,7 +33,10 @@
 | Voce 2 | Sedi | | Offices | |
 | Voce 3 | Manifesto | | Manifesto | |
 | Voce 4 | Lavora con noi | | Work with us | |
-| Voce 5 | Area Pubblica (Documenti) | | Public Area | |
+| Voce 5 | Documenti Pubblici | | Public Documents | |
+
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 1 (HEADER):**  
+> `[ Inserire qui eventuali note, richieste o modifiche per il Menu di navigazione ]`
 
 ---
 
@@ -37,7 +45,7 @@
 ### 2.1 Hero Banner Principale (A tutto schermo)
 *Il primo impatto visivo del sito con l'antenna 3D interattiva.*
 
-![Screenshot Hero Banner](screenshots_hr/1_home_hero.png)
+![Screenshot Hero Banner](screenshot_sezioni/1_home_hero.png)
 
 - **Titolo Principale (Claim):**
   - *Attuale IT:* `Connettere in un soffio.`
@@ -58,240 +66,237 @@
   - **[ NUOVO TESTO EN ]: **
 
 - **Pulsante CTA Secondario (Trasparente con bordo bianco):**
-  - *Attuale IT:* `Il nostro Manifesto` (porta al Manifesto)
+  - *Attuale IT:* `Il nostro Manifesto` (porta a Manifesto)
   - **[ NUOVO TESTO IT ]: **
   - *Attuale EN:* `Our Manifesto`
   - **[ NUOVO TESTO EN ]: **
 
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 2.1 (HERO BANNER):**  
+> `[ Inserire qui eventuali note, commenti sulla grafica o richieste per la Hero Banner ]`
+
 ---
 
-### 2.2 Sezione Mappa & Copertura Nazionale
-*La sezione con la mappa interattiva d'Italia e i dati di copertura.*
+### 2.2 Sezione Mappa di Copertura & Metriche Chiave
+*Sezione a schermo intero con mappa vettoriale dell'Italia e 3 statistiche.*
 
-![Screenshot Sezione Copertura](screenshots_hr/2_home_copertura.png)
+![Screenshot Copertura](screenshot_sezioni/2_home_copertura.png)
 
-- **Badge superiore (Etichetta):**
-  - *Attuale IT:* `Infrastruttura & Territorio`
-  - **[ NUOVO TESTO IT ]: **
-  - *Attuale EN:* `Infrastructure & Territory`
-  - **[ NUOVO TESTO EN ]: **
-
+- **Badge:** `COPERTURA RADIOMOBILE NAZIONALE`
 - **Titolo Sezione:**
   - *Attuale IT:* `Connettiamo il 70% del territorio italiano`
   - **[ NUOVO TESTO IT ]: **
   - *Attuale EN:* `Connecting 70% of Italian Territory`
   - **[ NUOVO TESTO EN ]: **
 
-- **Testo Descrittivo:**
+- **Paragrafo Descrittivo:**
   - *Attuale IT:* `Superiamo il digital divide portando la tecnologia 5G e le reti ultra-broadband nel 70% del territorio nazionale, principalmente nelle aree rurali e meno densamente popolate del Paese. Con circa 7.000 siti e torri radiomobili attive, abilitiamo un'infrastruttura wholesale d'eccellenza aperta e condivisa.`
   - **[ NUOVO TESTO IT ]: **
   - *Attuale EN:* `Bridging the digital divide by delivering 5G and ultra-broadband networks across 70% of the national territory, mainly in rural and sparsely populated areas. With around 7,000 active mobile sites and towers, we enable an open, shared wholesale infrastructure of excellence.`
   - **[ NUOVO TESTO EN ]: **
 
-- **Le 3 Metriche Chiave (Statistiche):**
-  1. **Statistica 1:**
-     - *Valore Attuale:* `70%` | *Label IT:* `Territorio nazionale coperto (zone rurali)` | *Label EN:* `National territory covered (rural areas)`
-     - **[ NUOVO VALORE ]: **
-     - **[ NUOVA LABEL IT ]: **
-     - **[ NUOVA LABEL EN ]: **
-  2. **Statistica 2:**
-     - *Valore Attuale:* `~7.000` | *Label IT:* `Siti e torri radiomobili attive` | *Label EN:* `Active mobile towers & sites`
-     - **[ NUOVO VALORE ]: **
-     - **[ NUOVA LABEL IT ]: **
-     - **[ NUOVA LABEL EN ]: **
-  3. **Statistica 3:**
-     - *Valore Attuale:* `100%` | *Label IT:* `Wholesale-Only condiviso` | *Label EN:* `Shared Wholesale-Only`
-     - **[ NUOVO VALORE ]: **
-     - **[ NUOVA LABEL IT ]: **
-     - **[ NUOVA LABEL EN ]: **
+- **Statistica 1:**
+  - *Valore:* `70%` | *Label IT:* `Territorio nazionale coperto (zone rurali)` | *Label EN:* `National territory covered (rural areas)`
+  - **[ NUOVO TESTO IT ]: **
+  - **[ NUOVO TESTO EN ]: **
+
+- **Statistica 2:**
+  - *Valore:* `~7.000` | *Label IT:* `Siti e torri radiomobili attive` | *Label EN:* `Active mobile towers & sites`
+  - **[ NUOVO TESTO IT ]: **
+  - **[ NUOVO TESTO EN ]: **
+
+- **Statistica 3:**
+  - *Valore:* `100%` | *Label IT:* `Wholesale-Only condiviso` | *Label EN:* `Shared Wholesale-Only`
+  - **[ NUOVO TESTO IT ]: **
+  - **[ NUOVO TESTO EN ]: **
+
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 2.2 (MAPPA & STATISTICHE):**  
+> `[ Inserire qui eventuali note sulle percentuali, numeri di torri o richieste sulla mappa ]`
 
 ---
 
-### 2.3 Sezione Valori & Punti di Forza (Highlights)
-*Le 3 schede interattive 3D sotto la mappa.*
+### 2.3 Punti di Forza (Highlights)
+*Le 3 schede con le caratteristiche tecnologiche di Zefiro Net.*
 
-![Screenshot Highlights](screenshots_hr/3_home_highlights.png)
+![Screenshot Highlights](screenshot_sezioni/3_home_highlights.png)
 
-- **Titolo Sezione:**
-  - *Attuale IT:* `Una missione condivisa — Eccellenza tecnologica al servizio degli operatori`
+- **Scheda 1 (Copertura 5G):**
+  - *Titolo IT:* `Copertura 5G Capillare` | *Testo IT:* `Infrastrutture radiomobili avanzate per abilitare la connettività ultra-broadband nelle aree rurali e a fallimento di mercato.`
   - **[ NUOVO TESTO IT ]: **
-  - *Attuale EN:* `A shared mission — Technological excellence serving telecom operators`
+  - *Titolo EN:* `Widespread 5G Coverage` | *Testo EN:* `Advanced mobile infrastructure enabling ultra-broadband connectivity across rural and market-failure regions.`
   - **[ NUOVO TESTO EN ]: **
 
-- **Scheda 1 (Icona Segnale/5G):**
-  - *Titolo IT:* `Copertura 5G Capillare` | *Titolo EN:* `Widespread 5G Coverage`
-  - **[ NUOVO TITOLO IT / EN ]: **
-  - *Descrizione IT:* `Infrastrutture radiomobili avanzate per abilitare la connettività ultra-broadband nelle aree rurali e a fallimento di mercato.`
-  - *Descrizione EN:* `Advanced mobile infrastructure enabling ultra-broadband connectivity across rural and market-failure regions.`
-  - **[ NUOVA DESCRIZIONE IT / EN ]: **
+- **Scheda 2 (Modello Wholesale):**
+  - *Titolo IT:* `Modello Wholesale Condiviso` | *Testo IT:* `Condivisione efficiente della rete di accesso tra operatori per ottimizzare gli investimenti e ridurre l'impatto ambientale.`
+  - **[ NUOVO TESTO IT ]: **
+  - *Titolo EN:* `Shared Wholesale Model` | *Testo EN:* `Efficient access network sharing between operators to optimize investments and minimize environmental impact.`
+  - **[ NUOVO TESTO EN ]: **
 
-- **Scheda 2 (Icona Rete Wholesale):**
-  - *Titolo IT:* `Modello Wholesale Condiviso` | *Titolo EN:* `Shared Wholesale Model`
-  - **[ NUOVO TITOLO IT / EN ]: **
-  - *Descrizione IT:* `Condivisione efficiente della rete di accesso tra operatori per ottimizzare gli investimenti e ridurre l'impatto ambientale.`
-  - *Descrizione EN:* `Efficient access network sharing between operators to optimize investments and minimize environmental impact.`
-  - **[ NUOVA DESCRIZIONE IT / EN ]: **
+- **Scheda 3 (Resilienza):**
+  - *Titolo IT:* `Affidabilità e Resilienza` | *Testo IT:* `Controllo e monitoraggio continuativo 24/7 per garantire la massima continuità operativa e tempi di intervento immediati.`
+  - **[ NUOVO TESTO IT ]: **
+  - *Titolo EN:* `Reliability & Resilience` | *Testo EN:* `Continuous 24/7 monitoring and control to guarantee maximum operational continuity and rapid response times.`
+  - **[ NUOVO TESTO EN ]: **
 
-- **Scheda 3 (Icona Scudo/Resilienza):**
-  - *Titolo IT:* `Affidabilità e Resilienza` | *Titolo EN:* `Reliability & Resilience`
-  - **[ NUOVO TITOLO IT / EN ]: **
-  - *Descrizione IT:* `Controllo e monitoraggio continuativo 24/7 per garantire la massima continuità operativa e tempi di intervento immediati.`
-  - *Descrizione EN:* `Continuous 24/7 monitoring and control to guarantee maximum operational continuity and rapid response times.`
-  - **[ NUOVA DESCRIZIONE IT / EN ]: **
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 2.3 (HIGHLIGHTS):**  
+> `[ Inserire qui eventuali commenti o integrazioni sui punti di forza ]`
 
 ---
 
 ## 3. Pagina: Chi Siamo
+*La pagina aziendale che descrive la joint venture, la missione, i soci e le certificazioni.*
 
-![Screenshot Chi Siamo](screenshots_hr/chisiamo_full.png)
+![Screenshot Chi Siamo](screenshot_sezioni/chisiamo_full.png)
 
-- **Intestazione & Sottotitolo:**
-  - *Titolo IT:* `Chi siamo` | *Titolo EN:* `About us`
-  - *Sottotitolo IT:* `Zefiro Net SRL è la joint venture paritetica creata da <strong>WINDTRE</strong> e <strong>Iliad Italia</strong>, nata per gestire e sviluppare congiuntamente la rete di telefonia mobile nelle aree meno densamente popolate d'Italia.`
-  - **[ NUOVO SOTTOTITOLO IT ]: **
-  - *Sottotitolo EN:* `Zefiro Net SRL is the 50/50 joint venture created by <strong>WINDTRE</strong> and <strong>Iliad Italia</strong>, established to jointly manage and expand mobile networks in Italy's less densely populated areas.`
-  - **[ NUOVO SOTTOTITOLO EN ]: **
+- **Sottotitolo Principale:**
+  - *Attuale IT:* `Zefiro Net SRL è la joint venture paritetica creata da WINDTRE e Iliad Italia, nata per gestire e sviluppare congiuntamente la rete di telefonia mobile nelle aree meno densamente popolate d'Italia.`
+  - **[ NUOVO TESTO IT ]: **
+  - *Attuale EN:* `Zefiro Net SRL is the 50/50 joint venture created by WINDTRE and Iliad Italia, established to jointly manage and expand mobile networks in Italy's less densely populated areas.`
+  - **[ NUOVO TESTO EN ]: **
 
-- **Blocco 1: La Nostra Missione:**
-  - *Titolo IT:* `La nostra missione` | *Titolo EN:* `Our Mission`
-  - **[ NUOVO TITOLO IT / EN ]: **
-  - *Testo IT:* `La nostra missione è abbattere il digital divide, garantendo a tutto il territorio nazionale l'accesso a reti di telecomunicazione moderne e performanti. Attraverso la condivisione delle infrastrutture (RAN sharing), ottimizziamo gli investimenti e acceleriamo la copertura delle aree rurali e suburbane con le più recenti tecnologie, a partire dal <strong>5G</strong>.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **La Nostra Missione:**
+  - *Attuale IT:* `La nostra missione è abbattere il digital divide, garantendo a tutto il territorio nazionale l'accesso a reti di telecomunicazione moderne e performanti. Attraverso la condivisione delle infrastrutture (RAN sharing), ottimizziamo gli investimenti e acceleriamo la copertura delle aree rurali e suburbane con le più recenti tecnologie, a partire dal 5G.`
+  - **[ NUOVO TESTO IT ]: **
+  - *Attuale EN:* `Our mission is to bridge the digital divide, ensuring equitable access to high-performance, modern telecommunications networks across the entire country. Through shared infrastructure (RAN sharing), we optimize capital investments and accelerate coverage in rural and suburban areas with state-of-the-art technologies, starting with 5G.`
+  - **[ NUOVO TESTO EN ]: **
 
-- **Blocco 2: Operatore Wholesale B2B:**
-  - *Titolo IT:* `Operatore Wholesale B2B` | *Titolo EN:* `B2B Wholesale Provider`
-  - **[ NUOVO TITOLO IT / EN ]: **
-  - *Testo IT:* `Zefiro Net opera esclusivamente come fornitore di infrastrutture all'ingrosso (wholesale) per i propri soci. Non forniamo servizi di connettività B2C diretti al pubblico, ma garantiamo che gli operatori partner possano offrire il miglior servizio possibile ai propri clienti, poggiandosi su un'infrastruttura resiliente, sicura e all'avanguardia tecnologica.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **Modello Wholesale B2B:**
+  - *Attuale IT:* `Zefiro Net opera esclusivamente come fornitore di infrastrutture all'ingrosso (wholesale) per i propri soci. Non forniamo servizi di connettività B2C diretti al pubblico, ma garantiamo che gli operatori partner possano offrire il miglior servizio possibile ai propri clienti, poggiandosi su un'infrastruttura resiliente, sicura e all'avanguardia tecnologica.`
+  - **[ NUOVO TESTO IT ]: **
+  - *Attuale EN:* `Zefiro Net operates exclusively as a wholesale infrastructure provider for its partners. We do not provide direct B2C consumer services; instead, we enable partner telecom operators to offer the highest quality service to their customers on a resilient, secure, and technologically advanced shared infrastructure.`
+  - **[ NUOVO TESTO EN ]: **
 
-- **I Nostri Soci (Shareholders):**
-  1. **WINDTRE (50%):**
-     - *Descrizione IT:* `Socio al 50%, porta nella joint venture la solidità e la capillarità di uno dei principali operatori italiani.`
-     - **[ NUOVA DESCRIZIONE IT / EN ]: **
-  2. **Iliad Italia (50%):**
-     - *Descrizione IT:* `Socio al 50%, contribuisce con la spinta innovativa che ha rivoluzionato il mercato mobile in Italia.`
-     - **[ NUOVA DESCRIZIONE IT / EN ]: **
+- **I Soci (WINDTRE 50% & Iliad 50%):**
+  - *WINDTRE IT:* `Socio al 50%, porta nella joint venture la solidità e la capillarità di uno dei principali operatori italiani.`
+  - **[ NUOVO TESTO IT ]: **
+  - *Iliad IT:* `Socio al 50%, contribuisce con la spinta innovativa che ha rivoluzionato il mercato mobile in Italia.`
+  - **[ NUOVO TESTO IT ]: **
 
 - **Certificazioni & Conformità:**
-  1. **Rating ESG:**
-     - *Descrizione IT:* `Zefiro Net si impegna a integrare criteri ambientali, sociali e di governance (ESG) in tutti i processi decisionali e operativi.`
-     - **[ NUOVO TESTO IT / EN ]: **
-  2. **Modello 231:**
-     - *Descrizione IT:* `Abbiamo adottato un Modello di Organizzazione, Gestione e Controllo ai sensi del D.Lgs. 231/01 per prevenire la commissione di reati.`
-     - **[ NUOVO TESTO IT / EN ]: **
-  3. **Certificazione ISO 9001:**
-     - *Descrizione IT:* `Il nostro Sistema di Gestione per la Qualità è certificato ISO 9001, garantendo standard eccellenti in ogni fase delle nostre attività.`
-     - **[ NUOVO TESTO IT / EN ]: **
+  - *Rating ESG, Modello 231, Certificazione ISO 9001*
+  - **[ NUOVE CERTIFICAZIONI DA AGGIUNGERE ]: **
+
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 3 (CHI SIAMO):**  
+> `[ Inserire qui eventuali note sui soci, sulla governance o sulle certificazioni ]`
 
 ---
 
 ## 4. Pagina: Sedi
+*Gli uffici direzionali e i poli operativi di Zefiro Net.*
 
-![Screenshot Sedi](screenshots_hr/sedi_full.png)
+![Screenshot Sedi](screenshot_sezioni/sedi_full.png)
 
-- **Sede di Milano (Il Pharo - Sede Legale & Direzionale):**
-  - *Tipologia:* `Sede Legale e Operativa` | `Registered & Operational HQ`
+- **Sede di Milano (Il Pharo - HQ):**
   - *Indirizzo:* `Via Gattamelata, 34 — 20149 Milano (MI)`
   - *Email:* `amministrazione@zefironet.it`
-  - *Descrizione IT:* `Sede legale principale e centro direzionale e operativo di Zefiro Net.`
-  - **[ EVENTUALI MODIFICHE INDIRIZZO / EMAIL / TESTO ]: **
+  - *Descrizione:* `Sede legale principale e centro direzionale e operativo di Zefiro Net.`
+  - **[ NOTE O MODIFICHE ]: **
 
 - **Sede di Roma (Polo Operativo):**
-  - *Tipologia:* `Sede Operativa` | `Operations Hub`
   - *Indirizzo:* `Via Luca Gaurico, 9/11 — 00143 Roma (RM)`
   - *Email:* `info@zefironet.it`
-  - *Descrizione IT:* `Ufficio operativo e polo di coordinamento di Zefiro Net a Roma.`
-  - **[ EVENTUALI MODIFICHE INDIRIZZO / EMAIL / TESTO ]: **
+  - *Descrizione:* `Ufficio operativo e polo di coordinamento di Zefiro Net a Roma.`
+  - **[ NOTE O MODIFICHE ]: **
+
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 4 (SEDI):**  
+> `[ Inserire qui eventuali recapiti telefonici, orari di apertura o note di accesso ]`
 
 ---
 
-## 5. Pagina: Manifesto (I Nostri Valori)
+## 5. Pagina: Manifesto
+*I 5 pilastri valoriali e guida strategica di Zefiro Net.*
 
-![Screenshot Manifesto](screenshots_hr/manifesto_full.png)
+![Screenshot Manifesto](screenshot_sezioni/manifesto_full.png)
 
-- **Sottotitolo Pagina:**
-  - *Attuale IT:* `Crediamo in un'Italia connessa, senza distinzioni geografiche. Lavoriamo dietro le quinte affinché la digitalizzazione diventi una realtà concreta per tutti.`
-  - *Attuale EN:* `We believe in a seamlessly connected Italy without geographical disparities. We work behind the scenes to make digitization a tangible reality for everyone.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **Pilastro 01 — Inclusione Digitale:**
+  - *Attuale IT:* `Le aree meno densamente popolate meritano le stesse opportunità dei grandi centri urbani. La nostra infrastruttura è la base su cui si costruisce l'inclusione digitale del Paese.`
+  - **[ NUOVO TESTO IT ]: **
 
-- **Valore 1: Inclusione Digitale**
-  - *Descrizione IT:* `Le aree meno densamente popolate meritano le stesse opportunità dei grandi centri urbani. La nostra infrastruttura è la base su cui si costruisce l'inclusione digitale del Paese.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **Pilastro 02 — Sostenibilità & Condivisione:**
+  - *Attuale IT:* `Il modello della joint venture e del RAN sharing riduce l'impatto ambientale e paesaggistico. Costruiamo una rete unica per più operatori, ottimizzando risorse e limitando la proliferazione di antenne.`
+  - **[ NUOVO TESTO IT ]: **
 
-- **Valore 2: Sostenibilità e Condivisione**
-  - *Descrizione IT:* `Il modello della joint venture e del RAN sharing riduce l'impatto ambientale e paesaggistico. Costruiamo una rete unica per più operatori, ottimizzando risorse e limitando la proliferazione di antenne.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **Pilastro 03 — Eccellenza B2B:**
+  - *Attuale IT:* `Come operatore wholesale, la nostra responsabilità è verso i nostri soci e, indirettamente, verso i loro clienti. Garantiamo i massimi standard di affidabilità, sicurezza informativa e innovazione tecnologica.`
+  - **[ NUOVO TESTO IT ]: **
 
-- **Valore 3: Eccellenza B2B**
-  - *Descrizione IT:* `Come operatore wholesale, la nostra responsabilità è verso i nostri soci e, indirettamente, verso i loro clienti. Garantiamo i massimi standard di affidabilità, sicurezza informativa e innovazione tecnologica.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **Pilastro 04 — Innovazione Responsabile:**
+  - *Attuale IT:* `Sperimentiamo tecnologie all'avanguardia come il 5G con l'obiettivo di migliorare la vita delle persone, rispettando sempre i più alti standard di sicurezza e privacy.`
+  - **[ NUOVO TESTO IT ]: **
 
-- **Valore 4: Innovazione Responsabile**
-  - *Descrizione IT:* `Sperimentiamo tecnologie all'avanguardia come il 5G con l'obiettivo di migliorare la vita delle persone, rispettando sempre i più alti standard di sicurezza e privacy.`
-  - **[ NUOVO TESTO IT / EN ]: **
+- **Pilastro 05 — Integrità & Trasparenza:**
+  - *Attuale IT:* `Operiamo con la massima onestà e chiarezza nei confronti dei nostri soci, dei partner e della collettività, promuovendo una governance solida e affidabile.`
+  - **[ NUOVO TESTO IT ]: **
 
-- **Valore 5: Integrità e Trasparenza**
-  - *Descrizione IT:* `Operiamo con la massima onestà e chiarezza nei confronti dei nostri soci, dei partner e della collettività, promuovendo una governance solida e affidabile.`
-  - **[ NUOVO TESTO IT / EN ]: **
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 5 (MANIFESTO):**  
+> `[ Inserire qui eventuali commenti o modifiche ai valori del Manifesto ]`
 
 ---
 
-## 6. Pagina: Lavora con Noi (Sezione HR)
+## 6. Pagina: Lavora con Noi
+*La pagina di selezione, cultura People e carriere.*
 
-![Screenshot Lavora con Noi](screenshots_hr/lavoraconnoi_full.png)
+![Screenshot Lavora con Noi](screenshot_sezioni/lavoraconnoi_full.png)
 
-- **Intestazione & Sottotitolo:**
-  - *Titolo IT:* `Lavora con noi` | *Titolo EN:* `Work with us`
-  - *Sottotitolo IT:* `Entra a far parte della joint venture che sta accelerando il futuro digitale dell'Italia. Cerchiamo talenti pronti a fare la differenza.`
-  - **[ NUOVO SOTTOTITOLO IT / EN ]: **
+- **I 3 Valori del Team (People):**
+  - *1. Innovazione Continua*
+  - *2. Sostenibilità*
+  - *3. Eccellenza Tecnica*
+  - **[ NOTE O MODIFICHE ]: **
 
-- **I 3 Valori del Team (Pillars People):**
-  1. **Innovazione Continua:**
-     - *Descrizione IT:* `Sperimentiamo le tecnologie 5G più avanzate per connettere anche le aree più remote d'Italia.`
-     - **[ NUOVO TESTO IT / EN ]: **
-  2. **Sostenibilità:**
-     - *Descrizione IT:* `Costruiamo infrastrutture nel rispetto dell'ambiente e del territorio, promuovendo uno sviluppo equo.`
-     - **[ NUOVO TESTO IT / EN ]: **
-  3. **Eccellenza Tecnica:**
-     - *Descrizione IT:* `Il nostro team è composto dai migliori esperti nel settore delle telecomunicazioni wholesale.`
-     - **[ NUOVO TESTO IT / EN ]: **
+- **Candidatura Spontanea:**
+  - *Email Attuale:* `candidatura@zefironet.it`
+  - *Istruzioni:* `Inviaci il tuo CV e raccontaci come puoi contribuire al progetto Zefiro Net.`
+  - **[ CONFERMA O NUOVA EMAIL HR ]: **
 
-- **Box Candidatura Spontanea:**
-  - *Titolo:* `Candidatura Spontanea` | `Open Application`
-  - *Descrizione IT:* `Inviaci il tuo CV e raccontaci come puoi contribuire al progetto Zefiro Net.`
-  - **[ NUOVA DESCRIZIONE IT / EN ]: **
-  - *Email di ricezione CV:* `candidatura@zefironet.it`
-  - **[ EMAIL DESTINATARIA DEFINITIVA ]: **
+- **Posizioni Aperte (Job Openings):**
+  - `[ Inserire qui eventuali posizioni aperte da pubblicare online, specificando Titolo, Sede e Requisiti ]`
+
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 6 (LAVORA CON NOI):**  
+> `[ Inserire qui eventuali note del team HR sui processi di recruiting o privacy candidati ]`
 
 ---
 
 ## 7. Pagina: Documenti Pubblici
+*Sezione documentale per il download dei PDF societari.*
 
-![Screenshot Documenti](screenshots_hr/documenti_full.png)
+![Screenshot Documenti Pubblici](screenshot_sezioni/documenti_full.png)
 
-*Indicare i documenti societari ufficiali (PDF) da caricare e pubblicare sul sito:*
+| N° | Documento Richiesto | Categoria | Stato File PDF |
+| :--- | :--- | :--- | :--- |
+| 1 | Bilancio d'Esercizio 2024 | Finanza | `[ ] Da allegare: bilancio-2024.pdf` |
+| 2 | Bilancio d'Esercizio 2023 | Finanza | `[ ] Da allegare: bilancio-2023.pdf` |
+| 3 | Relazione sul Governo Societario | Governance | `[ ] Da allegare: governance-report.pdf` |
+| 4 | Codice Etico e di Condotta | Governance | `[ ] Da allegare: codice-etico.pdf` |
+| 5 | Politica Sicurezza Informazioni | Sicurezza | `[ ] Da allegare: sicurezza-info.pdf` |
 
-| N° | Titolo Documento IT | Titolo Documento EN | Categoria (Finanza / Governance / Sicurezza) | Nome File PDF da allegare |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | Bilancio d'Esercizio 2024 | Annual Financial Report 2024 | Finanza | `bilancio-2024.pdf` |
-| 2 | Bilancio d'Esercizio 2023 | Annual Financial Report 2023 | Finanza | `bilancio-2023.pdf` |
-| 3 | Relazione sul Governo Societario | Corporate Governance Report | Governance | `governance-report.pdf` |
-| 4 | Codice Etico e di Condotta | Code of Ethics | Governance | `codice-etico.pdf` |
-| 5 | Politica per la Sicurezza delle Informazioni | Information Security Policy | Sicurezza | `sicurezza-info.pdf` |
-| 6 | *[ Nuovo Documento ]* | | | |
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 7 (DOCUMENTI):**  
+> `[ Inserire qui eventuali note sui documenti, scadenze di pubblicazione o documenti aggiuntivi ]`
+
+---
+
+## 8. Footer del Sito Web
+*Il piè di pagina presente su tutto il sito.*
+
+![Screenshot Footer](screenshot_sezioni/8_footer.png)
+
+- **Tagline:** `Connettere in un soffio.`
+- **Link Colonne:** *Chi siamo, Manifesto, Sedi, Documenti pubblici, Modello 231, Certificazioni, Whistleblowing, Privacy Policy, Cookie Policy*
+
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 8 (FOOTER):**  
+> `[ Inserire qui note su link aggiuntivi o canali social ]`
 
 ---
 
-## 8. Footer & Dati Legali
+## 9. Dati Societari Obbligatori
+*Tabella dei dati legali obbligatori ai sensi dell'art. 2250 del Codice Civile.*
 
-![Screenshot Footer](screenshots_hr/8_footer.png)
+| Dato Richiesto | Segnaposto Attuale sul Sito | ✏️ DATO UFFICIALE (da compilare) |
+| :--- | :--- | :--- |
+| **Partita IVA & Codice Fiscale** | `[00000000000]` | |
+| **Capitale Sociale Deliberato e Versato** | `[€ 000.000,00 i.v.]` | |
+| **Numero REA Registro Imprese Milano** | `[MI-0000000]` | |
+| **Indirizzo PEC Ufficiale** | `[zefironet@pec.it]` | |
+| **Link Piattaforma Whistleblowing** | `https://zefironet.integrityline.com/` | |
 
-- **Tagline:** `Connettere in un soffio.` / `Connecting in a breath.`
-- **Dati Societari:**
-  - *Ragione Sociale:* `Zefiro Net S.r.l.`
-  - *Sede Legale:* `Milano, Via Gattamelata, 34 (Il Pharo)`
-  - *Link Whistleblowing / Modello 231 / Privacy / Cookie:* *(Confermare o indicare link specifici)*
-  - **[ NOTE O INTEGRAZIONI DATI SOCIETARI / P.IVA / CAP. SOC. ]: **
-
----
-*Modulo generato per il team Zefiro Net con screenshot visivi aggiornati.*
+> 📝 **NOTE & INDICAZIONI GENERALI PER LA SEZIONE 9 (DATI SOCIETARI & LEGALI):**  
+> `[ Inserire qui note legali, iscrizioni ad albi o informazioni societarie speciali ]`
