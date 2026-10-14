@@ -14,16 +14,20 @@ function getLocale(request: NextRequest): string {
   return defaultLocale;
 }
 
+// Regex per identificare estensioni di file statici noti
+const STATIC_FILE_REGEX = /\.(ico|png|jpg|jpeg|svg|webp|avif|css|js|txt|pdf|woff|woff2|ttf|obj|json)$/i;
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Ignora file statici, API, screensaver e percorsi che iniziano già con un locale
+  // Ignora file statici di sistema, API, screensaver, .well-known e percorsi che iniziano già con un locale
   const shouldIgnore =
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/favicon') ||
     pathname.startsWith('/screensaver') ||
-    pathname.includes('.') || // file statici
+    pathname.startsWith('/.well-known') ||
+    STATIC_FILE_REGEX.test(pathname) ||
     locales.some((locale) => pathname.startsWith(`/${locale}`));
 
   if (shouldIgnore) {

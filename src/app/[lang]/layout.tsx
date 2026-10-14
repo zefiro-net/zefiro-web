@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
@@ -10,13 +11,19 @@ import type { Locale } from "@/i18n";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
+// Prevent on-demand rendering of arbitrary unmapped locales (hardening against soft-404 / DoS)
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const locale: Locale = locales.includes(lang as Locale) ? (lang as Locale) : defaultLocale;
+  if (!locales.includes(lang as Locale)) {
+    notFound();
+  }
+  const locale: Locale = lang as Locale;
   const dict = await getDictionary(locale);
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://zefironet.it'),
@@ -76,7 +83,10 @@ export default async function LocaleLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const locale: Locale = locales.includes(lang as Locale) ? (lang as Locale) : defaultLocale;
+  if (!locales.includes(lang as Locale)) {
+    notFound();
+  }
+  const locale: Locale = lang as Locale;
   const dict = await getDictionary(locale);
 
   return (

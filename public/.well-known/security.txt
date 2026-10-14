@@ -1,0 +1,9 @@
+# Zefiro Net Coordinated Vulnerability Disclosure Policy
+# Pursuant to EU NIS2 Directive (EU 2022/2555) & Italian D.Lgs. 138/2024
+Contact: mailto:security@zefironet.it
+Contact: https://zefironet.integrityline.com/
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: it, en
+Canonical: https://zefironet.it/.well-known/security.txt
+Policy: https://zefironet.it/it/privacy-policy
+Acknowledgments: https://zefironet.it/it/chi-siamo
