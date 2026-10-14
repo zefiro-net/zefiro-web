@@ -1,7 +1,7 @@
 {
   "lang": "en",
   "metadata": {
-    "title": "Zefiro SRL",
+    "title": "Zefiro Net S.r.l.",
     "description": "Official website of Zefiro Net. Secure, state-of-the-art telecommunications infrastructure."
   },
   "nav": {
@@ -36,7 +36,7 @@
   "hero": {
     "titolo": "Connecting <br/> <span class='text-zefiro-cyan'>in a breath.</span>",
     "sottotitolo": "We accelerate the deployment of 5G networks across Italy. Providing world-class wholesale infrastructure to connect rural areas and bridge the digital divide.",
-    "ctaPrimaria": "The Zefiro Project",
+    "ctaPrimaria": "The Zefiro Net Project",
     "ctaSecondaria": "Our Manifesto"
   },
   "missione": {
@@ -96,7 +96,7 @@
     "badgeCopertura": "Infrastructure & Territory",
     "chiSiamoTitolo": "Connecting 70% of Italian Territory",
     "chiSiamoSottotitolo": "Bridging the digital divide by delivering 5G and ultra-broadband networks across 70% of the national territory, mainly in rural and sparsely populated areas. With around 7,000 active mobile sites and towers, we enable an open, shared wholesale infrastructure of excellence.",
-    "chiSiamoBottone": "Discover the Zefiro project",
+    "chiSiamoBottone": "Discover the Zefiro Net project",
     "stat1Valore": "70%",
     "stat1Label": "National territory covered (rural areas)",
     "stat2Valore": "~7,000",

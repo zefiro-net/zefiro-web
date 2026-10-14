@@ -1,7 +1,7 @@
 {
   "lang": "it",
   "metadata": {
-    "title": "Zefiro s.r.l.",
+    "title": "Zefiro Net S.r.l.",
     "description": "Sito di Zefiro Net. Infrastrutture di telecomunicazione sicure e all'avanguardia."
   },
   "nav": {
@@ -36,7 +36,7 @@
   "hero": {
     "titolo": "Connettere <br/> <span class='text-zefiro-cyan'>in un soffio.</span>",
     "sottotitolo": "Acceleriamo lo sviluppo delle reti 5G in Italia. Forniamo infrastrutture wholesale d'eccellenza per connettere le aree rurali e colmare il digital divide.",
-    "ctaPrimaria": "Il progetto Zefiro",
+    "ctaPrimaria": "Il progetto Zefiro Net",
     "ctaSecondaria": "Il nostro Manifesto"
   },
   "missione": {
@@ -96,7 +96,7 @@
     "badgeCopertura": "Infrastruttura & Territorio",
     "chiSiamoTitolo": "Connettiamo il 70% del territorio italiano",
     "chiSiamoSottotitolo": "Superiamo il digital divide portando la tecnologia 5G e le reti ultra-broadband nel 70% del territorio nazionale, principalmente nelle aree rurali e meno densamente popolate del Paese. Con circa 7.000 siti e torri radiomobili attive, abilitiamo un'infrastruttura wholesale d'eccellenza aperta e condivisa.",
-    "chiSiamoBottone": "Scopri il progetto Zefiro",
+    "chiSiamoBottone": "Scopri il progetto Zefiro Net",
     "stat1Valore": "70%",
     "stat1Label": "Territorio nazionale coperto (zone rurali)",
     "stat2Valore": "~7.000",

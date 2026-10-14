@@ -60,9 +60,9 @@
   - **[ NUOVO TESTO EN ]: **
 
 - **Pulsante CTA Primario (Azzurro):**
-  - *Attuale IT:* `Il progetto Zefiro` (porta a Chi Siamo)
+  - *Attuale IT:* `Il progetto Zefiro Net` (porta a Chi Siamo)
   - **[ NUOVO TESTO IT ]: **
-  - *Attuale EN:* `The Zefiro Project`
+  - *Attuale EN:* `The Zefiro Net Project`
   - **[ NUOVO TESTO EN ]: **
 
 - **Pulsante CTA Secondario (Trasparente con bordo bianco):**
