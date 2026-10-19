@@ -12,7 +12,7 @@
     "lavoraConNoi": "Lavora con noi",
     "sedi": "Sedi",
     "manifesto": "Il Nostro Manifesto",
-    "areaPubblica": "Documenti Pubblici",
+    "areaPubblica": "Archivio",
     "apriMenu": "Apri menu",
     "governanceNotice": "Sezione in fase di pubblicazione: Documentazione societaria e bilanci d'esercizio saranno disponibili a breve.",
     "sub": {
@@ -51,7 +51,7 @@
     "bilancio": "Bilancio 2025",
     "risorse": "Governance & Legale",
     "governance": "Governance",
-    "documentiPubblici": "Documenti pubblici",
+    "documentiPubblici": "Archivio",
     "modello231": "Modello 231",
     "whistleblowing": "Whistleblowing",
     "lavoraConNoi": "Lavora con noi",
@@ -164,9 +164,9 @@
     "sottotitolo": "Siamo presenti sul territorio nazionale con la sede legale e direzionale a Milano e il polo operativo di coordinamento a Roma."
   },
   "documenti": {
-    "titolo": "Documenti ",
-    "titoloAccento": "pubblici",
-    "titoloSezione": "Documenti Pubblici",
+    "titolo": "Archivio",
+    "titoloAccento": "",
+    "titoloSezione": "Archivio",
     "sottotitolo": "In linea con i nostri valori di trasparenza, mettiamo a disposizione i documenti societari, finanziari e di conformità normativa.",
     "colonnaTitolo": "Titolo Documento",
     "colonnaCategoria": "Categoria",
@@ -177,7 +177,6 @@
     "filtroTutti": "Tutti",
     "filtroFinanza": "Finanza",
     "filtroGovernance": "Governance",
-    "filtroSicurezza": "Sicurezza",
     "filtroSostenibilita": "Sostenibilità"
   }
 }

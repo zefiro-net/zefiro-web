@@ -12,7 +12,6 @@ type DocumentiDict = {
   filtroTutti: string;
   filtroFinanza: string;
   filtroGovernance: string;
-  filtroSicurezza: string;
   filtroSostenibilita?: string;
   titoloSezione: string;
   sottotitolo: string;
@@ -30,7 +29,6 @@ export function DocumentiClient({ documents, dict }: { documents: Document[]; di
     { key: dict.filtroSostenibilita || 'Sostenibilità', value: 'Sostenibilità' },
     { key: dict.filtroGovernance, value: 'Governance' },
     { key: dict.filtroFinanza, value: 'Finanza' },
-    { key: dict.filtroSicurezza, value: 'Sicurezza' },
   ];
 
   const [activeCategory, setActiveCategory] = useState('Tutti');
@@ -53,7 +51,7 @@ export function DocumentiClient({ documents, dict }: { documents: Document[]; di
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <FadeIn delay={0.1}>
             <h1 className="text-3xl sm:text-5xl md:text-6xl tall:text-5xl lg:tall:text-6xl font-black tracking-tight text-primary dark:text-white mb-3 sm:mb-4 leading-[1.1]">
-              {dict.titolo || 'Documenti '}<span className="text-zefiro-cyan">{dict.titoloAccento || 'pubblici'}</span>
+              {dict.titolo || 'Archivio'}{dict.titoloAccento ? <span className="text-zefiro-cyan"> {dict.titoloAccento}</span> : ''}
             </h1>
           </FadeIn>
           <FadeIn delay={0.2} className="flex flex-col items-center">

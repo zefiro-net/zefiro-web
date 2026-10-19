@@ -12,7 +12,7 @@
     "lavoraConNoi": "Work with us",
     "sedi": "Offices",
     "manifesto": "Our Manifesto",
-    "areaPubblica": "Public Documents",
+    "areaPubblica": "Archive",
     "apriMenu": "Open menu",
     "governanceNotice": "Section upcoming: Corporate governance documentation and annual reports will be published soon.",
     "sub": {
@@ -51,7 +51,7 @@
     "bilancio": "Report 2025",
     "risorse": "Governance & Legal",
     "governance": "Governance",
-    "documentiPubblici": "Public Documents",
+    "documentiPubblici": "Archive",
     "modello231": "Model 231",
     "whistleblowing": "Whistleblowing",
     "lavoraConNoi": "Work with us",
@@ -164,9 +164,9 @@
     "sottotitolo": "Present across Italy with our corporate headquarters in Milan and our operations hub in Rome."
   },
   "documenti": {
-    "titolo": "Public ",
-    "titoloAccento": "documents",
-    "titoloSezione": "Public Documents",
+    "titolo": "Archive",
+    "titoloAccento": "",
+    "titoloSezione": "Archive",
     "sottotitolo": "In accordance with our commitment to transparency, we provide access to corporate, financial, and regulatory compliance records.",
     "colonnaTitolo": "Document Title",
     "colonnaCategoria": "Category",
@@ -177,7 +177,6 @@
     "filtroTutti": "All",
     "filtroFinanza": "Finance",
     "filtroGovernance": "Governance",
-    "filtroSicurezza": "Security",
     "filtroSostenibilita": "Sustainability"
   }
 }
