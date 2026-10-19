@@ -12,6 +12,7 @@ type DocumentiDict = {
   filtroTutti: string;
   filtroFinanza: string;
   filtroGovernance: string;
+  filtroSicurezza?: string;
   filtroSostenibilita?: string;
   titoloSezione: string;
   sottotitolo: string;
@@ -24,21 +25,26 @@ type DocumentiDict = {
 };
 
 export function DocumentiClient({ documents, dict }: { documents: Document[]; dict: DocumentiDict }) {
-  const CATEGORIES = [
-    { key: dict.filtroTutti, value: 'Tutti' },
-    { key: dict.filtroSostenibilita || 'Sostenibilità', value: 'Sostenibilità' },
-    { key: dict.filtroGovernance, value: 'Governance' },
-    { key: dict.filtroFinanza, value: 'Finanza' },
-  ];
+  const CATEGORIES = useMemo(() => [
+    { key: dict.filtroTutti, value: 'Tutti', matches: ['tutti', 'all'] },
+    { key: dict.filtroSostenibilita || 'Sostenibilità', value: 'Sostenibilità', matches: ['sostenibilità', 'sostenibilita', 'sustainability'] },
+    { key: dict.filtroSicurezza || 'Sicurezza', value: 'Sicurezza', matches: ['sicurezza', 'security', 'safety'] },
+    { key: dict.filtroGovernance, value: 'Governance', matches: ['governance'] },
+    { key: dict.filtroFinanza, value: 'Finanza', matches: ['finanza', 'finance'] },
+  ], [dict.filtroTutti, dict.filtroSostenibilita, dict.filtroSicurezza, dict.filtroGovernance, dict.filtroFinanza]);
 
   const [activeCategory, setActiveCategory] = useState('Tutti');
 
   const filtered = useMemo(() => {
     const originalDocs = Array.isArray(documents) ? [...documents] : [];
     if (activeCategory === 'Tutti') return originalDocs;
-    const target = activeCategory.toLowerCase().trim();
-    return originalDocs.filter(d => d.category?.toLowerCase().trim() === target);
-  }, [activeCategory, documents]);
+    const selectedCat = CATEGORIES.find(c => c.value === activeCategory);
+    if (!selectedCat) return originalDocs;
+    return originalDocs.filter(d => {
+      const docCat = d.category?.toLowerCase().trim() || '';
+      return selectedCat.matches.includes(docCat);
+    });
+  }, [activeCategory, documents, CATEGORIES]);
 
   return (
     <main className="relative overflow-hidden">

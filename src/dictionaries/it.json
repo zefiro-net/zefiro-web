@@ -43,7 +43,6 @@
     "sedi": "Sedi di Milano e Roma",
     "tecnologia": "Tecnologia",
     "ranSharing": "RAN Sharing",
-    "copertura": "Copertura 70%",
     "sostenibilita": "Sostenibilità",
     "certificazioni": "Certificazioni",
     "politiche": "Politiche ESG",
@@ -101,7 +100,6 @@
     "storiaTitolo": "Breve Descrizione & Storia",
     "storiaSottotitolo": "La joint venture strategica creata per condividere l'innovazione radiomobile nelle aree rurali del Paese.",
     "missioneTitolo": "Visione e Missione",
-    "missioneNota": "(Visione e missione condivise – versione generica in allestimento per la revisione collegiale)",
     "valoriTitolo": "I Nostri Valori",
     "valoriSottotitolo": "I principi guida che ispirano il nostro operato quotidiano e il percorso di crescita delle nostre persone.",
     "wholesaleTitolo": "Operatore Wholesale Condiviso",
@@ -138,7 +136,6 @@
     "politicheDesc": "Linee guida formali approvate dagli organi societari per orientare le attività quotidiane e le relazioni con tutti gli stakeholder.",
     "pianoEsgTitolo": "Piano di Sostenibilità ESG",
     "pianoEsgDesc": "Il percorso strategico strutturato in 5 direttrici, 15 obiettivi e 25 azioni per guidare l'evoluzione responsabile della nostra azienda.",
-    "pianoEsgNota": "Il documento di Piano ESG è attualmente in fase di revisione finale e validazione con la Direzione ESG (Ezio). Il PDF definitivo sarà reso disponibile al termine delle verifiche.",
     "bilancioTitolo": "Bilancio di Sostenibilità 2025",
     "bilancioDesc": "Il report ufficiale che illustra in modo trasparente le performance ESG, gli indicatori di impatto e i progressi conseguiti da Zefiro Net nell'esercizio 2025.",
     "apriPdf": "Visualizza Documento PDF"
@@ -175,8 +172,9 @@
     "nessunDocumento": "Nessun documento trovato in questa categoria.",
     "tornaTutti": "Torna a tutti i documenti",
     "filtroTutti": "Tutti",
-    "filtroFinanza": "Finanza",
+    "filtroSostenibilita": "Sostenibilità",
+    "filtroSicurezza": "Sicurezza",
     "filtroGovernance": "Governance",
-    "filtroSostenibilita": "Sostenibilità"
+    "filtroFinanza": "Finanza"
   }
 }

@@ -291,27 +291,16 @@ export default async function SostenibilitaPage({ params }: { params: Promise<{ 
         {/* 4. PIANO ESG (Struttura Roadmap Editoriale - Non card asimmetriche) */}
         <section id="piano-esg" className="scroll-mt-24 pt-4">
           <FadeIn delay={0.2}>
-            <div className="max-w-3xl mb-6">
+            <div className="max-w-3xl mb-10">
               <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
                 {data.pianoEsg.badge}
               </span>
               <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight mb-3">
                 {data.pianoEsg.titolo}
               </h2>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-normal mb-4">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
                 {data.pianoEsg.sottotitolo}
               </p>
-            </div>
-
-            {/* Note box regarding approval with Ezio */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-800 dark:text-amber-300 text-xs sm:text-sm flex items-start gap-3 mb-10">
-              <svg className="w-5 h-5 shrink-0 text-amber-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              <div>
-                <span className="font-bold">{lang === 'it' ? 'Nota di Validazione:' : 'Validation Note:'}</span>{' '}
-                {data.pianoEsg.statoRevisione}
-              </div>
             </div>
           </FadeIn>
 

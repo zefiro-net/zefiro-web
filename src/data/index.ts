@@ -42,11 +42,11 @@ const DOC_TITLES_EN: Record<number, { title: string; category: string }> = {
   1: { title: "Sustainability Report 2025", category: "Sustainability" },
   2: { title: "EcoVadis CSR & ESG Scorecard", category: "Sustainability" },
   3: { title: "Corporate Sustainability Policy", category: "Sustainability" },
-  4: { title: "Occupational Health & Safety Policy", category: "Sustainability" },
+  4: { title: "Occupational Health & Safety Policy", category: "Security" },
   5: { title: "Diversity, Equity & Inclusion Policy", category: "Sustainability" },
   6: { title: "ISO 9001:2015 Quality Certificate", category: "Governance" },
   7: { title: "ISO 14001:2015 Environmental Certificate", category: "Sustainability" },
-  8: { title: "ISO 45001:2018 Safety Certificate", category: "Sustainability" },
+  8: { title: "ISO 45001:2018 Safety Certificate", category: "Security" },
 };
 
 const REAL_DOCUMENTS_LIST: Document[] = [
@@ -78,7 +78,7 @@ const REAL_DOCUMENTS_LIST: Document[] = [
     id: 4,
     title: "Politica Salute e Sicurezza sul Lavoro",
     date: "2025-07-10",
-    category: "Sostenibilità",
+    category: "Sicurezza",
     size: "391 KB",
     fileUrl: "/documents/politiche/politica-salute-e-sicurezza.pdf",
   },
@@ -110,7 +110,7 @@ const REAL_DOCUMENTS_LIST: Document[] = [
     id: 8,
     title: "Certificato ISO 45001:2018 (Sicurezza)",
     date: "2024-11-20",
-    category: "Sostenibilità",
+    category: "Sicurezza",
     size: "1.5 MB",
     fileUrl: "/documents/certificazioni/certificato-iso-45001.pdf",
   },

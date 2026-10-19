@@ -122,12 +122,9 @@ export default async function ChiSiamoPage({ params }: { params: Promise<{ lang:
               <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
                 {dict.chiSiamo.missioneTitolo}
               </span>
-              <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight mb-2">
+              <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight">
                 {lang === 'it' ? 'Guida Strategica & Obiettivi' : 'Strategic Roadmap & Goals'}
               </h2>
-              <p className="text-xs sm:text-sm text-gray-500 italic">
-                {dict.chiSiamo.missioneNota}
-              </p>
             </div>
           </FadeIn>
 

@@ -109,11 +109,6 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/tecnologia#copertura`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
-                {f.copertura || (lang === 'it' ? 'Copertura 70%' : '70% Coverage')}
-              </Link>
-            </li>
-            <li>
               <Link href={`/${lang}/sostenibilita#certificazioni`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
                 {f.certificazioni || (lang === 'it' ? 'Certificazioni' : 'Certifications')}
               </Link>

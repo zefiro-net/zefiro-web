@@ -41,7 +41,6 @@ export interface SostenibilitaData {
     badge: string;
     titolo: string;
     sottotitolo: string;
-    statoRevisione: string;
     pilastri: PilastroPianoESG[];
   };
   bilancio: {
@@ -157,8 +156,6 @@ export const sostenibilitaDataIT: SostenibilitaData = {
     badge: 'Piano Strategico di Sostenibilità',
     titolo: 'Il Nostro Piano ESG',
     sottotitolo: '5 direttrici strategiche, 15 obiettivi ESG e 25 azioni operative per orientare il futuro sostenibile dell\'azienda.',
-    statoRevisione:
-      'Il documento completo del Piano ESG è in fase di revisione finale e validazione con la Direzione ESG (Ezio). Il file PDF ufficiale sarà reso disponibile per il download al termine della validazione.',
     pilastri: [
       {
         numero: '01',
@@ -331,8 +328,6 @@ export const sostenibilitaDataEN: SostenibilitaData = {
     badge: 'Strategic Sustainability Roadmap',
     titolo: 'Our ESG Plan',
     sottotitolo: '5 strategic pillars, 15 ESG objectives, and 25 actionable initiatives guiding our responsible evolution.',
-    statoRevisione:
-      'The complete ESG Plan document is currently undergoing final review and validation with the ESG Direction (Ezio). The official PDF will be downloadable upon approval.',
     pilastri: [
       {
         numero: '01',

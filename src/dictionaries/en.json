@@ -43,7 +43,6 @@
     "sedi": "Milan & Rome Offices",
     "tecnologia": "Technology",
     "ranSharing": "RAN Sharing",
-    "copertura": "70% Coverage",
     "sostenibilita": "Sustainability",
     "certificazioni": "Certifications",
     "politiche": "ESG Policies",
@@ -101,7 +100,6 @@
     "storiaTitolo": "Overview & History",
     "storiaSottotitolo": "The strategic joint venture established to share radio access innovation across Italy's rural areas.",
     "missioneTitolo": "Vision and Mission",
-    "missioneNota": "(Shared vision & mission – generic draft pending final collegial review)",
     "valoriTitolo": "Our Values",
     "valoriSottotitolo": "The guiding principles that shape our daily operations and professional development.",
     "wholesaleTitolo": "Shared Wholesale Operator",
@@ -138,7 +136,6 @@
     "politicheDesc": "Formal guidelines adopted by corporate leadership to govern daily operations and stakeholder engagement.",
     "pianoEsgTitolo": "ESG Sustainability Plan",
     "pianoEsgDesc": "A structured strategic roadmap spanning 5 pillars, 15 ESG targets, and 25 actionable initiatives guiding our corporate evolution.",
-    "pianoEsgNota": "The ESG Plan document is currently undergoing final verification and review with the ESG Direction (Ezio). The definitive PDF will be downloadable upon completion.",
     "bilancioTitolo": "Sustainability Report 2025",
     "bilancioDesc": "The official report transparently highlighting Zefiro Net's ESG performance, key impact metrics, and milestones for fiscal year 2025.",
     "apriPdf": "View PDF Document"
@@ -175,8 +172,9 @@
     "nessunDocumento": "No documents found in this category.",
     "tornaTutti": "Back to all documents",
     "filtroTutti": "All",
-    "filtroFinanza": "Finance",
+    "filtroSostenibilita": "Sustainability",
+    "filtroSicurezza": "Security",
     "filtroGovernance": "Governance",
-    "filtroSostenibilita": "Sustainability"
+    "filtroFinanza": "Finance"
   }
 }
