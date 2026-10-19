@@ -1,4 +1,4 @@
-import { getChiSiamo, getValori, getSedi } from '@/data';
+import { getChiSiamo, getSedi } from '@/data';
 import { getDictionary } from '@/i18n';
 import { FadeIn } from '@/components/animations/FadeIn';
 import { StaggerContainer, StaggerItem } from '@/components/animations/Stagger';
@@ -43,7 +43,6 @@ const PARTNER_EN = [
 export default async function ChiSiamoPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const page = getChiSiamo(lang);
-  const valori = getValori(lang);
   const sedi = getSedi(lang);
   const dict = await getDictionary(lang);
 
@@ -132,115 +131,170 @@ export default async function ChiSiamoPage({ params }: { params: Promise<{ lang:
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 2 Symmetric Pillars: Missione & Visione */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
             <FadeIn delay={0.3} direction="left">
-              <div className="h-full p-6 sm:p-8 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-md flex flex-col justify-between">
+              <div className="h-full p-6 sm:p-8 rounded-3xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-md flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-zefiro-cyan/15 text-zefiro-cyan flex items-center justify-center mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-zefiro-cyan/15 text-zefiro-cyan flex items-center justify-center mb-5">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="10"/>
                       <circle cx="12" cy="12" r="6"/>
                       <circle cx="12" cy="12" r="2"/>
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-primary dark:text-white mb-3">
+                  <span className="text-xs font-bold uppercase tracking-widest text-zefiro-cyan block mb-1">
+                    {lang === 'it' ? 'Il Nostro Scopo' : 'Our Purpose'}
+                  </span>
+                  <h3 className="text-2xl font-black text-primary dark:text-white mb-3 tracking-tight">
                     {page.acf?.sezione_missione_titolo}
                   </h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-normal">
                     {page.acf?.sezione_missione_testo}
                   </p>
                 </div>
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.4}>
-              <div className="h-full p-6 sm:p-8 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-md flex flex-col justify-between">
+            <FadeIn delay={0.4} direction="right">
+              <div className="h-full p-6 sm:p-8 rounded-3xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-md flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center mb-5">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-primary dark:text-white mb-3">
+                  <span className="text-xs font-bold uppercase tracking-widest text-emerald-500 block mb-1">
+                    {lang === 'it' ? 'La Nostra Prospettiva' : 'Our Perspective'}
+                  </span>
+                  <h3 className="text-2xl font-black text-primary dark:text-white mb-3 tracking-tight">
                     {page.acf?.sezione_visione_titolo}
                   </h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-normal">
                     {page.acf?.sezione_visione_testo}
                   </p>
                 </div>
               </div>
             </FadeIn>
-
-            <FadeIn delay={0.5} direction="right" className="md:col-span-2 lg:col-span-1">
-              <div className="h-full p-6 sm:p-8 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-md flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-zefiro-teal/15 text-zefiro-teal dark:text-zefiro-cyan flex items-center justify-center mb-5">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <polyline points="16 16 12 12 8 16"/>
-                      <line x1="12" y1="12" x2="12" y2="21"/>
-                      <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
-                      <polyline points="16 16 12 12 8 16"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-primary dark:text-white mb-3">
-                    {page.acf?.sezione_wholesale_titolo}
-                  </h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    {page.acf?.sezione_wholesale_testo}
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
           </div>
-        </section>
 
-        {/* 3. I NOSTRI VALORI (Da Company Developer Program) */}
-        <section id="valori" className="scroll-mt-24">
-          <FadeIn delay={0.2}>
-            <div className="max-w-3xl mb-8 sm:mb-10">
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
-                {dict.chiSiamo.valoriTitolo}
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight mb-2">
-                {lang === 'it' ? 'I Principi che Guidano Zefiro Net' : 'The Principles Guiding Zefiro Net'}
-              </h2>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
-                {dict.chiSiamo.valoriSottotitolo}
-              </p>
+          {/* Panoramic Wholesale Banner */}
+          <FadeIn delay={0.5}>
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900/90 to-primary/95 text-white border border-white/10 shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="max-w-3xl space-y-2">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-zefiro-cyan">
+                  {lang === 'it' ? 'MODELLO DI BUSINESS' : 'BUSINESS MODEL'}
+                </span>
+                <h4 className="text-xl sm:text-2xl font-black tracking-tight text-white">
+                  {page.acf?.sezione_wholesale_titolo}
+                </h4>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-normal">
+                  {page.acf?.sezione_wholesale_testo}
+                </p>
+              </div>
+              <div className="shrink-0">
+                <Link
+                  href={`/${lang}/tecnologia`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zefiro-cyan hover:bg-white text-primary font-bold text-xs sm:text-sm transition-all shadow-md"
+                >
+                  <span>{lang === 'it' ? 'Approfondisci il RAN Sharing' : 'Discover RAN Sharing'}</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </Link>
+              </div>
             </div>
           </FadeIn>
+        </section>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-            {valori.map((v, idx) => {
-              const isLast = idx === valori.length - 1 && valori.length % 3 !== 0;
-              return (
-                <StaggerItem key={v.id} className={isLast ? 'md:col-span-2 lg:col-span-1' : ''}>
-                  <div className="h-full flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-800/60 border border-gray-200/80 dark:border-white/10 shadow-sm hover:border-zefiro-cyan/50 hover:shadow-xl transition-all duration-300 group">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-xs font-mono font-black px-2.5 py-1 rounded-lg bg-zefiro-cyan/15 text-zefiro-cyan">
-                          {v.numero}
-                        </span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-zefiro-cyan/50 group-hover:bg-zefiro-cyan transition-colors"></span>
-                      </div>
-                      <h3 className="text-lg font-bold text-primary dark:text-white mb-2 leading-snug">
-                        {v.titolo}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal mb-4">
-                        {v.descrizione}
-                      </p>
-                    </div>
-                    {v.dettaglio && (
-                      <div className="pt-3 border-t border-gray-100 dark:border-white/5 text-[11px] font-semibold text-zefiro-teal dark:text-zefiro-cyan/90 uppercase tracking-wider">
-                        {v.dettaglio}
-                      </div>
-                    )}
+        {/* 3. I NOSTRI VALORI & MANIFESTO (Struttura Editoriale Simmetrica - Non 5 card) */}
+        <section id="valori" className="scroll-mt-24">
+          <FadeIn delay={0.2}>
+            <div className="p-8 sm:p-10 lg:p-12 rounded-3xl bg-gray-50/80 dark:bg-slate-900/50 border border-gray-200/80 dark:border-white/10 shadow-lg">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                {/* Left Side: Statement & CTA */}
+                <div className="lg:col-span-6 space-y-4">
+                  <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan block">
+                    {dict.chiSiamo.valoriTitolo}
+                  </span>
+                  <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight">
+                    {lang === 'it' ? 'I Principi che Guidano Zefiro Net' : 'The Principles Guiding Zefiro Net'}
+                  </h2>
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                    {lang === 'it'
+                      ? 'L\'identità di Zefiro Net si fonda su sei pilastri valoriali che orientano ogni scelta tecnica, strategica e relazionale: inclusione dei territori, tutela ambientale, benessere delle persone, innovazione etica, trasparenza e massima affidabilità operativa.'
+                      : 'Zefiro Net\'s identity is rooted in six core pillars steering every technological, strategic, and personal choice: territorial inclusion, ecological stewardship, people well-being, ethical innovation, transparency, and operational excellence.'}
+                  </p>
+                  
+                  <div className="pt-2">
+                    <Link
+                      href={`/${lang}/manifesto`}
+                      className="inline-flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-primary hover:bg-primary/90 text-white font-bold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+                    >
+                      <span>{lang === 'it' ? 'Leggi il Nostro Manifesto' : 'Read Our Manifesto'}</span>
+                      <svg className="w-4 h-4 text-zefiro-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                      </svg>
+                    </Link>
                   </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
+                </div>
+
+                {/* Right Side: 2x2 Balanced Pillar Matrix */}
+                <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-white/10 shadow-sm">
+                    <span className="text-xs font-mono font-bold text-zefiro-cyan block mb-1">01 • TERRITORI</span>
+                    <h4 className="text-base font-bold text-primary dark:text-white mb-1.5">
+                      {lang === 'it' ? 'Inclusione Digitale' : 'Digital Inclusion'}
+                    </h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">
+                      {lang === 'it'
+                        ? 'Superamento del digital divide per 16 milioni di residenti nel 70% del Paese.'
+                        : 'Bridging the digital divide for 16 million residents across 70% of Italy.'}
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-white/10 shadow-sm">
+                    <span className="text-xs font-mono font-bold text-emerald-500 block mb-1">02 • AMBIENTE</span>
+                    <h4 className="text-base font-bold text-primary dark:text-white mb-1.5">
+                      {lang === 'it' ? 'Decarbonizzazione' : 'Decarbonization'}
+                    </h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">
+                      {lang === 'it'
+                        ? 'RAN sharing per evitare torri duplicate, tagliare i consumi e mirare a Net Zero.'
+                        : 'RAN sharing preventing tower duplication and advancing toward Net Zero.'}
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-white/10 shadow-sm">
+                    <span className="text-xs font-mono font-bold text-zefiro-teal dark:text-zefiro-cyan block mb-1">03 • PERSONE</span>
+                    <h4 className="text-base font-bold text-primary dark:text-white mb-1.5">
+                      {lang === 'it' ? 'Equità & Benessere' : 'Equity & Well-Being'}
+                    </h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">
+                      {lang === 'it'
+                        ? 'Sicurezza certificata ISO 45001, pari opportunità e percorsi di crescita continui.'
+                        : 'ISO 45001 certified safety, equal opportunity, and continuous career growth.'}
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-white/10 shadow-sm">
+                    <span className="text-xs font-mono font-bold text-purple-400 block mb-1">04 • GOVERNANCE</span>
+                    <h4 className="text-base font-bold text-primary dark:text-white mb-1.5">
+                      {lang === 'it' ? 'Etica & Trasparenza' : 'Ethics & Transparency'}
+                    </h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">
+                      {lang === 'it'
+                        ? 'Modello 231, OdV autonomo, qualità certificata ISO 9001 e rating EcoVadis.'
+                        : 'Model 231, autonomous OdV, ISO 9001 certification, and EcoVadis rating.'}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </FadeIn>
         </section>
 
         {/* 4. I SOCI PARITETICI (50% WINDTRE & 50% ILIAD) */}

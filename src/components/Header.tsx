@@ -84,7 +84,7 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
       subItems: [
         { label: sub.storia, href: `/${lang}/chi-siamo#storia` },
         { label: sub.missione, href: `/${lang}/chi-siamo#missione` },
-        { label: sub.valori, href: `/${lang}/chi-siamo#valori` },
+        { label: sub.valori, href: `/${lang}/manifesto` },
         { label: sub.sedi, href: `/${lang}/sedi` },
       ],
     },

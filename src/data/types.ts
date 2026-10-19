@@ -29,6 +29,8 @@ export interface ValoreManifesto {
   titolo: string;
   descrizione: string;
   coloreIcona: 'cyan' | 'teal' | 'gray';
+  ambito?: string;
+  impegno?: string;
 }
 
 // --- Sede ---

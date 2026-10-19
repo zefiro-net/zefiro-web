@@ -11,14 +11,14 @@
     "sostenibilita": "Sustainability",
     "lavoraConNoi": "Work with us",
     "sedi": "Offices",
-    "manifesto": "Our Values",
+    "manifesto": "Our Manifesto",
     "areaPubblica": "Public Documents",
     "apriMenu": "Open menu",
     "governanceNotice": "Section upcoming: Corporate governance documentation and annual reports will be published soon.",
     "sub": {
       "storia": "History & Identity",
       "missione": "Vision & Mission",
-      "valori": "Our Values",
+      "valori": "Our Manifesto",
       "sedi": "Our Offices",
       "ranSharing": "RAN Sharing",
       "copertura": "Territorial Coverage",
@@ -39,7 +39,7 @@
     "tagline": "Connecting in a breath. The 50/50 joint venture between Iliad Italia and WINDTRE for wholesale mobile connectivity across rural areas.",
     "azienda": "About Us",
     "chiSiamo": "History & Partners",
-    "valori": "Our Values",
+    "valori": "Our Manifesto",
     "sedi": "Milan & Rome Offices",
     "tecnologia": "Technology",
     "ranSharing": "RAN Sharing",
@@ -73,8 +73,8 @@
   },
   "manifesto": {
     "titolo": "Our ",
-    "titoloAccento": "values",
-    "sottotitolo": "We believe in a connected, sustainable Italy without geographical disparities. We work to make digitization a tangible reality for everyone."
+    "titoloAccento": "Manifesto",
+    "sottotitolo": "The foundational principles and core value charter steering every strategic, technical, and human choice at Zefiro Net."
   },
   "homepage": {
     "badgeCopertura": "National Mobile Coverage",

@@ -80,8 +80,8 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/chi-siamo#valori`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
-                {f.valori || (lang === 'it' ? 'I Nostri Valori' : 'Our Values')}
+              <Link href={`/${lang}/manifesto`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
+                {f.valori || (lang === 'it' ? 'Il Nostro Manifesto' : 'Our Manifesto')}
               </Link>
             </li>
             <li>

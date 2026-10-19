@@ -11,14 +11,14 @@
     "sostenibilita": "Sostenibilità",
     "lavoraConNoi": "Lavora con noi",
     "sedi": "Sedi",
-    "manifesto": "I Nostri Valori",
+    "manifesto": "Il Nostro Manifesto",
     "areaPubblica": "Documenti Pubblici",
     "apriMenu": "Apri menu",
     "governanceNotice": "Sezione in fase di pubblicazione: Documentazione societaria e bilanci d'esercizio saranno disponibili a breve.",
     "sub": {
       "storia": "Storia e Identità",
       "missione": "Visione e Missione",
-      "valori": "I Nostri Valori",
+      "valori": "Il Nostro Manifesto",
       "sedi": "Le Nostre Sedi",
       "ranSharing": "RAN Sharing",
       "copertura": "Copertura Territoriale",
@@ -39,7 +39,7 @@
     "tagline": "Connettere in un soffio. La joint venture paritetica tra Iliad Italia e WINDTRE per la connettività wholesale nelle aree rurali.",
     "azienda": "Chi Siamo",
     "chiSiamo": "Storia e Soci",
-    "valori": "I Nostri Valori",
+    "valori": "Il Nostro Manifesto",
     "sedi": "Sedi di Milano e Roma",
     "tecnologia": "Tecnologia",
     "ranSharing": "RAN Sharing",
@@ -72,9 +72,9 @@
     "sottotitolo": "Eccellenza tecnologica e sostenibilità al servizio dei territori"
   },
   "manifesto": {
-    "titolo": "I Nostri ",
-    "titoloAccento": "valori",
-    "sottotitolo": "Crediamo in un'Italia connessa, senza distinzioni geografiche. Lavoriamo affinché la digitalizzazione diventi una realtà concreta per tutti."
+    "titolo": "Il Nostro ",
+    "titoloAccento": "Manifesto",
+    "sottotitolo": "I principi fondativi e la carta dei valori che guidano ogni decisione strategica, tecnologica e umana di Zefiro Net."
   },
   "homepage": {
     "badgeCopertura": "Copertura Radiomobile Nazionale",
