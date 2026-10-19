@@ -81,7 +81,7 @@ export default async function ChiSiamoPage({ params }: { params: Promise<{ lang:
       {/* Main Content Container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl relative z-10 pb-20 sm:pb-28 space-y-16 sm:space-y-24">
 
-        {/* 1. STORIA & DESCRIZIONE AZIENDALE (Da BROCHURE AZIENDALE) */}
+        {/* 1. STORIA & IDENTITÀ AZIENDALE */}
         <section id="storia" className="scroll-mt-24">
           <FadeIn delay={0.2}>
             <div className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-lg">

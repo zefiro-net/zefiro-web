@@ -5,6 +5,7 @@ import { FadeIn } from '@/components/animations/FadeIn';
 import { StaggerContainer, StaggerItem } from '@/components/animations/Stagger';
 import { TiltCard } from '@/components/animations/TiltCard';
 import { NetworkCoverageMap } from '@/components/NetworkCoverageMap';
+import RanSharingDiagram from '@/components/RanSharingDiagram';
 import Link from 'next/link';
 
 function FeatureIcon({ icona }: { icona: string }) {
@@ -86,22 +87,33 @@ export default async function TecnologiaPage({ params }: { params: Promise<{ lan
       {/* SECTION 1: RAN SHARING */}
       <section id="ran-sharing" className="py-12 sm:py-16 border-t border-gray-100 dark:border-white/5 scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl">
-          <FadeIn delay={0.2}>
-            <div className="max-w-3xl mb-10 sm:mb-12">
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
-                {data.ranSharing.badge}
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight mb-4">
-                {data.ranSharing.titolo}
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                {data.ranSharing.descrizione1}
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                {data.ranSharing.descrizione2}
-              </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+            {/* Left: Explanatory text */}
+            <div className="lg:col-span-6 xl:col-span-6 space-y-4">
+              <FadeIn delay={0.2}>
+                <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
+                  {data.ranSharing.badge}
+                </span>
+                <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight mb-4">
+                  {data.ranSharing.titolo}
+                </h2>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  {data.ranSharing.descrizione1}
+                </p>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {data.ranSharing.descrizione2}
+                </p>
+              </FadeIn>
             </div>
-          </FadeIn>
+
+            {/* Right: RAN Sharing Graphic Diagram */}
+            <div className="lg:col-span-6 xl:col-span-6">
+              <FadeIn delay={0.3} direction="right">
+                <RanSharingDiagram lang={lang} />
+              </FadeIn>
+            </div>
+          </div>
 
           {/* Architecture 3-Step Pillar Box */}
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-16">

@@ -38,33 +38,6 @@ export default async function LavoraConNoiPage({ params }: { params: Promise<{ l
     },
   ];
 
-  const hrPrograms = [
-    {
-      titolo: lang === 'it' ? 'Company Development Program & Feedback 360°' : 'Company Development Program & 360° Feedback',
-      descrizione:
-        lang === 'it'
-          ? 'Un sistema di crescita strutturato che unisce autovalutazione sui valori aziendali, feedback incrociato tra colleghi e piani di incentivazione a breve termine (STIP) orientati a obiettivi di squadra.'
-          : 'A structured talent growth system combining self-assessment on company values, peer-to-peer 360° feedback, and Short Term Incentive Plans (STIP) tied to collective milestones.',
-      icona: '🎯',
-    },
-    {
-      titolo: lang === 'it' ? 'Buddy Program per l\'Onboarding' : 'Buddy Onboarding Program',
-      descrizione:
-        lang === 'it'
-          ? 'Ogni neoassunto viene affiancato da un collega esperto di un\'altra area che fa da mentore e guida per facilitare l\'orientamento, le relazioni e l\'integrazione nella cultura aziendale fin dalla prima settimana.'
-          : 'Every new joiner is paired with an experienced colleague from another department who serves as a mentor, guiding orientation, networking, and cultural integration from day one.',
-      icona: '🤝',
-    },
-    {
-      titolo: lang === 'it' ? 'Welfare & Work-Life Balance' : 'Corporate Welfare & Wellbeing',
-      descrizione:
-        lang === 'it'
-          ? 'Contributo welfare flessibile, buoni pasto, fondo previdenziale Telemaco, assistenza sanitaria integrativa Assidim e Unisalute, convenzioni dedicate e attenzione all\'equilibrio tra vita privata e lavoro.'
-          : 'Flexible welfare allowances, meal vouchers, Telemaco pension funds, comprehensive supplementary healthcare (Assidim, Unisalute), and an ongoing focus on work-life harmony.',
-      icona: '🌿',
-    },
-  ];
-
   return (
     <main className="relative overflow-hidden min-h-screen">
       {/* Background Accents */}
@@ -119,40 +92,6 @@ export default async function LavoraConNoiPage({ params }: { params: Promise<{ l
             ))}
           </StaggerContainer>
         </div>
-
-        {/* Company Development Program & Onboarding */}
-        <section className="p-6 sm:p-10 rounded-3xl bg-gray-50/80 dark:bg-slate-900/60 border border-gray-200/80 dark:border-white/10 shadow-sm">
-          <FadeIn delay={0.2}>
-            <div className="max-w-2xl mb-8">
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
-                {lang === 'it' ? 'CRESCITA PROFESSIONALE' : 'PROFESSIONAL GROWTH'}
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-primary dark:text-white tracking-tight mb-2">
-                {d.peopleProgramTitolo}
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                {d.peopleProgramDesc}
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {hrPrograms.map((prog, idx) => (
-              <div
-                key={idx}
-                className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-gray-200/60 dark:border-white/5 shadow-sm"
-              >
-                <div className="text-2xl mb-3">{prog.icona}</div>
-                <h3 className="text-base font-bold text-primary dark:text-white mb-2">
-                  {prog.titolo}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {prog.descrizione}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Candidatura Spontanea */}
         <FadeIn direction="up" delay={0.3}>

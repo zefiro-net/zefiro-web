@@ -47,7 +47,6 @@ const DOC_TITLES_EN: Record<number, { title: string; category: string }> = {
   6: { title: "ISO 9001:2015 Quality Certificate", category: "Governance" },
   7: { title: "ISO 14001:2015 Environmental Certificate", category: "Sustainability" },
   8: { title: "ISO 45001:2018 Safety Certificate", category: "Sustainability" },
-  9: { title: "Corporate Presentation Brochure", category: "Corporate" },
 };
 
 const REAL_DOCUMENTS_LIST: Document[] = [
@@ -114,14 +113,6 @@ const REAL_DOCUMENTS_LIST: Document[] = [
     category: "Sostenibilità",
     size: "1.5 MB",
     fileUrl: "/documents/certificazioni/certificato-iso-45001.pdf",
-  },
-  {
-    id: 9,
-    title: "Brochure Aziendale Zefiro Net",
-    date: "2025-01-15",
-    category: "Governance",
-    size: "622 KB",
-    fileUrl: "/documents/brochure/brochure-aziendale.pdf",
   },
 ];
 
