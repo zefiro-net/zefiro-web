@@ -36,11 +36,11 @@
     "tornaHome": "Torna alla Home"
   },
   "footer": {
-    "tagline": "Connettere in un soffio. La joint venture paritetica tra Iliad Italia e WINDTRE per la connettività wholesale nelle aree rurali.",
+    "tagline": "Connettere in un soffio.",
     "azienda": "Chi Siamo",
-    "chiSiamo": "Storia e Soci",
-    "valori": "Il Nostro Manifesto",
-    "sedi": "Sedi di Milano e Roma",
+    "chiSiamo": "Storia",
+    "valori": "Manifesto",
+    "sedi": "Sedi",
     "tecnologia": "Tecnologia",
     "ranSharing": "RAN Sharing",
     "sostenibilita": "Sostenibilità",
@@ -55,7 +55,7 @@
     "whistleblowing": "Whistleblowing",
     "lavoraConNoi": "Lavora con noi",
     "contatti": "Contatti",
-    "indirizzo": "Milano, Via Gattamelata, 34 (Il Pharo)",
+    "indirizzo": "Milano, Via Gattamelata, 34",
     "copyright": "Tutti i diritti riservati.",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"

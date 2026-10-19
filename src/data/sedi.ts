@@ -4,7 +4,7 @@ import type { Locale } from '@/i18n';
 export const sediDataIT: Sede[] = [
   {
     id: 201,
-    nome: 'Il Pharo',
+    nome: 'Sede Legale e Operativa',
     tipo: 'Sede Legale e Operativa',
     citta: 'Milano',
     indirizzo: 'Via Gattamelata, 34',
@@ -33,7 +33,7 @@ export const sediDataIT: Sede[] = [
 export const sediDataEN: Sede[] = [
   {
     id: 201,
-    nome: 'Il Pharo',
+    nome: 'Registered & Operational HQ',
     tipo: 'Registered & Operational HQ',
     citta: 'Milan',
     indirizzo: 'Via Gattamelata, 34',

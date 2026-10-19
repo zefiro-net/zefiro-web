@@ -27,7 +27,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
             <section className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-bold text-primary dark:text-white">1. Titolare del Trattamento</h2>
               <p>
-                Il Titolare del trattamento dei dati personali è <strong>Zefiro Net S.r.l.</strong>, con sede legale in Milano (MI), Via Gattamelata, 34 (Il Pharo), P.IVA e C.F. dedicati.
+                Il Titolare del trattamento dei dati personali è <strong>Zefiro Net S.r.l.</strong>, con sede legale in Milano (MI), Via Gattamelata, 34, C.F. e P.IVA 12459610965.
               </p>
               <p>
                 Per qualsiasi richiesta relativa alla privacy o per esercitare i propri diritti, è possibile contattare il Titolare all&apos;indirizzo email: <a href="mailto:amministrazione@zefironet.it" className="text-zefiro-cyan font-semibold hover:underline">amministrazione@zefironet.it</a>.
@@ -38,7 +38,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
               <h2 className="text-xl sm:text-2xl font-bold text-primary dark:text-white">2. Tipologia di Dati Trattati</h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Dati di navigazione:</strong> I sistemi informatici acquisiscono alcuni dati tecnici (es. indirizzi IP, tipo di browser, orari di accesso) la cui trasmissione è implicita nell&apos;uso dei protocolli di comunicazione Internet.</li>
-                <li><strong>Dati forniti volontariamente dall&apos;utente:</strong> L&apos;invio facoltativo ed esplicito di posta elettronica agli indirizzi indicati su questo sito (es. candidature spontanee a <code>candidatura@zefironet.it</code> o richieste a <code>info@zefironet.it</code>) comporta la successiva acquisizione dell&apos;indirizzo del mittente e dei dati personali inseriti nella comunicazione/curriculum.</li>
+                <li><strong>Dati forniti volontariamente dall&apos;utente:</strong> L&apos;invio facoltativo ed esplicito di posta elettronica agli indirizzi indicati su questo sito (es. candidature spontanee a <code>recruiting@zefironet.it</code> o richieste a <code>info@zefironet.it</code>) comporta la successiva acquisizione dell&apos;indirizzo del mittente e dei dati personali inseriti nella comunicazione/curriculum.</li>
               </ul>
             </section>
 
@@ -71,7 +71,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
             <section className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-bold text-primary dark:text-white">1. Data Controller</h2>
               <p>
-                The Data Controller is <strong>Zefiro Net S.r.l.</strong>, having its registered office in Milan (MI), Via Gattamelata, 34 (Il Pharo), Italy.
+                The Data Controller is <strong>Zefiro Net S.r.l.</strong>, having its registered office in Milan (MI), Via Gattamelata, 34, Tax Code & VAT 12459610965, Italy.
               </p>
               <p>
                 For any privacy-related requests or to exercise statutory data protection rights, you may contact the Controller at: <a href="mailto:amministrazione@zefironet.it" className="text-zefiro-cyan font-semibold hover:underline">amministrazione@zefironet.it</a>.
@@ -82,7 +82,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
               <h2 className="text-xl sm:text-2xl font-bold text-primary dark:text-white">2. Categories of Processed Data</h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Browsing Data:</strong> Computer systems automatically collect technical data (e.g. IP addresses, browser specifications, access timestamps) necessary for Internet communication protocols.</li>
-                <li><strong>Data Voluntarily Provided by the User:</strong> Voluntary communications sent to email addresses published on this website (e.g. open job applications to <code>candidatura@zefironet.it</code>) entail processing of the sender&apos;s email address and attached CV information.</li>
+                <li><strong>Data Voluntarily Provided by the User:</strong> Voluntary communications sent to email addresses published on this website (e.g. open job applications to <code>recruiting@zefironet.it</code>) entail processing of the sender&apos;s email address and attached CV information.</li>
               </ul>
             </section>
 

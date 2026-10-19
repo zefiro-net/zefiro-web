@@ -36,11 +36,11 @@
     "tornaHome": "Back to Home"
   },
   "footer": {
-    "tagline": "Connecting in a breath. The 50/50 joint venture between Iliad Italia and WINDTRE for wholesale mobile connectivity across rural areas.",
+    "tagline": "Connecting in a breath.",
     "azienda": "About Us",
-    "chiSiamo": "History & Partners",
-    "valori": "Our Manifesto",
-    "sedi": "Milan & Rome Offices",
+    "chiSiamo": "History",
+    "valori": "Manifesto",
+    "sedi": "Offices",
     "tecnologia": "Technology",
     "ranSharing": "RAN Sharing",
     "sostenibilita": "Sustainability",
@@ -55,7 +55,7 @@
     "whistleblowing": "Whistleblowing",
     "lavoraConNoi": "Work with us",
     "contatti": "Contact",
-    "indirizzo": "Milan, Via Gattamelata, 34 (Il Pharo)",
+    "indirizzo": "Milan, Via Gattamelata, 34",
     "copyright": "All rights reserved.",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy"

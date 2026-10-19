@@ -81,7 +81,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
             </li>
             <li>
               <Link href={`/${lang}/manifesto`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
-                {f.valori || (lang === 'it' ? 'Il Nostro Manifesto' : 'Our Manifesto')}
+                {f.valori || 'Manifesto'}
               </Link>
             </li>
             <li>
@@ -185,7 +185,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
 
         {/* Corporate Details Line */}
         <p className="text-[11px] sm:text-xs text-gray-400/90 leading-relaxed text-center sm:text-left">
-          Sede Legale: {f.indirizzo} • P.IVA e C.F. [00000000000] • Cap. Soc. [€ 000.000,00 i.v.] • REA [MI-0000000] • PEC:{' '}
+          {lang === 'it' ? 'Sede Legale' : 'Registered Office'}: {f.indirizzo} • {lang === 'it' ? 'C.F. e P.IVA' : 'Tax Code & VAT'} 12459610965 • REA MI - 2662951 • {lang === 'it' ? 'Cap. Soc. € 20.000,00 i.v.' : 'Share Capital € 20,000.00 paid-up'} • PEC:{' '}
           <a href="mailto:zefironet@legalmail.it" className="text-gray-300 hover:text-zefiro-cyan transition-colors">
             zefironet@legalmail.it
           </a>
