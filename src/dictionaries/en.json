@@ -1,32 +1,60 @@
 {
   "lang": "en",
   "metadata": {
-    "title": "Zefiro Net S.r.l.",
-    "description": "Official website of Zefiro Net. Secure, state-of-the-art telecommunications infrastructure."
+    "title": "Zefiro Net S.r.l. — Shared Mobile Infrastructure",
+    "description": "Zefiro Net SRL is the 50/50 joint venture between Iliad Italia and WINDTRE dedicated to the sustainable deployment of 5G and 4G mobile networks across Italy's rural areas."
   },
   "nav": {
     "chiSiamo": "About Us",
-    "sedi": "Offices",
-    "manifesto": "Manifesto",
+    "tecnologia": "Technology",
+    "governance": "Governance",
+    "sostenibilita": "Sustainability",
     "lavoraConNoi": "Work with us",
+    "sedi": "Offices",
+    "manifesto": "Our Values",
     "areaPubblica": "Public Documents",
-    "apriMenu": "Open menu"
+    "apriMenu": "Open menu",
+    "governanceNotice": "Section upcoming: Corporate governance documentation and annual reports will be published soon.",
+    "sub": {
+      "storia": "History & Identity",
+      "missione": "Vision & Mission",
+      "valori": "Our Values",
+      "sedi": "Our Offices",
+      "ranSharing": "RAN Sharing",
+      "copertura": "Territorial Coverage",
+      "certificazioni": "Certifications",
+      "politiche": "ESG Policies",
+      "pianoEsg": "ESG Plan",
+      "bilancio": "Sustainability Report 2025"
+    }
   },
   "common": {
     "scopriDiPiu": "Learn more",
-    "contatti": "Contact"
+    "contatti": "Contact",
+    "scaricaPdf": "Download PDF",
+    "inArrivo": "Coming Soon",
+    "tornaHome": "Back to Home"
   },
   "footer": {
-    "tagline": "Connecting in a breath.",
-    "azienda": "The Company",
-    "chiSiamo": "About Us",
-    "manifesto": "Manifesto",
-    "sedi": "Offices",
-    "risorse": "Resources & Governance",
+    "tagline": "Connecting in a breath. The 50/50 joint venture between Iliad Italia and WINDTRE for wholesale mobile connectivity across rural areas.",
+    "azienda": "About Us",
+    "chiSiamo": "History & Partners",
+    "valori": "Our Values",
+    "sedi": "Milan & Rome Offices",
+    "tecnologia": "Technology",
+    "ranSharing": "RAN Sharing",
+    "copertura": "70% Coverage",
+    "sostenibilita": "Sustainability",
+    "certificazioni": "Certifications",
+    "politiche": "ESG Policies",
+    "pianoEsg": "ESG Plan",
+    "bilancio": "Report 2025",
+    "risorse": "Governance & Legal",
+    "governance": "Governance",
     "documentiPubblici": "Public Documents",
     "modello231": "Model 231",
-    "certificazioni": "Certifications & Sustainability",
     "whistleblowing": "Whistleblowing",
+    "lavoraConNoi": "Work with us",
     "contatti": "Contact",
     "indirizzo": "Milan, Via Gattamelata, 34 (Il Pharo)",
     "copyright": "All rights reserved.",
@@ -35,29 +63,113 @@
   },
   "hero": {
     "titolo": "Connecting <br/> <span class='text-zefiro-cyan'>in a breath.</span>",
-    "sottotitolo": "We accelerate the deployment of 5G networks across Italy. Providing world-class wholesale infrastructure to connect rural areas and bridge the digital divide.",
+    "sottotitolo": "We accelerate the rollout of 5G and ultra-broadband networks across Italy's less densely populated areas. Through RAN sharing, we foster sustainable wholesale infrastructure, minimizing environmental impact while ensuring digital inclusion for all.",
     "ctaPrimaria": "The Zefiro Net Project",
-    "ctaSecondaria": "Our Manifesto"
+    "ctaSecondaria": "Technology"
   },
   "missione": {
-    "titolo": "A shared mission",
-    "sottotitolo": "Technological excellence serving telecom operators"
+    "titolo": "Our Network",
+    "sottotitolo": "Technological excellence and sustainability empowering communities"
   },
   "manifesto": {
     "titolo": "Our ",
-    "titoloAccento": "manifesto",
-    "sottotitolo": "We believe in a seamlessly connected Italy without geographical disparities. We work behind the scenes to make digitization a tangible reality for everyone."
+    "titoloAccento": "values",
+    "sottotitolo": "We believe in a connected, sustainable Italy without geographical disparities. We work to make digitization a tangible reality for everyone."
+  },
+  "homepage": {
+    "badgeCopertura": "National Mobile Coverage",
+    "chiSiamoTitolo": "Connecting 70% of Italian Territory",
+    "chiSiamoSottotitolo": "Bridging the digital divide by delivering 5G and ultra-broadband networks across 70% of national territory, focusing on rural and sparsely populated areas home to approximately 26.8% of Italy's population. With around 7,000 active mobile sites and towers, we operate an open, efficient, and sustainable wholesale infrastructure.",
+    "chiSiamoBottone": "Discover Our Technology",
+    "stat1Valore": "70%",
+    "stat1Label": "National territory covered (rural areas)",
+    "stat2Valore": "~7,000",
+    "stat2Label": "Active mobile towers & sites",
+    "stat3Valore": "26.8%",
+    "stat3Label": "Resident population in served areas",
+    "mapChipRete": "National Mobile Network",
+    "mapChipCopertura": "70% Territory Covered",
+    "mapLegendaRurale": "Zefiro Net Covered Territory (70%)",
+    "mapLegendaUrbana": "Non-covered areas",
+    "mapTagline": "Digital Divide & Shared 5G Wholesale"
+  },
+  "chiSiamo": {
+    "etichetta": "The Joint Venture",
+    "titolo": "About ",
+    "titoloAccento": "us",
+    "titoloDefault": "About Us",
+    "storiaTitolo": "Overview & History",
+    "storiaSottotitolo": "The strategic joint venture established to share radio access innovation across Italy's rural areas.",
+    "missioneTitolo": "Vision and Mission",
+    "missioneNota": "(Shared vision & mission – generic draft pending final collegial review)",
+    "valoriTitolo": "Our Values",
+    "valoriSottotitolo": "The guiding principles that shape our daily operations and professional development.",
+    "wholesaleTitolo": "Shared Wholesale Operator",
+    "sociTitolo": "Our Shareholders",
+    "sediTitolo": "Our Offices"
+  },
+  "tecnologia": {
+    "etichetta": "Infrastructure & Network",
+    "titolo": "Technology ",
+    "titoloAccento": "- IT",
+    "sottotitolo": "Cutting-edge radio access solutions to connect the country while reducing environmental footprint and optimizing capital investment.",
+    "ranSharingTitolo": "What is RAN Sharing",
+    "ranSharingDesc": "Radio Access Network (RAN) Sharing is a technological framework where operators share radio access infrastructure (antennas, base stations, power supplies, and transmission backhaul) while maintaining strictly autonomous and separated Core Networks and subscriber services.",
+    "percheRanSharing": "Why Zefiro Net Adopts RAN Sharing",
+    "motivo1Titolo": "Cost Optimization (CapEx & OpEx)",
+    "motivo1Desc": "Sharing radio access enables partners WINDTRE and Iliad to eliminate duplicate infrastructure costs, power consumption, and maintenance in lower-density regions.",
+    "motivo2Titolo": "Enhanced Environmental Sustainability",
+    "motivo2Desc": "Avoiding parallel tower rollouts significantly reduces landscape footprint, overall electromagnetic impact, and power consumption, driving decarbonization.",
+    "motivo3Titolo": "Accelerated 5G & Ultra-Broadband Deployment",
+    "motivo3Desc": "A unified network allows next-generation 5G speeds and capacity to reach rural communities and mountain areas far quicker than isolated single deployments.",
+    "motivo4Titolo": "Resilience & 24/7 Operations Monitoring",
+    "motivo4Desc": "Centralized Network Operations monitor sites and key performance indicators (KPIs) around the clock to ensure maximum reliability and rapid response.",
+    "coperturaTitolo": "70% Italian Territorial Coverage",
+    "coperturaDesc": "Zefiro Net technically manages physical mobile infrastructure covering approximately 70% of Italian national territory, serving rural and low-density regions where approximately 26.8% of the population resides across ~7,000 active sites."
+  },
+  "sostenibilita": {
+    "etichetta": "ESG Responsibility",
+    "titolo": "Our ",
+    "titoloAccento": "sustainability",
+    "sottotitolo": "Embedding environmental, social, and governance (ESG) factors into telecommunications infrastructure to drive equitable, low-impact connectivity.",
+    "certificazioniTitolo": "Corporate Certifications",
+    "certificazioniDesc": "Third-party accredited certifications demonstrating our rigorous quality, environmental, safety, and governance standards.",
+    "politicheTitolo": "ESG Corporate Policies",
+    "politicheDesc": "Formal guidelines adopted by corporate leadership to govern daily operations and stakeholder engagement.",
+    "pianoEsgTitolo": "ESG Sustainability Plan",
+    "pianoEsgDesc": "A structured strategic roadmap spanning 5 pillars, 15 ESG targets, and 25 actionable initiatives guiding our corporate evolution.",
+    "pianoEsgNota": "The ESG Plan document is currently undergoing final verification and review with the ESG Direction (Ezio). The definitive PDF will be downloadable upon completion.",
+    "bilancioTitolo": "Sustainability Report 2025",
+    "bilancioDesc": "The official report transparently highlighting Zefiro Net's ESG performance, key impact metrics, and milestones for fiscal year 2025.",
+    "apriPdf": "View PDF Document"
+  },
+  "lavoraConNoi": {
+    "titolo": "Work ",
+    "titoloAccento": "with us",
+    "sottotitolo": "Join the joint venture driving Italy's digital transition forward. We seek talented professionals eager to make a lasting impact.",
+    "valoriTitolo": "Our People Values",
+    "valore1Titolo": "Continuous Innovation",
+    "valore1Desc": "Deploying cutting-edge 5G technologies to connect Italy's most remote communities.",
+    "valore2Titolo": "Sustainability & Wellbeing",
+    "valore2Desc": "Building environmentally conscious infrastructure while fostering an inclusive workplace with strong welfare initiatives.",
+    "valore3Titolo": "Technical Excellence",
+    "valore3Desc": "Our team brings together top-tier experts in wholesale telecommunications and RAN sharing.",
+    "peopleProgramTitolo": "Company Development Program & Buddy System",
+    "peopleProgramDesc": "Committed to ongoing professional growth: 360° feedback evaluations, continuous technical and ESG training, comprehensive corporate welfare, and dedicated Buddy onboarding for every new colleague.",
+    "candidaturaTitolo": "Open Application",
+    "candidaturaDesc": "Send us your curriculum vitae and share how your expertise can contribute to the growth of our nationwide network.",
+    "candidaturaNote": "Our People & HR team carefully assesses every application received."
   },
   "sedi": {
     "titolo": "Our ",
     "titoloAccento": "offices",
-    "sottotitolo": "We operate across Italy with strategic direction and operational centres to guarantee the highest network efficiency."
+    "sottotitolo": "Present across Italy with our corporate headquarters in Milan and our operations hub in Rome."
   },
   "documenti": {
     "titolo": "Public ",
     "titoloAccento": "documents",
     "titoloSezione": "Public Documents",
-    "sottotitolo": "In line with our commitment to transparency, we make all corporate, financial, and governance records available.",
+    "sottotitolo": "In accordance with our commitment to transparency, we provide access to corporate, financial, and regulatory compliance records.",
     "colonnaTitolo": "Document Title",
     "colonnaCategoria": "Category",
     "colonnaData": "Date",
@@ -67,46 +179,7 @@
     "filtroTutti": "All",
     "filtroFinanza": "Finance",
     "filtroGovernance": "Governance",
-    "filtroSicurezza": "Security"
-  },
-  "lavoraConNoi": {
-    "titolo": "Work ",
-    "titoloAccento": "with us",
-    "sottotitolo": "Join the joint venture accelerating Italy's digital future. We are looking for talents ready to make an impact.",
-    "valoriTitolo": "Our Core Values",
-    "valore1Titolo": "Continuous Innovation",
-    "valore1Desc": "We experiment with cutting-edge 5G technologies to connect even the most remote regions of Italy.",
-    "valore2Titolo": "Sustainability",
-    "valore2Desc": "We build infrastructure respecting the environment and local landscapes, fostering equitable growth.",
-    "valore3Titolo": "Technical Excellence",
-    "valore3Desc": "Our team brings together the foremost experts in wholesale telecommunications.",
-    "candidaturaTitolo": "Open Application",
-    "candidaturaDesc": "Send us your resume and tell us how you can contribute to the Zefiro Net vision.",
-    "candidaturaNote": "Our HR team will carefully review every application."
-  },
-  "chiSiamo": {
-    "etichetta": "The Joint Venture",
-    "titolo": "About ",
-    "titoloAccento": "us",
-    "titoloDefault": "About Us",
-    "missioneTitolo": "Our Mission",
-    "wholesaleTitolo": "Wholesale-Only Model"
-  },
-  "homepage": {
-    "badgeCopertura": "Infrastructure & Territory",
-    "chiSiamoTitolo": "Connecting 70% of Italian Territory",
-    "chiSiamoSottotitolo": "Bridging the digital divide by delivering 5G and ultra-broadband networks across 70% of the national territory, mainly in rural and sparsely populated areas. With around 7,000 active mobile sites and towers, we enable an open, shared wholesale infrastructure of excellence.",
-    "chiSiamoBottone": "Discover the Zefiro Net project",
-    "stat1Valore": "70%",
-    "stat1Label": "National territory covered (rural areas)",
-    "stat2Valore": "~7,000",
-    "stat2Label": "Active mobile towers & sites",
-    "stat3Valore": "100%",
-    "stat3Label": "Shared Wholesale-Only",
-    "mapChipRete": "National Mobile Network",
-    "mapChipCopertura": "70% Territory Covered",
-    "mapLegendaRurale": "Covered territory (70%)",
-    "mapLegendaUrbana": "Non-covered areas",
-    "mapTagline": "Digital Divide & 5G Wholesale"
+    "filtroSicurezza": "Security",
+    "filtroSostenibilita": "Sustainability"
   }
 }

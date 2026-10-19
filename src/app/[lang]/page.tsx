@@ -90,7 +90,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                   <Link href={`/${lang}/chi-siamo`} className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 text-base sm:text-lg font-bold rounded-full bg-zefiro-cyan text-primary hover:bg-white transition-all hover:scale-105 active:scale-95 shadow-xl text-center">
                     {btn1}
                   </Link>
-                  <Link href={`/${lang}/manifesto`} className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 text-base sm:text-lg font-bold rounded-full bg-transparent text-white hover:bg-white/15 backdrop-blur-md transition-all border-2 border-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-zefiro-cyan text-center">
+                  <Link href={`/${lang}/tecnologia`} className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 text-base sm:text-lg font-bold rounded-full bg-transparent text-white hover:bg-white/15 backdrop-blur-md transition-all border-2 border-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-zefiro-cyan text-center">
                     {btn2}
                   </Link>
                 </div>
@@ -196,7 +196,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                   </StaggerContainer>
 
                   <div className="pt-1 tall:pt-2">
-                    <Link href={`/${lang}/chi-siamo`} className="inline-flex items-center gap-2 tall:gap-3 text-sm sm:text-base tall:text-lg font-bold text-primary dark:text-zefiro-cyan hover:gap-3.5 tall:hover:gap-5 transition-all group">
+                    <Link href={`/${lang}/tecnologia`} className="inline-flex items-center gap-2 tall:gap-3 text-sm sm:text-base tall:text-lg font-bold text-primary dark:text-zefiro-cyan hover:gap-3.5 tall:hover:gap-5 transition-all group">
                       <span>{(dict as any).homepage.chiSiamoBottone}</span>
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />

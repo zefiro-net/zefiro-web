@@ -1,11 +1,45 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useLoader } from "@react-three/fiber";
+import React, { useRef, useMemo, Suspense, useState, useEffect } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three-stdlib";
-import { useRef, useMemo, Suspense, useState, useEffect } from "react";
 import * as THREE from "three";
-import { Environment, OrbitControls, Center } from "@react-three/drei";
+import { Environment, Lightformer, OrbitControls, Center } from "@react-three/drei";
+
+function isWebGLAvailable(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(
+      window.WebGLRenderingContext &&
+      (canvas.getContext("webgl2") || canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
+    );
+  } catch {
+    return false;
+  }
+}
+
+class ThreeErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error: unknown) {
+    console.warn("Screensaver 3D Canvas error caught safely:", error);
+  }
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || null;
+    }
+    return this.props.children;
+  }
+}
 
 function AntennaMesh() {
   const obj = useLoader(OBJLoader, "/media/antenna.obj");
@@ -17,9 +51,9 @@ function AntennaMesh() {
         const mesh = child as THREE.Mesh;
         mesh.material = new THREE.MeshStandardMaterial({
           color: "#ffffff",
-          roughness: 0.15,
-          metalness: 0.95,
-          envMapIntensity: 2.0,
+          roughness: 0.2,
+          metalness: 0.9,
+          envMapIntensity: 1.5,
         });
       }
     });
@@ -29,7 +63,7 @@ function AntennaMesh() {
     if (meshRef.current) {
       const t = state.clock.getElapsedTime();
 
-      // Gentle floating sine wave motion (constrained to avoid vertical clipping)
+      // Gentle floating sine wave motion
       meshRef.current.position.y = Math.sin(t * 0.4) * 0.8;
       meshRef.current.position.x = Math.cos(t * 0.25) * 1.0;
 
@@ -44,20 +78,18 @@ function AntennaMesh() {
 
   return (
     <Center>
-      <primitive
-        ref={meshRef}
-        object={obj}
-        scale={1.0}
-      />
+      <primitive ref={meshRef} object={obj} scale={1.0} />
     </Center>
   );
 }
 
 export function Screensaver3DAntenna() {
   const [mounted, setMounted] = useState(false);
+  const [webGLOk, setWebGLOk] = useState(true);
 
   useEffect(() => {
     setMounted(true);
+    setWebGLOk(isWebGLAvailable());
   }, []);
 
   if (!mounted) {
@@ -68,32 +100,53 @@ export function Screensaver3DAntenna() {
     );
   }
 
+  if (!webGLOk) {
+    return (
+      <div className="w-full h-full flex items-center justify-center p-8">
+        <div className="w-24 h-24 rounded-full border border-zefiro-cyan/40 flex items-center justify-center text-zefiro-cyan">
+          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="w-full h-full relative z-10 flex items-center justify-center">
-      <Canvas
-        camera={{ position: [0, 1, 56], fov: 38 }}
-        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
-      >
-        <ambientLight intensity={0.6} />
-        {/* Cinematic brand glow lighting (cyan rim light + teal fill) */}
-        <directionalLight position={[12, 12, 8]} intensity={3.5} color="#00CEDB" />
-        <directionalLight position={[-12, 8, -6]} intensity={2.2} color="#17556A" />
-        <directionalLight position={[0, -12, 4]} intensity={1.5} color="#38bdf8" />
-        <pointLight position={[0, 0, 15]} intensity={1.2} color="#ffffff" />
+    <ThreeErrorBoundary>
+      <div className="w-full h-full relative z-10 flex items-center justify-center">
+        <Canvas
+          camera={{ position: [0, 1, 56], fov: 38 }}
+          gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+        >
+          <ambientLight intensity={0.6} />
+          {/* Cinematic brand glow lighting */}
+          <directionalLight position={[12, 12, 8]} intensity={3.5} color="#00CEDB" />
+          <directionalLight position={[-12, 8, -6]} intensity={2.2} color="#17556A" />
+          <directionalLight position={[0, -12, 4]} intensity={1.5} color="#38bdf8" />
+          <pointLight position={[0, 0, 15]} intensity={1.2} color="#ffffff" />
 
-        <Suspense fallback={null}>
-          <AntennaMesh />
-          <Environment preset="night" />
-        </Suspense>
+          {/* Ambiente 100% offline generato via GPU Lightformer */}
+          <Suspense fallback={null}>
+            <AntennaMesh />
+            <Environment resolution={256}>
+              <group rotation={[-Math.PI / 3, 0, 1]}>
+                <Lightformer form="circle" intensity={4} rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={2} color="#00CEDB" />
+                <Lightformer form="circle" intensity={2} rotation-y={Math.PI / 2} position={[-5, 1, -1]} scale={2} color="#17556A" />
+                <Lightformer form="circle" intensity={3} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={8} color="#38bdf8" />
+              </group>
+            </Environment>
+          </Suspense>
 
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          enableRotate={true}
-          autoRotate={false}
-          rotateSpeed={0.8}
-        />
-      </Canvas>
-    </div>
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            enableRotate={true}
+            autoRotate={false}
+            rotateSpeed={0.8}
+          />
+        </Canvas>
+      </div>
+    </ThreeErrorBoundary>
   );
 }

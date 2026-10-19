@@ -1,32 +1,60 @@
 {
   "lang": "it",
   "metadata": {
-    "title": "Zefiro Net S.r.l.",
-    "description": "Sito di Zefiro Net. Infrastrutture di telecomunicazione sicure e all'avanguardia."
+    "title": "Zefiro Net S.r.l. — Infrastrutture Radiomobili Condivise",
+    "description": "Zefiro Net SRL è la joint venture paritetica tra Iliad Italia e WINDTRE per la gestione e lo sviluppo sostenibile delle reti mobili 5G e 4G nelle aree rurali italiane."
   },
   "nav": {
     "chiSiamo": "Chi Siamo",
-    "sedi": "Sedi",
-    "manifesto": "Manifesto",
+    "tecnologia": "Tecnologia",
+    "governance": "Governance",
+    "sostenibilita": "Sostenibilità",
     "lavoraConNoi": "Lavora con noi",
+    "sedi": "Sedi",
+    "manifesto": "I Nostri Valori",
     "areaPubblica": "Documenti Pubblici",
-    "apriMenu": "Apri menu"
+    "apriMenu": "Apri menu",
+    "governanceNotice": "Sezione in fase di pubblicazione: Documentazione societaria e bilanci d'esercizio saranno disponibili a breve.",
+    "sub": {
+      "storia": "Storia e Identità",
+      "missione": "Visione e Missione",
+      "valori": "I Nostri Valori",
+      "sedi": "Le Nostre Sedi",
+      "ranSharing": "RAN Sharing",
+      "copertura": "Copertura Territoriale",
+      "certificazioni": "Certificazioni",
+      "politiche": "Politiche ESG",
+      "pianoEsg": "Piano ESG",
+      "bilancio": "Bilancio di Sostenibilità 2025"
+    }
   },
   "common": {
     "scopriDiPiu": "Scopri di più",
-    "contatti": "Contatti"
+    "contatti": "Contatti",
+    "scaricaPdf": "Scarica PDF",
+    "inArrivo": "In arrivo",
+    "tornaHome": "Torna alla Home"
   },
   "footer": {
-    "tagline": "Connettere in un soffio.",
-    "azienda": "L'Azienda",
-    "chiSiamo": "Chi Siamo",
-    "manifesto": "Manifesto",
-    "sedi": "Sedi",
-    "risorse": "Risorse e Governance",
+    "tagline": "Connettere in un soffio. La joint venture paritetica tra Iliad Italia e WINDTRE per la connettività wholesale nelle aree rurali.",
+    "azienda": "Chi Siamo",
+    "chiSiamo": "Storia e Soci",
+    "valori": "I Nostri Valori",
+    "sedi": "Sedi di Milano e Roma",
+    "tecnologia": "Tecnologia",
+    "ranSharing": "RAN Sharing",
+    "copertura": "Copertura 70%",
+    "sostenibilita": "Sostenibilità",
+    "certificazioni": "Certificazioni",
+    "politiche": "Politiche ESG",
+    "pianoEsg": "Piano ESG",
+    "bilancio": "Bilancio 2025",
+    "risorse": "Governance & Legale",
+    "governance": "Governance",
     "documentiPubblici": "Documenti pubblici",
     "modello231": "Modello 231",
-    "certificazioni": "Certificazioni e Sostenibilità",
     "whistleblowing": "Whistleblowing",
+    "lavoraConNoi": "Lavora con noi",
     "contatti": "Contatti",
     "indirizzo": "Milano, Via Gattamelata, 34 (Il Pharo)",
     "copyright": "Tutti i diritti riservati.",
@@ -35,29 +63,113 @@
   },
   "hero": {
     "titolo": "Connettere <br/> <span class='text-zefiro-cyan'>in un soffio.</span>",
-    "sottotitolo": "Acceleriamo lo sviluppo delle reti 5G in Italia. Forniamo infrastrutture wholesale d'eccellenza per connettere le aree rurali e colmare il digital divide.",
+    "sottotitolo": "Acceleriamo lo sviluppo delle reti 5G e della connettività ultra-broadband nelle aree meno densamente popolate d'Italia. Attraverso il modello del RAN sharing, promuoviamo un'infrastruttura wholesale sostenibile, riducendo l'impatto ambientale e garantendo inclusione digitale per tutti.",
     "ctaPrimaria": "Il progetto Zefiro Net",
-    "ctaSecondaria": "Il nostro Manifesto"
+    "ctaSecondaria": "Tecnologia"
   },
   "missione": {
-    "titolo": "Una missione condivisa",
-    "sottotitolo": "Eccellenza tecnologica al servizio degli operatori"
+    "titolo": "La Nostra Rete",
+    "sottotitolo": "Eccellenza tecnologica e sostenibilità al servizio dei territori"
   },
   "manifesto": {
-    "titolo": "Il nostro ",
-    "titoloAccento": "manifesto",
-    "sottotitolo": "Crediamo in un'Italia connessa, senza distinzioni geografiche. Lavoriamo dietro le quinte affinché la digitalizzazione diventi una realtà concreta per tutti."
+    "titolo": "I Nostri ",
+    "titoloAccento": "valori",
+    "sottotitolo": "Crediamo in un'Italia connessa, senza distinzioni geografiche. Lavoriamo affinché la digitalizzazione diventi una realtà concreta per tutti."
+  },
+  "homepage": {
+    "badgeCopertura": "Copertura Radiomobile Nazionale",
+    "chiSiamoTitolo": "Connettiamo il 70% del territorio italiano",
+    "chiSiamoSottotitolo": "Superiamo il digital divide portando la tecnologia 5G e le reti ultra-broadband nel 70% del territorio nazionale, nelle aree rurali e meno densamente popolate in cui risiede circa il 26,8% della popolazione italiana. Con circa 7.000 siti e torri radiomobili attive, abilitiamo un'infrastruttura wholesale d'eccellenza, efficiente e sostenibile.",
+    "chiSiamoBottone": "Scopri la nostra Tecnologia",
+    "stat1Valore": "70%",
+    "stat1Label": "Territorio nazionale coperto (zone rurali)",
+    "stat2Valore": "~7.000",
+    "stat2Label": "Siti e torri radiomobili attive",
+    "stat3Valore": "26,8%",
+    "stat3Label": "Popolazione residente nelle aree servite",
+    "mapChipRete": "Rete Radiomobile Nazionale",
+    "mapChipCopertura": "70% Territorio Coperto",
+    "mapLegendaRurale": "Territorio coperto da Zefiro Net (70%)",
+    "mapLegendaUrbana": "Aree non coperte",
+    "mapTagline": "Digital Divide & 5G Wholesale Condiviso"
+  },
+  "chiSiamo": {
+    "etichetta": "La Joint Venture",
+    "titolo": "Chi ",
+    "titoloAccento": "siamo",
+    "titoloDefault": "Chi Siamo",
+    "storiaTitolo": "Breve Descrizione & Storia",
+    "storiaSottotitolo": "La joint venture strategica creata per condividere l'innovazione radiomobile nelle aree rurali del Paese.",
+    "missioneTitolo": "Visione e Missione",
+    "missioneNota": "(Visione e missione condivise – versione generica in allestimento per la revisione collegiale)",
+    "valoriTitolo": "I Nostri Valori",
+    "valoriSottotitolo": "I principi guida che ispirano il nostro operato quotidiano e il percorso di crescita delle nostre persone.",
+    "wholesaleTitolo": "Operatore Wholesale Condiviso",
+    "sociTitolo": "I Soci Paritetici",
+    "sediTitolo": "Le Nostre Sedi"
+  },
+  "tecnologia": {
+    "etichetta": "Infrastruttura & Rete",
+    "titolo": "Tecnologia ",
+    "titoloAccento": "- IT",
+    "sottotitolo": "Soluzioni di accesso radio all'avanguardia per connettere il Paese riducendo l'impatto ambientale e ottimizzando gli investimenti.",
+    "ranSharingTitolo": "Cos'è il RAN Sharing",
+    "ranSharingDesc": "Il Radio Access Network (RAN) Sharing è un'architettura tecnologica in cui due operatori condividono la rete di accesso radio (antenne, apparati trasmissivi, sistemi di alimentazione e pali di supporto), mantenendo autonome e indipendenti le rispettive reti core (Core Network) e i servizi offerti agli utenti.",
+    "percheRanSharing": "Perché Zefiro Net utilizza il RAN Sharing",
+    "motivo1Titolo": "Abbattimento dei Costi (CapEx & OpEx)",
+    "motivo1Desc": "Condividere la rete di accesso radio permette ai partner WINDTRE e Iliad di ottimizzare radicalmente gli investimenti infrastrutturali e i costi di gestione energetica e manutentiva nelle aree meno densamente popolate.",
+    "motivo2Titolo": "Maggiore Sostenibilità Ambientale",
+    "motivo2Desc": "Evitando la duplicazione di antenne e tralicci sul territorio, riduciamo l'impatto paesaggistico, l'impatto elettromagnetico complessivo e i consumi energetici, contribuendo alla decarbonizzazione.",
+    "motivo3Titolo": "Accelerazione 5G e Ultra-Broadband",
+    "motivo3Desc": "Un'infrastruttura condivisa permette di portare le frequenze e le prestazioni del 5G nei centri rurali e nei borghi montani molto più velocemente di quanto sarebbe possibile con singole reti concorrenti.",
+    "motivo4Titolo": "Resilienza e Supervisione 24/7",
+    "motivo4Desc": "Il Centro di Controllo Rete coordina e monitora in tempo reale tutti i siti e gli indicatori di prestazione (KPI) per garantire massima affidabilità e continuità di servizio.",
+    "coperturaTitolo": "Copertura del 70% del Territorio Italiano",
+    "coperturaDesc": "Zefiro Net garantisce la gestione tecnica dell'infrastruttura radiomobile in un'area pari a circa il 70% del territorio italiano, coprendo le aree rurali e a bassa densità demografica dove risiede circa il 26,8% della popolazione nazionale con circa 7.000 siti attivi."
+  },
+  "sostenibilita": {
+    "etichetta": "Responsabilità ESG",
+    "titolo": "La Nostra ",
+    "titoloAccento": "sostenibilità",
+    "sottotitolo": "Integriamo i fattori ambientali, sociali e di governance (ESG) nella gestione delle reti di telecomunicazione per promuovere uno sviluppo equo, inclusivo e a basso impatto.",
+    "certificazioniTitolo": "Certificazioni Aziendali",
+    "certificazioniDesc": "Attestazioni rilasciate da enti terzi accreditati che confermano l'eccellenza dei nostri standard di qualità, ambiente, sicurezza e sostenibilità.",
+    "politicheTitolo": "Politiche in Ambito ESG",
+    "politicheDesc": "Linee guida formali approvate dagli organi societari per orientare le attività quotidiane e le relazioni con tutti gli stakeholder.",
+    "pianoEsgTitolo": "Piano di Sostenibilità ESG",
+    "pianoEsgDesc": "Il percorso strategico strutturato in 5 direttrici, 15 obiettivi e 25 azioni per guidare l'evoluzione responsabile della nostra azienda.",
+    "pianoEsgNota": "Il documento di Piano ESG è attualmente in fase di revisione finale e validazione con la Direzione ESG (Ezio). Il PDF definitivo sarà reso disponibile al termine delle verifiche.",
+    "bilancioTitolo": "Bilancio di Sostenibilità 2025",
+    "bilancioDesc": "Il report ufficiale che illustra in modo trasparente le performance ESG, gli indicatori di impatto e i progressi conseguiti da Zefiro Net nell'esercizio 2025.",
+    "apriPdf": "Visualizza Documento PDF"
+  },
+  "lavoraConNoi": {
+    "titolo": "Lavora ",
+    "titoloAccento": "con noi",
+    "sottotitolo": "Entra a far parte della joint venture che sta accelerando il futuro digitale dell'Italia. Cerchiamo talenti pronti a fare la differenza.",
+    "valoriTitolo": "I Nostri Valori People",
+    "valore1Titolo": "Innovazione Continua",
+    "valore1Desc": "Sperimentiamo le tecnologie 5G più avanzate per connettere anche le aree più remote d'Italia.",
+    "valore2Titolo": "Sostenibilità & Benessere",
+    "valore2Desc": "Costruiamo infrastrutture nel rispetto dell'ambiente e promuoviamo un ambiente lavorativo inclusivo e attento al welfare.",
+    "valore3Titolo": "Eccellenza Tecnica",
+    "valore3Desc": "Il nostro team riunisce professionisti di primo livello nel settore delle telecomunicazioni wholesale e del RAN sharing.",
+    "peopleProgramTitolo": "Company Development Program & Buddy System",
+    "peopleProgramDesc": "Crediamo nello sviluppo professionale continuo: percorsi di feedback a 360°, formazione ESG e tecnica, piani di welfare aziendale e il Buddy Program per accogliere ogni nuova risorsa.",
+    "candidaturaTitolo": "Candidatura Spontanea",
+    "candidaturaDesc": "Inviaci il tuo Curriculum Vitae e raccontaci come le tue competenze possono contribuire alla crescita della nostra rete.",
+    "candidaturaNote": "Il nostro team People & HR valuterà con attenzione ogni profilo ricevuto."
   },
   "sedi": {
     "titolo": "Le ",
     "titoloAccento": "sedi",
-    "sottotitolo": "Siamo presenti sul territorio nazionale con centri operativi e direzionali per garantire la massima efficienza della rete."
+    "sottotitolo": "Siamo presenti sul territorio nazionale con la sede legale e direzionale a Milano e il polo operativo di coordinamento a Roma."
   },
   "documenti": {
     "titolo": "Documenti ",
     "titoloAccento": "pubblici",
     "titoloSezione": "Documenti Pubblici",
-    "sottotitolo": "In linea con i nostri valori di trasparenza, mettiamo a disposizione tutti i documenti societari, finanziari e di governance.",
+    "sottotitolo": "In linea con i nostri valori di trasparenza, mettiamo a disposizione i documenti societari, finanziari e di conformità normativa.",
     "colonnaTitolo": "Titolo Documento",
     "colonnaCategoria": "Categoria",
     "colonnaData": "Data",
@@ -67,46 +179,7 @@
     "filtroTutti": "Tutti",
     "filtroFinanza": "Finanza",
     "filtroGovernance": "Governance",
-    "filtroSicurezza": "Sicurezza"
-  },
-  "lavoraConNoi": {
-    "titolo": "Lavora ",
-    "titoloAccento": "con noi",
-    "sottotitolo": "Entra a far parte della joint venture che sta accelerando il futuro digitale dell'Italia. Cerchiamo talenti pronti a fare la differenza.",
-    "valoriTitolo": "I Nostri Valori",
-    "valore1Titolo": "Innovazione Continua",
-    "valore1Desc": "Sperimentiamo le tecnologie 5G più avanzate per connettere anche le aree più remote d'Italia.",
-    "valore2Titolo": "Sostenibilità",
-    "valore2Desc": "Costruiamo infrastrutture nel rispetto dell'ambiente e del territorio, promuovendo uno sviluppo equo.",
-    "valore3Titolo": "Eccellenza Tecnica",
-    "valore3Desc": "Il nostro team è composto dai migliori esperti nel settore delle telecomunicazioni wholesale.",
-    "candidaturaTitolo": "Candidatura Spontanea",
-    "candidaturaDesc": "Inviaci il tuo CV e raccontaci come puoi contribuire al progetto Zefiro Net.",
-    "candidaturaNote": "Il nostro team HR valuterà con attenzione ogni profilo."
-  },
-  "chiSiamo": {
-    "etichetta": "La Joint Venture",
-    "titolo": "Chi ",
-    "titoloAccento": "siamo",
-    "titoloDefault": "Chi Siamo",
-    "missioneTitolo": "La nostra missione",
-    "wholesaleTitolo": "Modello Wholesale Only"
-  },
-  "homepage": {
-    "badgeCopertura": "Infrastruttura & Territorio",
-    "chiSiamoTitolo": "Connettiamo il 70% del territorio italiano",
-    "chiSiamoSottotitolo": "Superiamo il digital divide portando la tecnologia 5G e le reti ultra-broadband nel 70% del territorio nazionale, principalmente nelle aree rurali e meno densamente popolate del Paese. Con circa 7.000 siti e torri radiomobili attive, abilitiamo un'infrastruttura wholesale d'eccellenza aperta e condivisa.",
-    "chiSiamoBottone": "Scopri il progetto Zefiro Net",
-    "stat1Valore": "70%",
-    "stat1Label": "Territorio nazionale coperto (zone rurali)",
-    "stat2Valore": "~7.000",
-    "stat2Label": "Siti e torri radiomobili attive",
-    "stat3Valore": "100%",
-    "stat3Label": "Wholesale-Only condiviso",
-    "mapChipRete": "Rete Radiomobile Nazionale",
-    "mapChipCopertura": "70% Territorio Coperto",
-    "mapLegendaRurale": "Territorio coperto (70%)",
-    "mapLegendaUrbana": "Aree non coperte",
-    "mapTagline": "Digital Divide & 5G Wholesale"
+    "filtroSicurezza": "Sicurezza",
+    "filtroSostenibilita": "Sostenibilità"
   }
 }

@@ -1,25 +1,31 @@
 import type { NextConfig } from "next";
 
-// Content Security Policy conforme a OWASP Top 10 e standard NIS2
+const isProduction = process.env.NODE_ENV === 'production';
+const robotsHeaderValue = process.env.NEXT_PUBLIC_ENABLE_INDEXING === 'true'
+  ? 'index, follow'
+  : 'noindex, nofollow, noarchive, nosnippet';
+
+// Abilita upgrade-insecure-requests solo quando è presente una connessione HTTPS sicura o forzatura esplicita
+const upgradeInsecure = process.env.NEXT_PUBLIC_ENABLE_HTTPS === 'true'
+  ? 'upgrade-insecure-requests;'
+  : '';
+
+// Content Security Policy conforme a OWASP Top 10 e standard NIS2 con supporto Three.js, WebGL e WebSockets
 const cspHeader = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval';
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: blob: https://zefironet.it;
   font-src 'self' data:;
-  connect-src 'self';
-  media-src 'self';
+  connect-src 'self' data: blob: ws: wss: https://zefironet.it https://raw.githack.com https://raw.githubusercontent.com;
+  worker-src 'self' blob:;
+  media-src 'self' data: blob:;
   object-src 'none';
   base-uri 'self';
   form-action 'self';
   frame-ancestors 'none';
-  upgrade-insecure-requests;
+  ${upgradeInsecure}
 `.replace(/\s{2,}/g, ' ').trim();
-
-const isProduction = process.env.NODE_ENV === 'production';
-const robotsHeaderValue = process.env.NEXT_PUBLIC_ENABLE_INDEXING === 'true'
-  ? 'index, follow'
-  : 'noindex, nofollow, noarchive, nosnippet';
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -28,11 +34,14 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   allowedDevOrigins: [
     "localhost:3000",
+    "127.0.0.1:3000",
     "192.168.1.105",
     "192.168.1.105:3000",
     "192.168.1.53",
     "192.168.1.53:3000",
-    "192.168.1.*",
+    "192.168.*",
+    "10.*",
+    "172.*",
     "*.local",
   ],
   async headers() {

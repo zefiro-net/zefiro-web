@@ -13,6 +13,7 @@ type DocumentiDict = {
   filtroFinanza: string;
   filtroGovernance: string;
   filtroSicurezza: string;
+  filtroSostenibilita?: string;
   titoloSezione: string;
   sottotitolo: string;
   colonnaTitolo: string;
@@ -26,8 +27,9 @@ type DocumentiDict = {
 export function DocumentiClient({ documents, dict }: { documents: Document[]; dict: DocumentiDict }) {
   const CATEGORIES = [
     { key: dict.filtroTutti, value: 'Tutti' },
-    { key: dict.filtroFinanza, value: 'Finanza' },
+    { key: dict.filtroSostenibilita || 'Sostenibilità', value: 'Sostenibilità' },
     { key: dict.filtroGovernance, value: 'Governance' },
+    { key: dict.filtroFinanza, value: 'Finanza' },
     { key: dict.filtroSicurezza, value: 'Sicurezza' },
   ];
 
