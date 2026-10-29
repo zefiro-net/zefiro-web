@@ -1,52 +1,19 @@
 import Link from 'next/link';
 import { FadeIn } from '@/components/animations/FadeIn';
-import { StaggerContainer, StaggerItem } from '@/components/animations/Stagger';
-import { TiltCard } from '@/components/animations/TiltCard';
 import { DataBreath3D } from '@/components/animations/DataBreath3D';
 import { Hero3DAntenna } from '@/components/animations/Hero3DAntenna';
 import { Parallax } from '@/components/animations/Parallax';
 import { ScrollProgress } from '@/components/animations/ScrollProgress';
 import { ScrollSectionReveal } from '@/components/animations/ScrollSectionReveal';
-import { getHighlights } from '@/data';
-import type { Highlight } from '@/data/types';
 import { getDictionary } from '@/i18n';
 import type { Locale } from '@/i18n';
 import { NetworkCoverageMap } from '@/components/NetworkCoverageMap';
 import { ScrollDownButton } from '@/components/animations/ScrollDownButton';
-import RanSharingDiagram from '@/components/RanSharingDiagram';
-
-function HighlightIcon({ icona }: { icona: Highlight['icona'] }) {
-  if (icona === 'shield') {
-    return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-5 h-5 sm:w-6 sm:h-6 tall:w-7 tall:h-7 xl:tall:w-8 xl:tall:h-8">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    );
-  }
-  if (icona === 'signal') {
-    return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-5 h-5 sm:w-6 sm:h-6 tall:w-7 tall:h-7 xl:tall:w-8 xl:tall:h-8">
-        <path d="m13 2-2 2.5h3L12 7" /><path d="m11 22 2-2.5h-3L12 17" />
-        <path d="M2 13h2.5l-2-3L7 12" /><path d="M22 11h-2.5l2 3L17 12" />
-        <path d="M12 12m-3 0a3 3 0 1 0 6 0 3 3 0 1 0-6 0" />
-      </svg>
-    );
-  }
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-5 h-5 sm:w-6 sm:h-6 tall:w-7 tall:h-7 xl:tall:w-8 xl:tall:h-8">
-      <rect width="18" height="18" x="3" y="3" rx="2" />
-      <path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2" />
-      <path d="M3 11h3c.8 0 1.6.3 2.1.9l1.1 1.2c.6.6 1.3.9 2.1.9h3" />
-      <path d="M14 21V11" />
-    </svg>
-  );
-}
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  
-  const highlights = getHighlights(lang);
+  const isIt = lang === 'it';
 
   const heroTitolo = dict.hero.titolo;
   const heroSottotitolo = dict.hero.sottotitolo;
@@ -114,153 +81,74 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
         </div>
       </section>
 
-      {/* 1. HIGH-TECH LIVE METRIC RIBBON (Seamless bridge from Hero) */}
-      <section className="relative z-30 bg-slate-900 text-white border-y border-white/10 shadow-2xl overflow-hidden py-5 sm:py-6">
-        <div className="absolute inset-0 bg-gradient-to-r from-zefiro-teal/30 via-primary to-slate-900 pointer-events-none" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            <div className="flex items-center gap-3.5 pt-3 md:pt-0">
-              <div className="w-10 h-10 rounded-2xl bg-zefiro-cyan/20 border border-zefiro-cyan/40 flex items-center justify-center shrink-0 text-zefiro-cyan font-bold">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
-              </div>
-              <div>
-                <p className="text-sm sm:text-base font-extrabold text-white tracking-tight">{hp.ribbonKpi1 || '70% Territorio'}</p>
-                <p className="text-xs text-gray-400 font-medium">{hp.ribbonSub1 || 'Aree Rurali e Montane'}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3.5 pt-3 md:pt-0 md:pl-6 lg:pl-8">
-              <div className="w-10 h-10 rounded-2xl bg-zefiro-cyan/20 border border-zefiro-cyan/40 flex items-center justify-center shrink-0 text-zefiro-cyan font-bold">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
-              </div>
-              <div>
-                <p className="text-sm sm:text-base font-extrabold text-white tracking-tight">{hp.ribbonKpi2 || '~7.000 Siti'}</p>
-                <p className="text-xs text-gray-400 font-medium">{hp.ribbonSub2 || 'Torri 4G & 5G Attive'}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3.5 pt-3 md:pt-0 md:pl-6 lg:pl-8">
-              <div className="w-10 h-10 rounded-2xl bg-zefiro-cyan/20 border border-zefiro-cyan/40 flex items-center justify-center shrink-0 text-zefiro-cyan font-bold">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-              </div>
-              <div>
-                <p className="text-sm sm:text-base font-extrabold text-white tracking-tight">{hp.ribbonKpi3 || '26,8% Popolazione'}</p>
-                <p className="text-xs text-gray-400 font-medium">{hp.ribbonSub3 || '~16 Milioni di Residenti'}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3.5 pt-3 md:pt-0 md:pl-6 lg:pl-8">
-              <div className="w-10 h-10 rounded-2xl bg-zefiro-cyan/20 border border-zefiro-cyan/40 flex items-center justify-center shrink-0 text-zefiro-cyan font-bold">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-              </div>
-              <div>
-                <p className="text-sm sm:text-base font-extrabold text-white tracking-tight">{hp.ribbonKpi4 || 'Joint Venture 50/50'}</p>
-                <p className="text-xs text-gray-400 font-medium">{hp.ribbonSub4 || 'WINDTRE & Iliad Italia'}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. RURAL NETWORK COVERAGE & DIGITAL DIVIDE */}
-      <section id="copertura" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-slate-950 overflow-hidden relative scroll-mt-20">
-        <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-zefiro-cyan/5 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. SEZIONE COPERTURA — EDITORIALE, SPAZIOSA E MINIMALE */}
+      <section id="copertura" className="py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950 overflow-hidden relative scroll-mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14 xl:gap-20">
-            {/* Left Column: Interactive Italy Network Map */}
-            <div className="w-full lg:w-5/12 flex justify-center">
-              <ScrollSectionReveal direction="right" delay={0.1} className="w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[390px] xl:max-w-[420px]">
-                <div className="relative p-2 rounded-3xl bg-slate-50/60 dark:bg-slate-900/60 border border-gray-200/80 dark:border-white/10 shadow-xl backdrop-blur-sm">
-                  <NetworkCoverageMap dict={hp} />
-                </div>
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24">
+            {/* Left: Mappa d'Italia Minimale */}
+            <div className="w-full lg:w-5/12 flex justify-center order-2 lg:order-1">
+              <ScrollSectionReveal direction="right" delay={0.1} className="w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[400px]">
+                <NetworkCoverageMap dict={hp} />
               </ScrollSectionReveal>
             </div>
 
-            {/* Right Column: Narrative & Key Metrics */}
-            <div className="w-full lg:w-7/12">
-              <ScrollSectionReveal direction="left" delay={0.2}>
-                <div className="space-y-5 sm:space-y-6">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zefiro-cyan/10 text-zefiro-cyan text-xs font-bold uppercase tracking-widest border border-zefiro-cyan/20">
-                    <span className="w-2 h-2 rounded-full bg-zefiro-cyan animate-pulse"></span>
-                    {hp.badgeCopertura || dict.nav.chiSiamo}
-                  </div>
-                  <h2 className="text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-black text-primary dark:text-white leading-[1.12] tracking-tight">
+            {/* Right: Tipografia & Metriche Essenziali */}
+            <div className="w-full lg:w-7/12 order-1 lg:order-2">
+              <ScrollSectionReveal direction="left" delay={0.15}>
+                <div className="space-y-6">
+                  <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zefiro-cyan block">
+                    {hp.badgeCopertura || (isIt ? 'Infrastruttura Radiomobile' : 'Mobile Infrastructure')}
+                  </span>
+                  
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary dark:text-white leading-[1.12] tracking-tight">
                     {hp.chiSiamoTitolo}
                   </h2>
+                  
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
                     {hp.chiSiamoSottotitolo}
                   </p>
 
-                  {/* 3 Key Stats Grid with Enhanced Micro-Interactions */}
-                  <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-2">
-                    <StaggerItem className="h-full">
-                      <div className="h-full flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-gray-200 dark:border-white/10 hover:border-zefiro-cyan/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div>
-                          <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-3xl lg:text-4xl font-black text-primary dark:text-zefiro-cyan tracking-tight">
-                              {hp.stat1Valore || '70%'}
-                            </span>
-                            <span className="w-2 h-2 rounded-full bg-zefiro-cyan/40 group-hover:bg-zefiro-cyan transition-colors" />
-                          </div>
-                          <div className="w-8 h-1 bg-zefiro-cyan/40 group-hover:w-12 group-hover:bg-zefiro-cyan transition-all duration-300 rounded-full mb-2"></div>
-                        </div>
-                        <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-semibold leading-snug">
-                          {hp.stat1Label || 'Territorio nazionale coperto'}
-                        </p>
-                      </div>
-                    </StaggerItem>
+                  {/* Metriche pure tipografiche senza card pesanti */}
+                  <div className="grid grid-cols-3 gap-6 pt-4 pb-6 border-y border-gray-100 dark:border-white/10">
+                    <div>
+                      <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-primary dark:text-white block">
+                        {hp.stat1Valore || '70%'}
+                      </span>
+                      <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1.5 block leading-snug">
+                        {hp.stat1Label || (isIt ? 'Territorio nazionale coperto' : 'National territory covered')}
+                      </span>
+                    </div>
 
-                    <StaggerItem className="h-full">
-                      <div className="h-full flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-gray-200 dark:border-white/10 hover:border-zefiro-cyan/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div>
-                          <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-3xl lg:text-4xl font-black text-primary dark:text-zefiro-cyan tracking-tight">
-                              {hp.stat2Valore || '~7.000'}
-                            </span>
-                            <span className="w-2 h-2 rounded-full bg-zefiro-cyan/40 group-hover:bg-zefiro-cyan transition-colors" />
-                          </div>
-                          <div className="w-8 h-1 bg-zefiro-cyan/40 group-hover:w-12 group-hover:bg-zefiro-cyan transition-all duration-300 rounded-full mb-2"></div>
-                        </div>
-                        <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-semibold leading-snug">
-                          {hp.stat2Label || 'Siti e torri radiomobili attive'}
-                        </p>
-                      </div>
-                    </StaggerItem>
+                    <div>
+                      <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-primary dark:text-white block">
+                        {hp.stat2Valore || '~7.000'}
+                      </span>
+                      <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1.5 block leading-snug">
+                        {hp.stat2Label || (isIt ? 'Siti e torri radiomobili' : 'Mobile sites & towers')}
+                      </span>
+                    </div>
 
-                    <StaggerItem className="h-full">
-                      <div className="h-full flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-gray-200 dark:border-white/10 hover:border-zefiro-cyan/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div>
-                          <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-3xl lg:text-4xl font-black text-primary dark:text-zefiro-cyan tracking-tight">
-                              {hp.stat3Valore || '26,8%'}
-                            </span>
-                            <span className="w-2 h-2 rounded-full bg-zefiro-cyan/40 group-hover:bg-zefiro-cyan transition-colors" />
-                          </div>
-                          <div className="w-8 h-1 bg-zefiro-cyan/40 group-hover:w-12 group-hover:bg-zefiro-cyan transition-all duration-300 rounded-full mb-2"></div>
-                        </div>
-                        <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-semibold leading-snug">
-                          {hp.stat3Label || 'Popolazione residente servita'}
-                        </p>
-                      </div>
-                    </StaggerItem>
-                  </StaggerContainer>
+                    <div>
+                      <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-primary dark:text-white block">
+                        {hp.stat3Valore || '26,8%'}
+                      </span>
+                      <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1.5 block leading-snug">
+                        {hp.stat3Label || (isIt ? 'Popolazione residente' : 'Resident population')}
+                      </span>
+                    </div>
+                  </div>
 
-                  <div className="pt-3 flex flex-wrap items-center gap-4">
+                  {/* Azione pulita con link testuale */}
+                  <div className="pt-2">
                     <Link
                       href={`/${lang}/tecnologia`}
-                      className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary hover:bg-primary/90 dark:bg-zefiro-cyan dark:text-primary dark:hover:bg-white text-white font-bold text-sm shadow-md transition-all group"
+                      className="inline-flex items-center gap-2.5 text-sm sm:text-base font-bold text-primary dark:text-zefiro-cyan hover:gap-4 transition-all group"
                     >
-                      <span>{hp.chiSiamoBottone || 'Scopri la nostra Tecnologia'}</span>
+                      <span>{hp.chiSiamoBottone || (isIt ? 'Scopri la nostra Tecnologia' : 'Discover Our Technology')}</span>
                       <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </Link>
-                    <Link
-                      href={`/${lang}/manifesto`}
-                      className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-gray-300 dark:border-white/20 text-gray-700 dark:text-gray-200 hover:border-zefiro-cyan hover:text-zefiro-cyan text-sm font-semibold transition-colors"
-                    >
-                      <span>{lang === 'it' ? 'Il Nostro Manifesto' : 'Our Manifesto'}</span>
-                    </Link>
                   </div>
                 </div>
               </ScrollSectionReveal>
@@ -269,338 +157,215 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
         </div>
       </section>
 
-      {/* 3. RAN SHARING BREAKTHROUGH — VISUAL ARCHITECTURAL SHOWCASE */}
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-slate-900 via-primary to-slate-950 text-white relative overflow-hidden">
-        <div className="absolute top-1/4 -right-24 w-96 h-96 bg-zefiro-cyan/15 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-10 -left-24 w-96 h-96 bg-zefiro-teal/20 rounded-full blur-[120px] pointer-events-none" />
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl relative z-10">
+      {/* 2. SEZIONE RAN SHARING — ESSENZA TECNOLOGICA A 3 PILASTRI */}
+      <section className="py-20 sm:py-28 bg-gray-50/80 dark:bg-slate-900/40 border-y border-gray-100 dark:border-white/5 relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl">
           <ScrollSectionReveal direction="up" delay={0.1}>
-            <div className="max-w-3xl mb-12 sm:mb-16">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-zefiro-cyan text-xs font-bold uppercase tracking-widest border border-white/10 mb-4">
-                <span className="w-2 h-2 rounded-full bg-zefiro-cyan" />
-                {hp.ranSharingBadge || 'Innovazione Wholesale'}
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
-                {hp.ranSharingTitolo}
+            <div className="max-w-3xl mb-14 sm:mb-16">
+              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zefiro-cyan block mb-3">
+                {hp.ranSharingBadge || (isIt ? 'Modello Tecnologico' : 'Technology Model')}
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary dark:text-white tracking-tight leading-tight mb-4">
+                {hp.ranSharingTitolo || (isIt ? 'RAN Sharing: tecnologia condivisa, impatto dimezzato' : 'RAN Sharing: shared technology, halved footprint')}
               </h2>
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
-                {hp.ranSharingDesc}
+              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                {hp.ranSharingDesc || (isIt
+                  ? 'Il modello Radio Access Network Sharing consente di condividere l’infrastruttura passiva e attiva di trasmissione, garantendo la totale indipendenza delle rispettive Core Network e azzerando la duplicazione degli impianti.'
+                  : 'The Radio Access Network Sharing model shares passive and active transmission assets while maintaining autonomous Core Networks, eliminating redundant equipment.')}
               </p>
             </div>
           </ScrollSectionReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Column: 3 Strategic Benefit Pillars */}
-            <div className="lg:col-span-5 space-y-4 sm:space-y-5">
-              <ScrollSectionReveal direction="right" delay={0.2}>
-                <div className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-zefiro-cyan/50 transition-all group">
-                  <div className="flex items-center gap-3.5 mb-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-zefiro-cyan transition-colors">
-                      {hp.ranPillar1Titolo || 'Sostenibilità Ambientale'}
-                    </h3>
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed pl-12">
-                    {hp.ranPillar1Desc}
-                  </p>
-                </div>
-              </ScrollSectionReveal>
-
-              <ScrollSectionReveal direction="right" delay={0.3}>
-                <div className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-zefiro-cyan/50 transition-all group">
-                  <div className="flex items-center gap-3.5 mb-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-zefiro-cyan/20 text-zefiro-cyan flex items-center justify-center font-bold text-sm">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    </div>
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-zefiro-cyan transition-colors">
-                      {hp.ranPillar2Titolo || 'Accelerazione 5G nei Borghi'}
-                    </h3>
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed pl-12">
-                    {hp.ranPillar2Desc}
-                  </p>
-                </div>
-              </ScrollSectionReveal>
-
-              <ScrollSectionReveal direction="right" delay={0.4}>
-                <div className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-zefiro-cyan/50 transition-all group">
-                  <div className="flex items-center gap-3.5 mb-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                    </div>
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-zefiro-cyan transition-colors">
-                      {hp.ranPillar3Titolo || 'Separazione Logica & Sicurezza'}
-                    </h3>
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed pl-12">
-                    {hp.ranPillar3Desc}
-                  </p>
-                </div>
-              </ScrollSectionReveal>
-
-              <div className="pt-2 pl-2">
-                <Link
-                  href={`/${lang}/tecnologia`}
-                  className="inline-flex items-center gap-3 text-sm font-bold text-zefiro-cyan hover:text-white transition-colors"
-                >
-                  <span>{hp.ranSharingBottone || 'Esplora la nostra Rete'}</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </Link>
+          {/* 3 Colonne Editoriali Minimali */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 pt-2">
+            <ScrollSectionReveal direction="up" delay={0.15}>
+              <div className="space-y-3">
+                <span className="text-xs font-mono font-bold text-zefiro-cyan tracking-wider">01</span>
+                <h3 className="text-lg sm:text-xl font-bold text-primary dark:text-white">
+                  {hp.ranPillar1Titolo || (isIt ? 'Sostenibilità Ambientale' : 'Environmental Sustainability')}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                  {hp.ranPillar1Desc || (isIt
+                    ? 'Dimezzamento dei tralicci e apparati radio per ridurre l’impatto paesaggistico, i consumi energetici e l’impatto elettromagnetico.'
+                    : 'Halving towers and equipment to minimize landscape footprint, power consumption, and electromagnetic impact.')}
+                </p>
               </div>
-            </div>
+            </ScrollSectionReveal>
 
-            {/* Right Column: Visual Architecture Graphic */}
-            <div className="lg:col-span-7">
-              <ScrollSectionReveal direction="left" delay={0.3}>
-                <RanSharingDiagram lang={lang} />
-              </ScrollSectionReveal>
-            </div>
+            <ScrollSectionReveal direction="up" delay={0.25}>
+              <div className="space-y-3">
+                <span className="text-xs font-mono font-bold text-zefiro-cyan tracking-wider">02</span>
+                <h3 className="text-lg sm:text-xl font-bold text-primary dark:text-white">
+                  {hp.ranPillar2Titolo || (isIt ? 'Accelerazione 5G nei Borghi' : 'Fast 5G in Rural Towns')}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                  {hp.ranPillar2Desc || (isIt
+                    ? 'Accesso immediato alle frequenze ultra-broadband per comunità e imprese locali che altrimenti resterebbero escluse.'
+                    : 'Immediate access to ultra-broadband frequencies for rural communities and local businesses.')}
+                </p>
+              </div>
+            </ScrollSectionReveal>
+
+            <ScrollSectionReveal direction="up" delay={0.35}>
+              <div className="space-y-3">
+                <span className="text-xs font-mono font-bold text-zefiro-cyan tracking-wider">03</span>
+                <h3 className="text-lg sm:text-xl font-bold text-primary dark:text-white">
+                  {hp.ranPillar3Titolo || (isIt ? 'Separazione Logica & Sicurezza' : 'Logical Separation & Security')}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                  {hp.ranPillar3Desc || (isIt
+                    ? 'I dati degli utenti e i sistemi di fatturazione dei soci partner rimangono rigorosamente isolati e protetti.'
+                    : 'Subscriber traffic and billing systems of partner operators remain strictly isolated and protected.')}
+                </p>
+              </div>
+            </ScrollSectionReveal>
+          </div>
+
+          <div className="pt-10 sm:pt-12">
+            <Link
+              href={`/${lang}/tecnologia`}
+              className="inline-flex items-center gap-2 text-sm font-bold text-primary dark:text-zefiro-cyan hover:gap-3 transition-all group"
+            >
+              <span>{hp.ranSharingBottone || (isIt ? 'Approfondisci l’architettura di rete' : 'Explore network architecture')}</span>
+              <svg className="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 4. MODERN BENTO GRID — THE 4 PILLARS OF ZEFIRO NET */}
-      <section className="py-20 sm:py-28 bg-gray-50/70 dark:bg-slate-900/60 relative overflow-hidden">
+      {/* 3. SEZIONE I TRE PILASTRI STRATEGICI — GRIGLIA EDITORIALE PULITA */}
+      <section className="py-20 sm:py-28 bg-white dark:bg-slate-950 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl">
           <ScrollSectionReveal direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
-                {hp.bentoBadge || "L'Ecosistema Zefiro Net"}
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary dark:text-white tracking-tight mb-4">
-                {hp.bentoTitolo}
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                {hp.bentoSottotitolo}
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 sm:mb-16 pb-6 border-b border-gray-100 dark:border-white/10">
+              <div>
+                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zefiro-cyan block mb-2">
+                  {isIt ? 'Visione & Impegno' : 'Vision & Commitment'}
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-black text-primary dark:text-white tracking-tight">
+                  {isIt ? 'I Valori Fondamentali di Zefiro Net' : 'The Core Pillars of Zefiro Net'}
+                </h2>
+              </div>
+              <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-md font-normal leading-relaxed">
+                {isIt
+                  ? 'Un’infrastruttura condivisa guidata da integrità etica, responsabilità ambientale e centralità delle persone.'
+                  : 'A shared infrastructure steered by ethical integrity, environmental responsibility, and human development.'}
               </p>
             </div>
           </ScrollSectionReveal>
 
-          {/* Asymmetric 12-Column Bento Matrix */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-            {/* Bento Card 1 (7 cols) — IL NOSTRO MANIFESTO */}
-            <div className="lg:col-span-7">
-              <ScrollSectionReveal direction="up" delay={0.1} className="h-full">
-                <div className="h-full relative overflow-hidden p-7 sm:p-10 rounded-3xl bg-gradient-to-br from-primary via-slate-900 to-slate-950 text-white border border-white/10 shadow-xl flex flex-col justify-between group hover:border-zefiro-cyan/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-zefiro-cyan/15 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16" />
-
-                  <div className="relative z-10 space-y-4">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-zefiro-cyan text-xs font-bold uppercase tracking-wider border border-white/10">
-                      {hp.bentoManifestoBadge || 'Carta dei Valori'}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                      {hp.bentoManifestoTitolo}
-                    </h3>
-                    <p className="text-lg sm:text-xl font-serif italic text-zefiro-cyan leading-snug">
-                      {hp.bentoManifestoQuote}
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-normal">
-                      {hp.bentoManifestoDesc}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Inclusione Territoriale</span>
-                      <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Decarbonizzazione</span>
-                      <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Trasparenza Etica</span>
-                    </div>
-                  </div>
-
-                  <div className="relative z-10 pt-8 border-t border-white/10 mt-6 flex items-center justify-between">
-                    <Link
-                      href={`/${lang}/manifesto`}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-zefiro-cyan group-hover:translate-x-1 transition-all"
-                    >
-                      <span>{hp.bentoManifestoBottone || 'Leggi il Manifesto'}</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                    </Link>
-                    <span className="text-xs font-mono text-gray-400">01 / MANIFESTO</span>
-                  </div>
+          {/* 3 Colonne Editoriali con Link Diretto */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+            {/* Pilastro 1: Manifesto */}
+            <ScrollSectionReveal direction="up" delay={0.1}>
+              <div className="h-full flex flex-col justify-between group">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono font-semibold text-gray-400 dark:text-gray-500">
+                    01 / {isIt ? 'VALORI' : 'VALUES'}
+                  </span>
+                  <h3 className="text-xl font-bold text-primary dark:text-white group-hover:text-zefiro-cyan transition-colors">
+                    {hp.bentoManifestoTitolo || (isIt ? 'Il Nostro Manifesto' : 'Our Manifesto')}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                    {hp.bentoManifestoDesc || (isIt
+                      ? 'I 6 principi guida per uno sviluppo digitale inclusivo, etico e rispettoso delle persone e dei territori.'
+                      : '6 guiding principles for equitable, ethical, and community-centered digital development.')}
+                  </p>
                 </div>
-              </ScrollSectionReveal>
-            </div>
-
-            {/* Bento Card 2 (5 cols) — SOSTENIBILITÀ & CERTIFICAZIONI */}
-            <div className="lg:col-span-5">
-              <ScrollSectionReveal direction="up" delay={0.2} className="h-full">
-                <div className="h-full relative overflow-hidden p-7 sm:p-10 rounded-3xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-emerald-500/50 transition-all duration-300">
-                  <div className="space-y-4">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/20">
-                      {hp.bentoEsgBadge || 'Responsabilità ESG'}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-black text-primary dark:text-white tracking-tight">
-                      {hp.bentoEsgTitolo}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
-                      {hp.bentoEsgDesc}
-                    </p>
-
-                    <div className="grid grid-cols-2 gap-2 pt-2 text-xs font-bold text-gray-700 dark:text-gray-200">
-                      <div className="p-2.5 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200/60 dark:border-white/5 text-center">
-                        EcoVadis Rating
-                      </div>
-                      <div className="p-2.5 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200/60 dark:border-white/5 text-center">
-                        ISO 9001 / 14001 / 45001
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-8 border-t border-gray-100 dark:border-white/10 mt-6 flex items-center justify-between">
-                    <Link
-                      href={`/${lang}/sostenibilita`}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 group-hover:translate-x-1 transition-all"
-                    >
-                      <span>{hp.bentoEsgBottone || 'Certificazioni & Bilancio'}</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                    </Link>
-                    <span className="text-xs font-mono text-gray-400">02 / ESG</span>
-                  </div>
+                <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5">
+                  <Link
+                    href={`/${lang}/manifesto`}
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary dark:text-white hover:text-zefiro-cyan group-hover:gap-2.5 transition-all"
+                  >
+                    <span>{hp.bentoManifestoBottone || (isIt ? 'Leggi il Manifesto' : 'Read the Manifesto')}</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
                 </div>
-              </ScrollSectionReveal>
-            </div>
+              </div>
+            </ScrollSectionReveal>
 
-            {/* Bento Card 3 (5 cols) — LA JOINT VENTURE PARITETICA */}
-            <div className="lg:col-span-5">
-              <ScrollSectionReveal direction="up" delay={0.3} className="h-full">
-                <div className="h-full relative overflow-hidden p-7 sm:p-10 rounded-3xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-zefiro-cyan/50 transition-all duration-300">
-                  <div className="space-y-4">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zefiro-cyan/10 text-zefiro-cyan text-xs font-bold uppercase tracking-wider border border-zefiro-cyan/20">
-                      {hp.bentoSociBadge || 'Sinergia Industriale'}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-black text-primary dark:text-white tracking-tight">
-                      {hp.bentoSociTitolo}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
-                      {hp.bentoSociDesc}
-                    </p>
-
-                    <div className="flex items-center gap-3 pt-2">
-                      <div className="px-4 py-2 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-600 dark:text-orange-400 font-black text-xs">
-                        WINDTRE 50%
-                      </div>
-                      <span className="text-xs font-bold text-gray-400">+</span>
-                      <div className="px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 font-black text-xs">
-                        Iliad Italia 50%
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-8 border-t border-gray-100 dark:border-white/10 mt-6 flex items-center justify-between">
-                    <Link
-                      href={`/${lang}/chi-siamo`}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-primary dark:text-zefiro-cyan hover:underline group-hover:translate-x-1 transition-all"
-                    >
-                      <span>{hp.bentoSociBottone || 'Chi Siamo & Soci'}</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                    </Link>
-                    <span className="text-xs font-mono text-gray-400">03 / PARTNERS</span>
-                  </div>
+            {/* Pilastro 2: Sostenibilità */}
+            <ScrollSectionReveal direction="up" delay={0.2}>
+              <div className="h-full flex flex-col justify-between group">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono font-semibold text-gray-400 dark:text-gray-500">
+                    02 / {isIt ? 'SOSTENIBILITÀ' : 'SUSTAINABILITY'}
+                  </span>
+                  <h3 className="text-xl font-bold text-primary dark:text-white group-hover:text-emerald-500 transition-colors">
+                    {hp.bentoEsgTitolo || (isIt ? 'Sostenibilità & Rating' : 'Sustainability & Ratings')}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                    {hp.bentoEsgDesc || (isIt
+                      ? 'Certificazioni ISO 9001, 14001, 45001, rating indipendente EcoVadis e Bilancio di Sostenibilità 2025 ufficiale.'
+                      : 'ISO 9001, 14001, 45001 certificates, independent EcoVadis scorecard, and official 2025 Report.')}
+                  </p>
                 </div>
-              </ScrollSectionReveal>
-            </div>
-
-            {/* Bento Card 4 (7 cols) — PEOPLE & TALENTO */}
-            <div className="lg:col-span-7">
-              <ScrollSectionReveal direction="up" delay={0.4} className="h-full">
-                <div className="h-full relative overflow-hidden p-7 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-primary text-white border border-white/10 shadow-xl flex flex-col justify-between group hover:border-zefiro-cyan/50 transition-all duration-300">
-                  <div className="space-y-4">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-zefiro-cyan text-xs font-bold uppercase tracking-wider border border-white/10">
-                      {hp.bentoPeopleBadge || 'People & Cultura'}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                      {hp.bentoPeopleTitolo}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-normal">
-                      {hp.bentoPeopleDesc}
-                    </p>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                        <p className="font-bold text-white mb-0.5">Innovazione 5G</p>
-                        <p className="text-gray-400 text-[11px]">Tecnologie di rete radio d&apos;avanguardia</p>
-                      </div>
-                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                        <p className="font-bold text-white mb-0.5">Welfare Integrato</p>
-                        <p className="text-gray-400 text-[11px]">Salute, previdenza e work-life balance</p>
-                      </div>
-                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                        <p className="font-bold text-white mb-0.5">Pari Opportunità</p>
-                        <p className="text-gray-400 text-[11px]">Certificazione UNI/PdR 125 in corso</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-8 border-t border-white/10 mt-6 flex items-center justify-between">
-                    <Link
-                      href={`/${lang}/lavora-con-noi`}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-zefiro-cyan group-hover:translate-x-1 transition-all"
-                    >
-                      <span>{hp.bentoPeopleBottone || 'Lavora con Noi'}</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                    </Link>
-                    <span className="text-xs font-mono text-gray-400">04 / CAREERS</span>
-                  </div>
+                <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5">
+                  <Link
+                    href={`/${lang}/sostenibilita`}
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary dark:text-white hover:text-emerald-500 group-hover:gap-2.5 transition-all"
+                  >
+                    <span>{hp.bentoEsgBottone || (isIt ? 'Certificazioni & Bilancio' : 'Certifications & Report')}</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
                 </div>
-              </ScrollSectionReveal>
-            </div>
+              </div>
+            </ScrollSectionReveal>
+
+            {/* Pilastro 3: Persone & Soci */}
+            <ScrollSectionReveal direction="up" delay={0.3}>
+              <div className="h-full flex flex-col justify-between group">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono font-semibold text-gray-400 dark:text-gray-500">
+                    03 / {isIt ? 'PERSONE & SOCI' : 'PEOPLE & PARTNERS'}
+                  </span>
+                  <h3 className="text-xl font-bold text-primary dark:text-white group-hover:text-zefiro-cyan transition-colors">
+                    {hp.bentoPeopleTitolo || (isIt ? 'Talento & Innovazione' : 'Talent & Innovation')}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                    {hp.bentoPeopleDesc || (isIt
+                      ? 'La joint venture paritetica al 50% tra WINDTRE e Iliad e il team ingegneristico che costruisce la rete del futuro.'
+                      : 'The 50/50 joint venture between WINDTRE and Iliad, powered by an engineering team bridging the digital divide.')}
+                  </p>
+                </div>
+                <div className="pt-6 mt-6 border-t border-gray-100 dark:border-white/5">
+                  <Link
+                    href={`/${lang}/lavora-con-noi`}
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary dark:text-white hover:text-zefiro-cyan group-hover:gap-2.5 transition-all"
+                  >
+                    <span>{hp.bentoPeopleBottone || (isIt ? 'Lavora con Noi' : 'Work with Us')}</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
+              </div>
+            </ScrollSectionReveal>
           </div>
         </div>
       </section>
 
-      {/* 5. STRATEGIC HIGHLIGHTS CARDS (Refined & Elevated) */}
-      <section className="py-14 sm:py-20 bg-white dark:bg-slate-950 overflow-hidden relative">
+      {/* 4. SEZIONE ARCHIVIO & TRASPARENZA — LINEA MINIMALE PRIMA DEL FOOTER */}
+      <section className="py-12 sm:py-16 bg-slate-900 text-white border-t border-white/10 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl">
-          <ScrollSectionReveal direction="up">
-            <div className="text-center mb-10 sm:mb-14 max-w-3xl mx-auto">
-              <h2 className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-2">{dict.missione.titolo}</h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary dark:text-white leading-tight">{dict.missione.sottotitolo}</h3>
-            </div>
-          </ScrollSectionReveal>
-
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {highlights.map((h) => (
-              <StaggerItem key={h.id}>
-                <TiltCard>
-                  <div className="group h-full flex flex-col p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/80 shadow-md hover:shadow-2xl border border-gray-200 dark:border-white/10 hover:border-zefiro-cyan/50 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-2xl bg-primary dark:bg-zefiro-cyan flex items-center justify-center mb-5 text-white dark:text-primary shadow-lg group-hover:scale-110 transition-all duration-300">
-                      <HighlightIcon icona={h.icona} />
-                    </div>
-                    <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-zefiro-cyan transition-colors">{h.titolo}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-normal">{h.descrizione}</p>
-                  </div>
-                </TiltCard>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 6. INSTITUTIONAL CALLOUT & ARCHIVE STRIP (Before Footer) */}
-      <section className="py-12 sm:py-16 bg-slate-900 text-white relative overflow-hidden border-t border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-zefiro-teal/30 via-primary/95 to-slate-950 pointer-events-none" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl relative z-10">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
-            <div className="max-w-2xl space-y-3">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zefiro-cyan/20 text-zefiro-cyan text-xs font-bold uppercase tracking-wider border border-zefiro-cyan/30">
-                {hp.ctaArchivioBadge || 'Conformità & Trasparenza'}
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                {hp.ctaArchivioTitolo}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                {hp.ctaArchivioDesc}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div className="space-y-1">
+              <p className="text-xs font-mono font-bold uppercase tracking-wider text-zefiro-cyan">
+                {isIt ? 'Trasparenza Societaria' : 'Corporate Transparency'}
+              </p>
+              <p className="text-sm sm:text-base text-gray-300 font-normal">
+                {isIt
+                  ? 'Certificazioni ufficiali, politiche ESG e relazioni societarie consultabili nell’Archivio.'
+                  : 'Official certificates, ESG policies, and corporate records available in the Archive.'}
               </p>
             </div>
-            <div className="shrink-0 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <Link
-                href={`/${lang}/documenti`}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-zefiro-cyan hover:bg-white text-primary font-bold text-sm shadow-xl hover:scale-105 active:scale-95 transition-all text-center"
-              >
-                {hp.ctaArchivioBottone || "Accedi all'Archivio"}
-              </Link>
-            </div>
+            <Link
+              href={`/${lang}/documenti`}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/10 hover:bg-white text-white hover:text-primary border border-white/15 text-xs sm:text-sm font-bold transition-all shrink-0"
+            >
+              <span>{isIt ? 'Consulta l’Archivio' : 'View Archive'}</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+            </Link>
           </div>
         </div>
       </section>
