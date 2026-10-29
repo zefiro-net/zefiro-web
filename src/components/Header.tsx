@@ -138,9 +138,9 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
 
   return (
     <>
-      <header className="fixed top-3 sm:top-5 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 pointer-events-none">
+      <header className="fixed top-3 sm:top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 lg:px-8 xl:px-12 pointer-events-none">
         <nav
-          className="w-full max-w-6xl pointer-events-auto flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/85 dark:bg-slate-900/80 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] transition-all"
+          className="w-full max-w-7xl pointer-events-auto flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/85 dark:bg-slate-900/80 backdrop-blur-xl border border-gray-200/70 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] transition-all"
           aria-label="Navigazione principale"
         >
           {/* Logo */}

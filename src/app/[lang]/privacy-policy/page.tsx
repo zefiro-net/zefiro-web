@@ -6,8 +6,9 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
   const isIt = lang === 'it';
 
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-4xl pt-28 sm:pt-36 pb-20 sm:pb-32 text-gray-800 dark:text-gray-200">
-      <FadeIn delay={0.1}>
+    <main className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl pt-28 sm:pt-36 pb-20 sm:pb-32 text-gray-800 dark:text-gray-200">
+      <div className="max-w-4xl">
+        <FadeIn delay={0.1}>
         <div className="mb-8 pb-6 border-b border-gray-200 dark:border-white/10">
           <span className="text-xs font-bold uppercase tracking-widest text-zefiro-cyan mb-2 block">
             {isIt ? 'Informativa Legale' : 'Legal Information'}
@@ -112,6 +113,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
           </>
         )}
       </FadeIn>
+      </div>
     </main>
   );
 }

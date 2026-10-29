@@ -36,7 +36,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
   const f = dict.footer;
   return (
     <footer className="bg-primary text-primary-foreground py-12 sm:py-16 mt-auto border-t border-white/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
         {/* Brand Column */}
         <div className="sm:col-span-2 lg:col-span-1">
           <div className="mb-4 sm:mb-6">
@@ -167,7 +167,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
       </div>
 
       {/* Bottom Legal & Corporate Strip */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col gap-3">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col gap-3">
         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-3 text-xs sm:text-sm text-gray-300">
           <p className="font-medium text-center sm:text-left">
             &copy; {new Date().getFullYear()} Zefiro Net S.r.l. — {f.copyright}

@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff0d_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
 
       {/* Header with Logo */}
-      <header className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+      <header className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl py-6 flex items-center justify-between">
         <Link href="/it" className="inline-block transition-transform hover:scale-105">
           <Image src={logoWhite} alt="Zefiro Net" className="h-8 w-auto" priority />
         </Link>
@@ -80,7 +80,7 @@ export default function NotFound() {
       </main>
 
       {/* Footer minimal */}
-      <footer className="relative z-10 container mx-auto px-4 py-6 text-center text-xs text-gray-500 border-t border-white/10">
+      <footer className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl py-6 text-center text-xs text-gray-500 border-t border-white/10">
         <p>&copy; {new Date().getFullYear()} Zefiro Net S.r.l. — Connettere in un soffio.</p>
       </footer>
     </div>

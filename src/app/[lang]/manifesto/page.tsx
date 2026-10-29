@@ -75,7 +75,7 @@ export default async function ManifestoPage({ params }: { params: Promise<{ lang
       </section>
 
       {/* Main Container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl relative z-10 pb-20 sm:pb-28 space-y-16 sm:space-y-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl relative z-10 pb-20 sm:pb-28 space-y-16 sm:space-y-20">
 
         {/* 1. DICHIARAZIONE FONDATIVA (Preambolo Editoriale - Non card) */}
         <section>
