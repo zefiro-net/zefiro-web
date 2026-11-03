@@ -19,7 +19,11 @@ type DocumentiDict = {
   colonnaTitolo: string;
   colonnaCategoria: string;
   colonnaData: string;
+  colonnaPeso?: string;
+  colonnaAzioni?: string;
   colonnaDownload: string;
+  visualizza?: string;
+  scarica?: string;
   nessunDocumento: string;
   tornaTutti: string;
 };
@@ -93,10 +97,11 @@ export function DocumentiClient({ documents, dict }: { documents: Document[]; di
       <FadeIn delay={0.2}>
         <div className="bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-gray-200/80 dark:border-slate-700 overflow-hidden shadow-md">
           <div className="hidden md:grid grid-cols-12 gap-4 p-4 sm:p-5 bg-gray-50 dark:bg-slate-900/50 border-b border-gray-200 dark:border-slate-700 text-xs sm:text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            <div className="col-span-6">{dict.colonnaTitolo}</div>
+            <div className="col-span-5">{dict.colonnaTitolo}</div>
             <div className="col-span-2">{dict.colonnaCategoria}</div>
             <div className="col-span-2">{dict.colonnaData}</div>
-            <div className="col-span-2 text-right">{dict.colonnaDownload}</div>
+            <div className="col-span-1 text-center">{dict.colonnaPeso || 'Peso'}</div>
+            <div className="col-span-2 text-right">{dict.colonnaAzioni || dict.colonnaDownload || 'Azioni'}</div>
           </div>
 
           <div key={activeCategory} className="min-h-[250px]">
@@ -115,7 +120,7 @@ export function DocumentiClient({ documents, dict }: { documents: Document[]; di
                 {filtered.map((doc) => (
                   <StaggerItem key={doc.id}>
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 p-4 sm:p-5 items-center hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors group">
-                      <div className="col-span-1 md:col-span-6 flex items-start gap-3 sm:gap-4">
+                      <div className="col-span-1 md:col-span-5 flex items-start gap-3 sm:gap-4">
                         <div className="text-primary dark:text-white mt-0.5 flex-shrink-0">
                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /></svg>
                         </div>
@@ -128,16 +133,35 @@ export function DocumentiClient({ documents, dict }: { documents: Document[]; di
                         <span className="inline-flex px-2.5 py-1 rounded bg-gray-100 border border-gray-200 dark:bg-slate-700 dark:border-slate-600 uppercase text-[10px] font-bold tracking-wider">{doc.category}</span>
                       </div>
                       <div className="hidden md:block col-span-2 text-sm text-gray-600 dark:text-gray-300">{doc.date}</div>
-                      <div className="col-span-1 md:col-span-2 text-right flex justify-end mt-1 md:mt-0">
+                      <div className="hidden md:block col-span-1 text-center font-mono text-xs text-gray-500 dark:text-gray-400 font-medium">{doc.size}</div>
+                      <div className="col-span-1 md:col-span-2 flex items-center justify-start md:justify-end gap-2 mt-2 md:mt-0">
                         <a
                           href={doc.fileUrl !== '#' ? doc.fileUrl : undefined}
-                          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-primary dark:text-zefiro-cyan hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-3 py-1.5 bg-gray-100 dark:bg-white/10 md:bg-transparent md:dark:bg-transparent transition-all"
-                          aria-label={`${dict.colonnaDownload} ${doc.title}`}
-                          download={doc.fileUrl !== '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-zefiro-cyan hover:text-zefiro-cyan text-xs font-semibold text-gray-700 dark:text-gray-200 transition-all shadow-2xs"
+                          title={`${dict.visualizza || 'Visualizza'} ${doc.title}`}
+                          aria-label={`${dict.visualizza || 'Visualizza'} ${doc.title}`}
                         >
-                          <span className="md:hidden">Scarica ({doc.size})</span>
-                          <span className="hidden md:inline">{doc.size}</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                          </svg>
+                          <span className="text-xs">{dict.visualizza || 'Visualizza'}</span>
+                        </a>
+                        <a
+                          href={doc.fileUrl !== '#' ? doc.fileUrl : undefined}
+                          download={doc.fileUrl !== '#'}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-zefiro-cyan text-white hover:text-primary dark:bg-zefiro-cyan dark:text-primary dark:hover:bg-white text-xs font-bold transition-all shadow-2xs"
+                          title={`${dict.scarica || 'Scarica'} ${doc.title}`}
+                          aria-label={`${dict.scarica || 'Scarica'} ${doc.title}`}
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                          </svg>
+                          <span className="text-xs">{dict.scarica || 'Scarica'}</span>
                         </a>
                       </div>
                     </div>

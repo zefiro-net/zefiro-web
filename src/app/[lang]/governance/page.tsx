@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getGovernance } from '@/data';
 import { getDictionary } from '@/i18n';
@@ -89,13 +88,10 @@ export default async function GovernancePage({ params }: { params: Promise<{ lan
               <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
                 {data.codiceEtico.badge}
               </span>
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-4">
+              <div className="mb-4">
                 <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight">
                   {data.codiceEtico.titolo}
                 </h2>
-                <span className="text-xs font-mono font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-white/5 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 self-start sm:self-auto">
-                  {data.codiceEtico.delibera}
-                </span>
               </div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed">
                 {data.codiceEtico.descrizione}
@@ -148,15 +144,15 @@ export default async function GovernancePage({ params }: { params: Promise<{ lan
               </div>
               <a
                 href={data.codiceEtico.documento.fileUrl}
-                download
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-zefiro-cyan text-white hover:text-primary dark:bg-zefiro-cyan dark:text-primary dark:hover:bg-white font-bold text-xs sm:text-sm shadow-md transition-all shrink-0"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-                <span>{dict.common?.scaricaPdf || 'Scarica PDF'}</span>
+                <span>{dict.common?.visualizzaPdf || 'Visualizza PDF'}</span>
               </a>
             </div>
           </FadeIn>
@@ -169,13 +165,10 @@ export default async function GovernancePage({ params }: { params: Promise<{ lan
               <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
                 {data.modello231.badge}
               </span>
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-4">
+              <div className="mb-4">
                 <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight">
                   {data.modello231.titolo}
                 </h2>
-                <span className="text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 self-start sm:self-auto">
-                  {data.modello231.edizioni}
-                </span>
               </div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed">
                 {data.modello231.descrizione}
@@ -257,15 +250,15 @@ export default async function GovernancePage({ params }: { params: Promise<{ lan
                 <div className="pt-6">
                   <a
                     href={data.modello231.documento.fileUrl}
-                    download
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-md transition-all"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
-                    <span>{dict.common?.scaricaPdf || 'Scarica PDF'}</span>
+                    <span>{dict.common?.visualizzaPdf || 'Visualizza PDF'}</span>
                   </a>
                 </div>
               </div>
@@ -280,13 +273,10 @@ export default async function GovernancePage({ params }: { params: Promise<{ lan
               <span className="text-xs font-black uppercase tracking-[0.25em] text-zefiro-cyan mb-2 block">
                 {data.whistleblowing.badge}
               </span>
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-4">
+              <div className="mb-4">
                 <h2 className="text-2xl sm:text-4xl font-black text-primary dark:text-white tracking-tight">
                   {data.whistleblowing.titolo}
                 </h2>
-                <span className="text-xs font-mono font-medium text-zefiro-cyan bg-zefiro-cyan/10 px-3 py-1 rounded-full border border-zefiro-cyan/20 self-start sm:self-auto">
-                  {data.whistleblowing.normativa}
-                </span>
               </div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed">
                 {data.whistleblowing.descrizione}
@@ -413,44 +403,21 @@ export default async function GovernancePage({ params }: { params: Promise<{ lan
 
                     <a
                       href={doc.fileUrl}
-                      download
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary hover:bg-zefiro-cyan text-white hover:text-primary dark:bg-zefiro-cyan dark:text-primary dark:hover:bg-white font-bold text-xs shadow-sm transition-all shrink-0"
                     >
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                       </svg>
-                      <span>{dict.common?.scaricaPdf || 'Scarica'}</span>
+                      <span>{dict.documenti?.visualizza || 'Visualizza'}</span>
                     </a>
                   </div>
                 ))}
               </div>
             </div>
           </FadeIn>
-        </section>
-
-        {/* 4. BOTTOM ARCHIVE STRIP */}
-        <section className="p-8 sm:p-10 rounded-3xl bg-gray-50 dark:bg-white/5 border border-gray-200/80 dark:border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="space-y-1">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-zefiro-cyan">
-              {isIt ? 'Archivio Documentale Unificato' : 'Unified Document Archive'}
-            </span>
-            <p className="text-sm text-gray-600 dark:text-gray-300 font-normal">
-              {isIt
-                ? 'Tutti i documenti societari, i bilanci, le certificazioni ISO e le politiche ESG sono raccolti nell\'Archivio.'
-                : 'All corporate records, financial reports, ISO certifications, and ESG policies are accessible in the Archive.'}
-            </p>
-          </div>
-          <Link
-            href={`/${lang}/documenti`}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary hover:bg-zefiro-cyan text-white hover:text-primary dark:bg-white dark:text-primary dark:hover:bg-zefiro-cyan text-xs sm:text-sm font-bold shadow-sm transition-all shrink-0"
-          >
-            <span>{isIt ? 'Accedi all\'Archivio' : 'Access Archive'}</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
         </section>
 
       </div>
