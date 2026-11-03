@@ -114,10 +114,10 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
       label: n.sostenibilita || 'Sostenibilità',
       href: `/${lang}/sostenibilita`,
       subItems: [
+        { label: sub.bilancio, href: `/${lang}/sostenibilita#bilancio` },
         { label: sub.certificazioni, href: `/${lang}/sostenibilita#certificazioni` },
         { label: sub.politiche, href: `/${lang}/sostenibilita#politiche` },
         { label: sub.pianoEsg, href: `/${lang}/sostenibilita#piano-esg` },
-        { label: sub.bilancio, href: `/${lang}/sostenibilita#bilancio` },
       ],
     },
     {

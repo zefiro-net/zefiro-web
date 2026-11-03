@@ -110,6 +110,11 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
               </Link>
             </li>
             <li>
+              <Link href={`/${lang}/sostenibilita#bilancio`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
+                {f.bilancio || (lang === 'it' ? 'Bilancio di Sostenibilità 2025' : 'Report 2025')}
+              </Link>
+            </li>
+            <li>
               <Link href={`/${lang}/sostenibilita#certificazioni`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
                 {f.certificazioni || (lang === 'it' ? 'Certificazioni' : 'Certifications')}
               </Link>
@@ -122,11 +127,6 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
             <li>
               <Link href={`/${lang}/sostenibilita#piano-esg`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
                 {f.pianoEsg || (lang === 'it' ? 'Piano ESG' : 'ESG Plan')}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lang}/sostenibilita#bilancio`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
-                {f.bilancio || (lang === 'it' ? 'Bilancio di Sostenibilità 2025' : 'Report 2025')}
               </Link>
             </li>
           </ul>
