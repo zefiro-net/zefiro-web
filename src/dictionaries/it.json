@@ -25,7 +25,10 @@
       "certificazioni": "Certificazioni",
       "politiche": "Politiche ESG",
       "pianoEsg": "Piano ESG",
-      "bilancio": "Bilancio di Sostenibilità 2025"
+      "bilancio": "Bilancio di Sostenibilità 2025",
+      "codiceEtico": "Codice Etico",
+      "modello231": "Modello 231",
+      "whistleblowing": "Whistleblowing"
     }
   },
   "common": {
@@ -51,6 +54,7 @@
     "risorse": "Governance & Legale",
     "governance": "Governance",
     "documentiPubblici": "Archivio",
+    "codiceEtico": "Codice Etico",
     "modello231": "Modello 231",
     "whistleblowing": "Whistleblowing",
     "lavoraConNoi": "Lavora con noi",
@@ -201,6 +205,22 @@
     "titolo": "Le ",
     "titoloAccento": "sedi",
     "sottotitolo": "Siamo presenti sul territorio nazionale con la sede legale e direzionale a Milano e il polo operativo di coordinamento a Roma."
+  },
+  "governance": {
+    "badge": "Integrità, Etica e Controllo",
+    "titolo": "Corporate ",
+    "titoloAccento": "Governance",
+    "sottotitolo": "Il sistema di governo societario, le regole di condotta deontologica e i presidi di controllo interno che assicurano la massima trasparenza, legalità e responsabilità nella gestione dell'infrastruttura condivisa di Zefiro Net.",
+    "scaricaDocumento": "Scarica Documento",
+    "accediPiattaforma": "Accedi a Integrity Line",
+    "approvazione": "Approvazione",
+    "canaleRiservato": "Canale Riservato",
+    "inboxSicura": "Inbox Sicura",
+    "ancore": {
+      "codiceEtico": "Codice Etico",
+      "modello231": "Modello 231",
+      "whistleblowing": "Whistleblowing"
+    }
   },
   "documenti": {
     "titolo": "Archivio",

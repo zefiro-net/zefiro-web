@@ -25,7 +25,10 @@
       "certificazioni": "Certifications",
       "politiche": "ESG Policies",
       "pianoEsg": "ESG Plan",
-      "bilancio": "Sustainability Report 2025"
+      "bilancio": "Sustainability Report 2025",
+      "codiceEtico": "Code of Ethics",
+      "modello231": "Model 231",
+      "whistleblowing": "Whistleblowing"
     }
   },
   "common": {
@@ -51,6 +54,7 @@
     "risorse": "Governance & Legal",
     "governance": "Governance",
     "documentiPubblici": "Archive",
+    "codiceEtico": "Code of Ethics",
     "modello231": "Model 231",
     "whistleblowing": "Whistleblowing",
     "lavoraConNoi": "Work with us",
@@ -201,6 +205,22 @@
     "titolo": "Our ",
     "titoloAccento": "offices",
     "sottotitolo": "Present across Italy with our corporate headquarters in Milan and our operations hub in Rome."
+  },
+  "governance": {
+    "badge": "Integrity, Ethics & Compliance",
+    "titolo": "Corporate ",
+    "titoloAccento": "Governance",
+    "sottotitolo": "The corporate governance framework, deontological rules, and internal control mechanisms ensuring transparency, legal compliance, and responsibility across Zefiro Net's shared mobile network infrastructure.",
+    "scaricaDocumento": "Download Document",
+    "accediPiattaforma": "Access Integrity Line",
+    "approvazione": "Approval",
+    "canaleRiservato": "Confidential Channel",
+    "inboxSicura": "Secure Inbox",
+    "ancore": {
+      "codiceEtico": "Code of Ethics",
+      "modello231": "Model 231",
+      "whistleblowing": "Whistleblowing"
+    }
   },
   "documenti": {
     "titolo": "Archive",

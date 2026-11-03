@@ -21,6 +21,7 @@ type FooterDict = {
     risorse: string;
     governance?: string;
     documentiPubblici: string;
+    codiceEtico?: string;
     modello231: string;
     whistleblowing: string;
     lavoraConNoi?: string;
@@ -143,24 +144,24 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/chi-siamo#valori`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
+              <Link href={`/${lang}/governance`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
+                {f.governance || 'Governance'}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/governance#codice-etico`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
+                {f.codiceEtico || (lang === 'it' ? 'Codice Etico' : 'Code of Ethics')}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/governance#modello-231`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
                 {f.modello231}
               </Link>
             </li>
             <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://zefironet.integrityline.com/"
-                className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block"
-              >
+              <Link href={`/${lang}/governance#whistleblowing`} className="hover:text-zefiro-cyan transition-colors py-0.5 inline-block">
                 {f.whistleblowing}
-              </a>
-            </li>
-            <li>
-              <span className="text-gray-400 text-xs py-0.5 inline-block italic">
-                {lang === 'it' ? 'Governance (in allestimento)' : 'Governance (upcoming)'}
-              </span>
+              </Link>
             </li>
           </ul>
         </div>

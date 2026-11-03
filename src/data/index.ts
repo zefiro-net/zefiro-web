@@ -16,6 +16,7 @@ export type {
 export type { ValoreAziendale } from './chi-siamo';
 export type { TecnologiaData, TecnologiaFeature } from './tecnologia';
 export type { SostenibilitaData, DocumentoSostenibilita, PilastroPianoESG } from './sostenibilita';
+export type { GovernanceData, GovernancePrincipio, GovernanceDocumento } from './governance';
 
 import type { Document } from './types';
 import type { Locale } from '@/i18n';
@@ -26,6 +27,7 @@ import { getHighlightsData } from './highlights';
 import { getCertificazioniData } from './certificazioni';
 import { getTecnologiaData } from './tecnologia';
 import { getSostenibilitaData } from './sostenibilita';
+import { getGovernance as getGovernanceData } from './governance';
 
 // Helper per formattare le date in base alla lingua
 function formatDateByLocale(isoDate: string, lang: Locale = 'it'): string {
@@ -47,6 +49,10 @@ const DOC_TITLES_EN: Record<number, { title: string; category: string }> = {
   6: { title: "ISO 9001:2015 Quality Certificate", category: "Governance" },
   7: { title: "ISO 14001:2015 Environmental Certificate", category: "Sustainability" },
   8: { title: "ISO 45001:2018 Safety Certificate", category: "Security" },
+  9: { title: "Code of Ethics", category: "Governance" },
+  10: { title: "Model 231 — General Part (Extract)", category: "Governance" },
+  11: { title: "Whistleblowing Management Procedure", category: "Governance" },
+  12: { title: "Integrity Line Platform Instructions", category: "Governance" },
 };
 
 const REAL_DOCUMENTS_LIST: Document[] = [
@@ -114,6 +120,38 @@ const REAL_DOCUMENTS_LIST: Document[] = [
     size: "1.5 MB",
     fileUrl: "/documents/certificazioni/certificato-iso-45001.pdf",
   },
+  {
+    id: 9,
+    title: "Codice Etico",
+    date: "2023-03-27",
+    category: "Governance",
+    size: "284 KB",
+    fileUrl: "/documents/governance/codice-etico.pdf",
+  },
+  {
+    id: 10,
+    title: "Modello 231 — Parte Generale (Estratto)",
+    date: "2026-04-09",
+    category: "Governance",
+    size: "338 KB",
+    fileUrl: "/documents/governance/modello-231-parte-generale.pdf",
+  },
+  {
+    id: 11,
+    title: "Procedura per la Gestione delle Segnalazioni (Whistleblowing)",
+    date: "2023-12-15",
+    category: "Governance",
+    size: "181 KB",
+    fileUrl: "/documents/governance/procedura-whistleblowing.pdf",
+  },
+  {
+    id: 12,
+    title: "Istruzioni Piattaforma Integrity Line (Whistleblowing)",
+    date: "2023-12-15",
+    category: "Governance",
+    size: "445 KB",
+    fileUrl: "/documents/governance/guida-piattaforma-whistleblowing.pdf",
+  },
 ];
 
 // DOCUMENTI
@@ -167,3 +205,9 @@ export function getTecnologia(lang: Locale = 'it') {
 export function getSostenibilita(lang: Locale = 'it') {
   return getSostenibilitaData(lang);
 }
+
+// GOVERNANCE
+export function getGovernance(lang: Locale = 'it') {
+  return getGovernanceData(lang);
+}
+

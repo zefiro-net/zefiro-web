@@ -33,6 +33,9 @@ type HeaderDict = {
       politiche: string;
       pianoEsg: string;
       bilancio: string;
+      codiceEtico?: string;
+      modello231?: string;
+      whistleblowing?: string;
     };
   };
 };
@@ -41,7 +44,6 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [showGovernanceModal, setShowGovernanceModal] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Close mobile menu on route change
@@ -100,11 +102,11 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
     {
       id: 'governance',
       label: n.governance || 'Governance',
-      href: '#',
-      isPlaceholder: true,
+      href: `/${lang}/governance`,
       subItems: [
-        { label: lang === 'it' ? 'Documenti di Governance (Doc Cristina)' : 'Governance Reports', href: '#', isPlaceholder: true },
-        { label: lang === 'it' ? 'Bilanci Societari (Bilanci Marchini)' : 'Financial Statements', href: '#', isPlaceholder: true },
+        { label: sub.codiceEtico || (lang === 'it' ? 'Codice Etico' : 'Code of Ethics'), href: `/${lang}/governance#codice-etico` },
+        { label: sub.modello231 || (lang === 'it' ? 'Modello 231' : 'Model 231'), href: `/${lang}/governance#modello-231` },
+        { label: sub.whistleblowing || 'Whistleblowing', href: `/${lang}/governance#whistleblowing` },
       ],
     },
     {
@@ -154,55 +156,6 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
             {MENU_STRUCTURE.map((item) => {
               const isActive = pathname.startsWith(item.href) && item.href !== '#';
               const hasSub = item.subItems && item.subItems.length > 0;
-
-              if (item.isPlaceholder) {
-                return (
-                  <div
-                    key={item.id}
-                    className="relative"
-                    onMouseEnter={() => handleMouseEnter(item.id)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setShowGovernanceModal(true)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-all cursor-pointer"
-                    >
-                      <span>{item.label}</span>
-                      <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-gray-200 dark:bg-white/10 text-gray-600 dark:text-gray-300">
-                        {lang === 'it' ? 'in arrivo' : 'soon'}
-                      </span>
-                    </button>
-
-                    <AnimatePresence>
-                      {openDropdown === item.id && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 6, scale: 0.96 }}
-                          transition={{ duration: 0.15 }}
-                          className="absolute top-full left-0 mt-2 w-64 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl border border-gray-200/80 dark:border-white/10 shadow-2xl p-3 z-50"
-                        >
-                          <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-2 px-2">
-                            {n.governanceNotice || 'Sezione in fase di pubblicazione.'}
-                          </p>
-                          <div className="space-y-1">
-                            {item.subItems.map((subItem, idx) => (
-                              <button
-                                key={idx}
-                                onClick={() => setShowGovernanceModal(true)}
-                                className="w-full text-left px-3 py-2 rounded-xl text-xs font-medium text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer"
-                              >
-                                • {subItem.label}
-                              </button>
-                            ))}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              }
 
               return (
                 <div
@@ -297,40 +250,6 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
         </nav>
       </header>
 
-      {/* Governance Modal Notice */}
-      <AnimatePresence>
-        {showGovernanceModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm pointer-events-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="w-full max-w-md rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-2xl border border-gray-200 dark:border-white/10 text-center"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-zefiro-cyan/20 text-zefiro-cyan flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-black text-primary dark:text-white mb-2">
-                {lang === 'it' ? 'Governance & Bilanci' : 'Governance & Financials'}
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                {lang === 'it'
-                  ? 'La sezione Governance è attualmente in fase di finalizzazione. A breve saranno resi consultabili i documenti di Governance (Relazioni societarie e Modello 231) e i Bilanci d\'esercizio.'
-                  : 'The Governance section is currently being finalized. Corporate Governance records and annual financial statements will be published here shortly.'}
-              </p>
-              <button
-                onClick={() => setShowGovernanceModal(false)}
-                className="w-full px-6 py-3 rounded-full bg-zefiro-cyan text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all shadow-md"
-              >
-                {lang === 'it' ? 'Ho capito' : 'Understood'}
-              </button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
       {/* Mobile Drawer Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -348,23 +267,6 @@ export default function Header({ dict, lang }: { dict: HeaderDict; lang: Locale 
               <div className="flex flex-col space-y-2">
                 {MENU_STRUCTURE.map((item) => {
                   const isActive = pathname.startsWith(item.href) && item.href !== '#';
-                  if (item.isPlaceholder) {
-                    return (
-                      <button
-                        key={item.id}
-                        onClick={() => {
-                          setShowGovernanceModal(true);
-                          setIsOpen(false);
-                        }}
-                        className="flex items-center justify-between text-left text-lg font-bold py-2.5 px-4 rounded-xl text-gray-400 hover:bg-white/5 active:bg-white/10"
-                      >
-                        <span>{item.label}</span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-gray-300">
-                          {lang === 'it' ? 'in allestimento' : 'soon'}
-                        </span>
-                      </button>
-                    );
-                  }
 
                   return (
                     <div key={item.id} className="space-y-1">
